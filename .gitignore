@@ -1,0 +1,72 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# === Virtual Environments ===
+.venv/
+.venv-training/
+venv/
+env/
+
+# === Django ===
+db.sqlite3
+*.log
+media/
+staticfiles/
+
+# === ML Model Weights (too large for git) ===
+*.keras
+*.onnx
+*.onnx.data
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.ckpt
+ml_model/wheat_data/
+ml_model/maize_data/
+ml_model/datasets/
+
+# === Training artifacts ===
+ml_model/__pycache__/
+ml_model/*.png
+ml_model/wheat_evaluation_report.json
+ml_model/maize_evaluation_report.json
+ml_model/wheat_data_merged/
+training_*.log
+dataset_visual_check.png
+run_wheat_train.bat
+test_accuracy.py
+
+# === Datasets / feature caches (too large for git) ===
+dataset/
+ml_model/*.pkl
+ml_model/*.npy
+ml_model/cotton_split_data/
+ml_model/groundnut_cleaned/
+ml_model/groundnut_cleaned_split/
+ml_model/groundnut_split_data/
+ml_model/*_split_data/
+
+# === ONNX backups ===
+detector/ml_assets/*.onnx.bak*
+*.bak
+
+# === Secrets ===
+.env
+.env.local
+.env.production
+
+# === OS / IDE ===
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# === Distribution / Build ===
+dist/
+build/
+*.egg-info/

@@ -1,0 +1,13 @@
+{
+    "train_accuracy": 98.2188,
+    "best_val_accuracy": 92.0,
+    "test_accuracy": 0.93,
+    "classes": [
+        "Pumpkin___bacterial_leaf_spot",
+        "Pumpkin___downy_mildew",
+        "Pumpkin___healthy",
+        "Pumpkin___mosaic_disease",
+        "Pumpkin___powdery_mildew"
+    ],
+    "device": "cpu"
+}

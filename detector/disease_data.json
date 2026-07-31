@@ -1,0 +1,905 @@
+{
+    "PlantVillage": {
+        "plant_name": "Unknown",
+        "disease_name": "Uncertain Classification",
+        "description": "The model could not confidently identify this plant sample. This may be due to image quality, unusual lighting, or a plant species not in the training set.",
+        "symptoms": "Unable to determine specific symptoms from the image provided.",
+        "treatment_prevention": "Try capturing a clearer image with good lighting. Ensure the leaf is in focus and fills most of the frame. Consult a local agricultural extension service for expert identification."
+    },
+    "Potato___Potato_Leaf_Disease_Dataset_in_Uncontrolled_Environment": {
+        "plant_name": "Potato",
+        "disease_name": "Uncertain Classification",
+        "description": "The model detected possible Potato leaf disease but could not classify it precisely. The image conditions or leaf state may be ambiguous.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Potato foliage.",
+        "treatment_prevention": "Ensure proper crop rotation, use certified seed potatoes, and apply appropriate treatments. Consult a local agricultural expert for precise diagnosis."
+    },
+    "Apple___alternaria_leaf_spot": {
+        "plant_name": "Apple",
+        "disease_name": "Alternaria Leaf Spot",
+        "description": "The system has detected signs of Alternaria Leaf Spot on this Apple leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Apple foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Alternaria Leaf Spot on Apple."
+    },
+    "Apple___black_rot": {
+        "plant_name": "Apple",
+        "disease_name": "Black Rot",
+        "description": "Black rot is caused by the fungus Botryosphaeria obtusa. It affects apple tree leaves, fruit, and limbs, leading to leaf drop, rotten fruit, and cankers on branches.",
+        "symptoms": "Leaves show small purple spots that expand into 'frogeye' spots (brown centers with purple margins). Fruit develops a firm, dark brown rot with concentric rings, eventually turning black and shriveling into a dry 'mummy'. Limbs develop sunken cankers.",
+        "treatment_prevention": "Prune out dead wood, cankered limbs, and mummified fruit from the tree and ground during winter dormancy. Apply protective fungicides starting at green tip stage."
+    },
+    "Apple___brown_spot": {
+        "plant_name": "Apple",
+        "disease_name": "Brown Spot",
+        "description": "The system has detected signs of Brown Spot on this Apple leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Apple foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Brown Spot on Apple."
+    },
+    "Apple___gray_spot": {
+        "plant_name": "Apple",
+        "disease_name": "Gray Spot",
+        "description": "The system has detected signs of Gray Spot on this Apple leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Apple foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Gray Spot on Apple."
+    },
+    "Apple___healthy": {
+        "plant_name": "Apple",
+        "disease_name": "Healthy",
+        "description": "The apple leaf appears completely healthy, showing no signs of fungal, bacterial, or viral disease.",
+        "symptoms": "Uniform green color, clear leaf margins, normal vein pattern, and no spots or blemishes.",
+        "treatment_prevention": "Maintain consistent watering, proper pruning, and fertilization. Continue to inspect foliage regularly for early signs of pests or disease."
+    },
+    "Apple___rust": {
+        "plant_name": "Apple",
+        "disease_name": "Rust",
+        "description": "The system has detected signs of Rust on this Apple leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Apple foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Rust on Apple."
+    },
+    "Apple___scab": {
+        "plant_name": "Apple",
+        "disease_name": "Scab",
+        "description": "The system has detected signs of Scab on this Apple leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Apple foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Scab on Apple."
+    },
+    "Bell_pepper___bacterial_spot": {
+        "plant_name": "Bell Pepper",
+        "disease_name": "Bacterial Spot",
+        "description": "The system has detected signs of Bacterial Spot on this Bell Pepper leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Bell Pepper foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Bacterial Spot on Bell Pepper."
+    },
+    "Bell_pepper___healthy": {
+        "plant_name": "Bell Pepper",
+        "disease_name": "Healthy",
+        "description": "This Bell Pepper leaf appears perfectly healthy with no visible signs of disease or pests.",
+        "symptoms": "No symptoms of disease. The leaf color is normal and structural integrity is intact.",
+        "treatment_prevention": "Continue maintaining good agricultural practices, proper watering, and regular monitoring to keep the Bell Pepper healthy."
+    },
+    "Blueberry___healthy": {
+        "plant_name": "Blueberry",
+        "disease_name": "Healthy",
+        "description": "This Blueberry leaf appears perfectly healthy with no visible signs of disease or pests.",
+        "symptoms": "No symptoms of disease. The leaf color is normal and structural integrity is intact.",
+        "treatment_prevention": "Continue maintaining good agricultural practices, proper watering, and regular monitoring to keep the Blueberry healthy."
+    },
+    "Cassava___bacterial_blight": {
+        "plant_name": "Cassava",
+        "disease_name": "Bacterial Blight",
+        "description": "The system has detected signs of Bacterial Blight on this Cassava leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Cassava foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Bacterial Blight on Cassava."
+    },
+    "Cassava___brown_streak_disease": {
+        "plant_name": "Cassava",
+        "disease_name": "Brown Streak Disease",
+        "description": "The system has detected signs of Brown Streak Disease on this Cassava leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Cassava foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Brown Streak Disease on Cassava."
+    },
+    "Cassava___green_mottle": {
+        "plant_name": "Cassava",
+        "disease_name": "Green Mottle",
+        "description": "The system has detected signs of Green Mottle on this Cassava leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Cassava foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Green Mottle on Cassava."
+    },
+    "Cassava___healthy": {
+        "plant_name": "Cassava",
+        "disease_name": "Healthy",
+        "description": "This Cassava leaf appears perfectly healthy with no visible signs of disease or pests.",
+        "symptoms": "No symptoms of disease. The leaf color is normal and structural integrity is intact.",
+        "treatment_prevention": "Continue maintaining good agricultural practices, proper watering, and regular monitoring to keep the Cassava healthy."
+    },
+    "Cassava___mosaic_disease": {
+        "plant_name": "Cassava",
+        "disease_name": "Mosaic Disease",
+        "description": "The system has detected signs of Mosaic Disease on this Cassava leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Cassava foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Mosaic Disease on Cassava."
+    },
+    "Cherry___healthy": {
+        "plant_name": "Cherry",
+        "disease_name": "Healthy",
+        "description": "This Cherry leaf appears perfectly healthy with no visible signs of disease or pests.",
+        "symptoms": "No symptoms of disease. The leaf color is normal and structural integrity is intact.",
+        "treatment_prevention": "Continue maintaining good agricultural practices, proper watering, and regular monitoring to keep the Cherry healthy."
+    },
+    "Cherry___powdery_mildew": {
+        "plant_name": "Cherry",
+        "disease_name": "Powdery Mildew",
+        "description": "The system has detected signs of Powdery Mildew on this Cherry leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Cherry foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Powdery Mildew on Cherry."
+    },
+    "Coffee___healthy": {
+        "plant_name": "Coffee",
+        "disease_name": "Healthy",
+        "description": "This Coffee leaf appears perfectly healthy with no visible signs of disease or pests.",
+        "symptoms": "No symptoms of disease. The leaf color is normal and structural integrity is intact.",
+        "treatment_prevention": "Continue maintaining good agricultural practices, proper watering, and regular monitoring to keep the Coffee healthy."
+    },
+    "Coffee___red_spider_mite": {
+        "plant_name": "Coffee",
+        "disease_name": "Red Spider Mite",
+        "description": "The system has detected signs of Red Spider Mite on this Coffee leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Coffee foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Red Spider Mite on Coffee."
+    },
+    "Coffee___rust": {
+        "plant_name": "Coffee",
+        "disease_name": "Rust",
+        "description": "The system has detected signs of Rust on this Coffee leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Coffee foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Rust on Coffee."
+    },
+    "Corn___common_rust": {
+        "plant_name": "Corn",
+        "disease_name": "Common Rust",
+        "description": "The system has detected signs of Common Rust on this Corn leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Corn foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Common Rust on Corn."
+    },
+    "Corn___gray_leaf_spot": {
+        "plant_name": "Corn",
+        "disease_name": "Gray Leaf Spot",
+        "description": "The system has detected signs of Gray Leaf Spot on this Corn leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Corn foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Gray Leaf Spot on Corn."
+    },
+    "Corn___healthy": {
+        "plant_name": "Corn",
+        "disease_name": "Healthy",
+        "description": "This Corn leaf appears perfectly healthy with no visible signs of disease or pests.",
+        "symptoms": "No symptoms of disease. The leaf color is normal and structural integrity is intact.",
+        "treatment_prevention": "Continue maintaining good agricultural practices, proper watering, and regular monitoring to keep the Corn healthy."
+    },
+    "Corn___northern_leaf_blight": {
+        "plant_name": "Corn",
+        "disease_name": "Northern Leaf Blight",
+        "description": "The system has detected signs of Northern Leaf Blight on this Corn leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Corn foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Northern Leaf Blight on Corn."
+    },
+    "Groundnut___Healthy": {
+        "plant_name": "Groundnut",
+        "disease_name": "Healthy",
+        "description": "This Groundnut leaf appears perfectly healthy with no visible signs of disease or pests.",
+        "symptoms": "No symptoms of disease. The leaf color is normal and structural integrity is intact.",
+        "treatment_prevention": "Continue maintaining good agricultural practices, proper watering, and regular monitoring to keep the Groundnut healthy."
+    },
+    "Groundnut___Leaf_Spot": {
+        "plant_name": "Groundnut",
+        "disease_name": "Leaf Spot",
+        "description": "Leaf Spot in Groundnut is caused by fungal pathogens including Cercospora arachidicola (Early Leaf Spot) and Cercosporidium personatum (Late Leaf Spot). It is the most common and destructive foliar disease of groundnut worldwide, causing significant yield loss if untreated.",
+        "symptoms": "Small, circular, dark brown to black spots on leaves. Early leaf spot produces spots on the upper leaf surface, while late leaf spot produces spots on both surfaces. Spots may have a yellow halo. Severe infections cause premature defoliation and reduced pod filling.",
+        "treatment_prevention": "Use resistant varieties. Apply fungicides (chlorothalonil, tebuconazole, or mancozeb) at the first sign of disease. Practice crop rotation with non-host crops. Ensure proper plant spacing for air circulation. Remove and destroy crop debris after harvest."
+    },
+    "Groundnut___Nutrition_Deficiency": {
+        "plant_name": "Groundnut",
+        "disease_name": "Nutrition Deficiency",
+        "description": "Nutritional deficiencies in Groundnut commonly include iron chlorosis, zinc deficiency, and calcium deficiency. These can cause stunted growth, yellowing of leaves, and reduced yield.",
+        "symptoms": "Iron deficiency: interveinal chlorosis on young leaves. Zinc deficiency: bronzing and stunting of leaflets. Calcium deficiency: poor root development and unfilled pods. Nitrogen deficiency: general yellowing of older leaves.",
+        "treatment_prevention": "Conduct soil testing before planting. Apply balanced fertilizers based on soil test results. Use foliar sprays of micronutrients (iron sulfate, zinc sulfate) as needed. Ensure proper soil pH (5.5-7.0). Incorporate organic matter into the soil."
+    },
+    "Groundnut___Rust": {
+        "plant_name": "Groundnut",
+        "disease_name": "Rust",
+        "description": "Groundnut Rust is caused by the fungus Puccinia arachidis. It can cause severe epidemics leading to defoliation and substantial yield losses. Both early rust and rust infections are grouped under this condition.",
+        "symptoms": "Small, reddish-brown to orange pustules (uredinia) primarily on the undersides of leaves. Pustules may also appear on petioles and stems. Severe infections cause leaf yellowing, premature defoliation, stunted plant growth, and significant yield reduction.",
+        "treatment_prevention": "Plant resistant varieties when available. Apply protectant fungicides (mancozeb, chlorothalonil) or systemic fungicides (triazoles) at the onset of symptoms. Practice crop rotation with non-host crops. Avoid dense planting to reduce humidity in the canopy. Remove volunteer groundnut plants that can harbor the fungus."
+    },
+    "Pumpkin___bacterial_leaf_spot": {
+        "plant_name": "Pumpkin",
+        "disease_name": "Bacterial Leaf Spot",
+        "description": "Bacterial Leaf Spot in Pumpkin is caused by Xanthomonas cucurbitae. It affects pumpkin leaves, reducing photosynthesis and fruit quality. The bacteria can survive in plant debris and spread through water splash and contaminated tools.",
+        "symptoms": "Small, angular, water-soaked lesions on leaves that turn brown to black. Lesions are often surrounded by a yellow halo. In severe cases, spots coalesce causing leaf blight and defoliation. Fruit may develop small, sunken, scab-like lesions.",
+        "treatment_prevention": "Use disease-free seeds and resistant varieties. Apply copper-based fungicides preventively. Practice crop rotation of 2-3 years with non-cucurbit crops. Avoid overhead irrigation. Remove and destroy infected plant debris after harvest."
+    },
+    "Pumpkin___downy_mildew": {
+        "plant_name": "Pumpkin",
+        "disease_name": "Downy Mildew",
+        "description": "Downy Mildew in Pumpkin is caused by the oomycete Pseudoperonospora cubensis. It is a destructive foliar disease that spreads rapidly in cool, humid conditions. The pathogen can cause significant yield losses if not managed promptly.",
+        "symptoms": "Angular, yellow to pale green lesions on the upper leaf surface, bounded by leaf veins. Under high humidity, a gray to purple fuzzy growth appears on the underside of lesions. Infected leaves quickly turn brown and die, leading to defoliation.",
+        "treatment_prevention": "Apply fungicides (chlorothalonil, mancozeb, or metalaxyl) preventively in humid conditions. Use resistant varieties when available. Ensure proper plant spacing for air circulation. Avoid overhead irrigation. Remove crop debris after harvest."
+    },
+    "Pumpkin___healthy": {
+        "plant_name": "Pumpkin",
+        "disease_name": "Healthy",
+        "description": "This Pumpkin leaf appears perfectly healthy with no visible signs of disease or pests. The plant is in good condition.",
+        "symptoms": "No symptoms of disease. The leaf color is normal, with uniform green pigmentation and intact leaf structure.",
+        "treatment_prevention": "Continue maintaining good agricultural practices: proper watering, balanced fertilization, regular monitoring for early signs of disease, and crop rotation."
+    },
+    "Pumpkin___mosaic_disease": {
+        "plant_name": "Pumpkin",
+        "disease_name": "Mosaic Disease",
+        "description": "Mosaic Disease in Pumpkin is caused by several viruses including Cucumber Mosaic Virus (CMV), Watermelon Mosaic Virus (WMV), and Zucchini Yellow Mosaic Virus (ZYMV). These viruses are transmitted by aphids and cause significant yield reduction.",
+        "symptoms": "Mottled light and dark green patterns (mosaic) on leaves. Leaves may be distorted, blistered, or reduced in size. Plants may be stunted. Fruits can be deformed with discolored, bumpy surfaces. Yellowing and leaf curling are common.",
+        "treatment_prevention": "Use virus-resistant varieties. Control aphid populations with insecticides or reflective mulches. Remove and destroy infected plants immediately. Practice crop rotation. Control weeds that can serve as virus reservoirs. Use certified disease-free seeds."
+    },
+    "Pumpkin___powdery_mildew": {
+        "plant_name": "Pumpkin",
+        "disease_name": "Powdery Mildew",
+        "description": "Powdery Mildew in Pumpkin is caused by Podosphaera xanthii (formerly Sphaerotheca fuliginea). It is a common fungal disease that appears as white powdery growth on leaves, reducing photosynthesis and fruit quality.",
+        "symptoms": "White to gray powdery fungal growth on the upper surfaces of leaves, stems, and sometimes fruit. Affected leaves may yellow, turn brown, and die prematurely. Severe infection can lead to defoliation, sunburned fruit, and reduced yield.",
+        "treatment_prevention": "Apply sulfur-based or systemic fungicides (myclobutanil, trifloxystrobin) at the first sign of powdery growth. Plant resistant varieties. Ensure good air circulation through proper spacing. Avoid excessive nitrogen fertilization. Remove and destroy infected plant debris."
+    },
+    "Maize___Blight": {
+        "plant_name": "Corn",
+        "disease_name": "Northern Leaf Blight",
+        "description": "Northern Leaf Blight on Maize is caused by Exserohilum turcicum. It produces large, cigar-shaped gray-green lesions on leaves that can significantly reduce photosynthesis and yield.",
+        "symptoms": "Large, elliptical, grayish-green to tan lesions on leaves, typically 1-6 inches long. Lesions start on lower leaves and move upward. Severe infection causes leaf death and reduced grain fill.",
+        "treatment_prevention": "Plant resistant hybrids, apply fungicides at early symptom onset, practice crop rotation with non-host crops, till crop residue to reduce inoculum, and avoid overhead irrigation."
+    },
+    "Maize___Common_Rust": {
+        "plant_name": "Corn",
+        "disease_name": "Common Rust",
+        "description": "Common rust on maize is caused by Puccinia sorghi. It produces small, circular to elongated cinnamon-brown pustules on both leaf surfaces. It can reduce yield in severe cases.",
+        "symptoms": "Small, raised, cinnamon-brown pustules on leaves and stalks. Pustules rupture to release rust-colored spores. Severe infections cause premature leaf death and reduced photosynthesis.",
+        "treatment_prevention": "Plant resistant hybrids, apply fungicides if infection is early and severe, practice crop rotation, and destroy crop debris after harvest."
+    },
+    "Maize___Gray_Leaf_Spot": {
+        "plant_name": "Corn",
+        "disease_name": "Gray Leaf Spot",
+        "description": "Gray Leaf Spot on maize is caused by Cercospora zeae-maydis. It produces rectangular gray to tan lesions bounded by leaf veins. It is one of the most yield-limiting diseases of corn in humid regions.",
+        "symptoms": "Rectangular, gray to tan lesions on leaves that are restricted by leaf veins. Lesions can merge to blight entire leaves. Severe infections cause significant yield loss.",
+        "treatment_prevention": "Plant resistant hybrids, use tillage to bury crop residue, practice crop rotation, apply fungicides at VT-R1 stage in severe years, and manage weeds."
+    },
+    "Maize___Healthy": {
+        "plant_name": "Corn",
+        "disease_name": "Healthy",
+        "description": "This Maize leaf appears perfectly healthy with no visible signs of disease or pests.",
+        "symptoms": "No symptoms of disease. The leaf color is normal and structural integrity is intact.",
+        "treatment_prevention": "Continue maintaining good agricultural practices, proper watering, and regular monitoring to keep the Maize healthy."
+    },
+    "Grape___Leaf_blight": {
+        "plant_name": "Grape",
+        "disease_name": "Leaf Blight",
+        "description": "The system has detected signs of Leaf Blight on this Grape leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Grape foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Leaf Blight on Grape."
+    },
+    "Grape___black_measles": {
+        "plant_name": "Grape",
+        "disease_name": "Black Measles",
+        "description": "The system has detected signs of Black Measles on this Grape leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Grape foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Black Measles on Grape."
+    },
+    "Grape___black_rot": {
+        "plant_name": "Grape",
+        "disease_name": "Black Rot",
+        "description": "Black rot is caused by the fungus Guignardia bidwellii. It is a highly destructive disease affecting grape leaves, shoots, and berries.",
+        "symptoms": "Small, circular, reddish-brown spots on leaves, which develop tiny black dots (pycnidia) in the center. Berries turn dark, shrivel into hard, black, wrinkled mummies.",
+        "treatment_prevention": "Prune grapevines to improve airflow and sunlight. Remove and destroy mummified berries. Apply preventative fungicides from bud break through fruit set."
+    },
+    "Grape___healthy": {
+        "plant_name": "Grape",
+        "disease_name": "Healthy",
+        "description": "The grape foliage is healthy and free from active disease.",
+        "symptoms": "Uniformly green leaves, firm tissue, healthy grape clusters, and no spotting.",
+        "treatment_prevention": "Perform seasonal pruning, canopy thinning, and maintain consistent soil moisture."
+    },
+    "Plant___test": {
+        "plant_name": "Unknown",
+        "disease_name": "Uncertain Classification",
+        "description": "The model could not confidently identify this plant sample. This may be due to image quality, unusual lighting, or a plant species not in the training set.",
+        "symptoms": "Unable to determine specific symptoms from the image provided.",
+        "treatment_prevention": "Try capturing a clearer image with good lighting. Ensure the leaf is in focus and fills most of the frame. Consult a local agricultural extension service for expert identification."
+    },
+    "Plant___train": {
+        "plant_name": "Unknown",
+        "disease_name": "Uncertain Classification",
+        "description": "The model could not confidently identify this plant sample. This may be due to image quality, unusual lighting, or a plant species not in the training set.",
+        "symptoms": "Unable to determine specific symptoms from the image provided.",
+        "treatment_prevention": "Try capturing a clearer image with good lighting. Ensure the leaf is in focus and fills most of the frame. Consult a local agricultural extension service for expert identification."
+    },
+    "Plant___val": {
+        "plant_name": "Unknown",
+        "disease_name": "Uncertain Classification",
+        "description": "The model could not confidently identify this plant sample. This may be due to image quality, unusual lighting, or a plant species not in the training set.",
+        "symptoms": "Unable to determine specific symptoms from the image provided.",
+        "treatment_prevention": "Try capturing a clearer image with good lighting. Ensure the leaf is in focus and fills most of the frame. Consult a local agricultural extension service for expert identification."
+    },
+    "Mango___Anthracnose": {
+        "plant_name": "Mango",
+        "disease_name": "Anthracnose",
+        "description": "Anthracnose is caused by the fungus Colletotrichum gloeosporioides. It is the most common and destructive disease affecting mango foliage and fruits, especially in wet conditions.",
+        "symptoms": "Dark brown to black spots on leaves, which may grow and coalesce into large necrotic areas. Leaf margins can shrivel and leaves may drop prematurely.",
+        "treatment_prevention": "Prune infected branches to improve canopy airflow. Destroy fallen leaves to prevent fungal spores from overwintering. Apply copper-based fungicides during vegetative flush."
+    },
+    "Mango___Bacterial_Canker": {
+        "plant_name": "Mango",
+        "disease_name": "Bacterial Canker",
+        "description": "Bacterial canker (or bacterial black spot) is caused by Xanthomonas campestris pv. mangiferaeindicae. It spreads through wind-driven rain and pruning tools.",
+        "symptoms": "Water-soaked spots on leaves that turn dark brown to black and develop a yellow halo. Spots can coalesce into necrotic patches. Cankers may form on twigs and branches.",
+        "treatment_prevention": "Avoid pruning in wet weather. Sanitize tools between cuts. Apply copper oxychloride sprays at regular intervals during wet seasons."
+    },
+    "Mango___Cutting_Weevil": {
+        "plant_name": "Mango",
+        "disease_name": "Cutting Weevil",
+        "description": "The system has detected signs of Cutting Weevil on this Mango leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Mango foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Cutting Weevil on Mango."
+    },
+    "Mango___Die_Back": {
+        "plant_name": "Mango",
+        "disease_name": "Die Back",
+        "description": "Die back is a fungal disease caused by Lasiodiplodia theobromae, leading to the drying and dying back of twigs and branches.",
+        "symptoms": "Drying and leaf-browning starting at the branch tips and progressing downwards. Twigs turn blackish-brown and shrivel. Leaves dry up and remain attached to dead twigs.",
+        "treatment_prevention": "Prune diseased twigs 3 inches below the infected area and apply pruning paste. Ensure proper tree nutrition and irrigation to avoid stress."
+    },
+    "Mango___Gall_Midge": {
+        "plant_name": "Mango",
+        "disease_name": "Gall Midge",
+        "description": "The system has detected signs of Gall Midge on this Mango leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Mango foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Gall Midge on Mango."
+    },
+    "Mango___Healthy": {
+        "plant_name": "Mango",
+        "disease_name": "Healthy",
+        "description": "The mango foliage appears completely healthy, showing normal color, growth, and structure.",
+        "symptoms": "Shiny green leaves, firm tissue, normal veins, and no spots or cuts.",
+        "treatment_prevention": "Maintain regular watering, fertilization, and sunlight exposure. Prune periodically to allow light penetration."
+    },
+    "Mango___Powdery_Mildew": {
+        "plant_name": "Mango",
+        "disease_name": "Powdery Mildew",
+        "description": "Powdery mildew is caused by the fungus Oidium mangiferae. It is highly active during cool, dry nights followed by warm days.",
+        "symptoms": "White, powdery fungal growth appearing on leaf surfaces, flowers, and young fruits. Infected leaves curl, dry, and drop.",
+        "treatment_prevention": "Avoid crowded planting. Prune dense canopies to reduce relative humidity. Apply sulfur-based fungicides during the flowering flushes."
+    },
+    "Mango___Sooty_Mould": {
+        "plant_name": "Mango",
+        "disease_name": "Sooty Mould",
+        "description": "Sooty mould is a black fungus that grows on the sugary honeydew excreted by sap-sucking insects like scale insects, mealybugs, and aphids.",
+        "symptoms": "A black, soot-like film covers leaf surfaces, blocking sunlight and reducing photosynthesis. Leaf tissue underneath remains healthy.",
+        "treatment_prevention": "Control the honey-dew producing insects using horticultural oils or insecticides. Wash the soot off the leaves with water sprays if necessary."
+    },
+    "Orange___citrus_greening": {
+        "plant_name": "Orange",
+        "disease_name": "Citrus Greening",
+        "description": "The system has detected signs of Citrus Greening on this Orange leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Orange foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Citrus Greening on Orange."
+    },
+    "Peach___bacterial_spot": {
+        "plant_name": "Peach",
+        "disease_name": "Bacterial Spot",
+        "description": "The system has detected signs of Bacterial Spot on this Peach leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Peach foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Bacterial Spot on Peach."
+    },
+    "Peach___healthy": {
+        "plant_name": "Peach",
+        "disease_name": "Healthy",
+        "description": "This Peach leaf appears perfectly healthy with no visible signs of disease or pests.",
+        "symptoms": "No symptoms of disease. The leaf color is normal and structural integrity is intact.",
+        "treatment_prevention": "Continue maintaining good agricultural practices, proper watering, and regular monitoring to keep the Peach healthy."
+    },
+    "Potato___bacterial_wilt": {
+        "plant_name": "Potato",
+        "disease_name": "Bacterial Wilt",
+        "description": "The system has detected signs of Bacterial Wilt on this Potato leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Potato foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Bacterial Wilt on Potato."
+    },
+    "Potato___early_blight": {
+        "plant_name": "Potato",
+        "disease_name": "Early Blight",
+        "description": "Early blight is a fungal disease caused by Alternaria solani. It targets potato foliage and stems, reducing tuber yields.",
+        "symptoms": "Dark brown, circular spots with characteristic concentric rings ('target board' pattern) appearing first on older lower leaves. Leaves yellow and eventually die.",
+        "treatment_prevention": "Plant certified disease-free seed tubers. Apply protectant copper-based fungicides. Rotate crops with non-solanaceous plants. Avoid overhead irrigation."
+    },
+    "Potato___healthy": {
+        "plant_name": "Potato",
+        "disease_name": "Healthy",
+        "description": "The potato plant leaves are healthy.",
+        "symptoms": "Deep green color, fully expanded leaves, no dry spots, halos, or fuzzy growth.",
+        "treatment_prevention": "Keep plants well-weeded and watered. Practice crop rotation to maintain soil health."
+    },
+    "Potato___late_blight": {
+        "plant_name": "Potato",
+        "disease_name": "Late Blight",
+        "description": "Late blight is a highly destructive disease caused by the oomycete Phytophthora infestans, famously responsible for the Irish Potato Famine.",
+        "symptoms": "Dark, water-soaked, irregular lesions on leaves that expand rapidly. In humid conditions, a white fuzzy growth appears on the undersides of infected leaves. Tubers show dry, reddish-brown rot.",
+        "treatment_prevention": "Plant certified seed. Apply preventative fungicides. Destroy volunteer potato plants and dump piles. Harvest only when vines are completely dead."
+    },
+    "Potato___leafroll_virus": {
+        "plant_name": "Potato",
+        "disease_name": "Leafroll Virus",
+        "description": "The system has detected signs of Leafroll Virus on this Potato leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Potato foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Leafroll Virus on Potato."
+    },
+    "Potato___mosaic_virus": {
+        "plant_name": "Potato",
+        "disease_name": "Mosaic Virus",
+        "description": "The system has detected signs of Mosaic Virus on this Potato leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Potato foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Mosaic Virus on Potato."
+    },
+    "Potato___nematode": {
+        "plant_name": "Potato",
+        "disease_name": "Nematode",
+        "description": "The system has detected signs of Nematode on this Potato leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Potato foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Nematode on Potato."
+    },
+    "Potato___pests": {
+        "plant_name": "Potato",
+        "disease_name": "Pests",
+        "description": "The system has detected signs of Pests on this Potato leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Potato foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Pests on Potato."
+    },
+    "Potato___phytophthora": {
+        "plant_name": "Potato",
+        "disease_name": "Phytophthora",
+        "description": "The system has detected signs of Phytophthora on this Potato leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Potato foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Phytophthora on Potato."
+    },
+    "Raspberry___healthy": {
+        "plant_name": "Raspberry",
+        "disease_name": "Healthy",
+        "description": "This Raspberry leaf appears perfectly healthy with no visible signs of disease or pests.",
+        "symptoms": "No symptoms of disease. The leaf color is normal and structural integrity is intact.",
+        "treatment_prevention": "Continue maintaining good agricultural practices, proper watering, and regular monitoring to keep the Raspberry healthy."
+    },
+    "Rice___bacterial_blight": {
+        "plant_name": "Rice",
+        "disease_name": "Bacterial Blight",
+        "description": "Bacterial blight is caused by Xanthomonas oryzae pv. oryzae. It is one of the most critical bacterial diseases affecting rice crops worldwide.",
+        "symptoms": "Water-soaked stripes starting at leaf tips and margins, turning yellow-to-white wavy lesions along the leaf length. Droplets of bacterial ooze may form on leaves in high humidity.",
+        "treatment_prevention": "Use resistant rice varieties. Avoid high nitrogen fertilizer rates which favor the bacteria. Keep fields clean of weeds. Drain fields if disease is detected early."
+    },
+    "Rice___blast": {
+        "plant_name": "Rice",
+        "disease_name": "Blast",
+        "description": "The system has detected signs of Blast on this Rice leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Rice foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Blast on Rice."
+    },
+    "Rice___brown_spot": {
+        "plant_name": "Rice",
+        "disease_name": "Brown Spot",
+        "description": "Brown spot is a fungal disease caused by Bipolaris oryzae, often associated with nutrient-deficient soils.",
+        "symptoms": "Numerous small, oval brown spots with grey or yellow centers (resembling sesame seeds) covering leaf surfaces. Severe infections can dry out entire leaves.",
+        "treatment_prevention": "Apply balanced fertilizers (potassium and micronutrients). Treat seeds with hot water or fungicides before planting. Improve soil drainage."
+    },
+    "Rice___tungro": {
+        "plant_name": "Rice",
+        "disease_name": "Tungro",
+        "description": "The system has detected signs of Tungro on this Rice leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Rice foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Tungro on Rice."
+    },
+    "Rose___healthy": {
+        "plant_name": "Rose",
+        "disease_name": "Healthy",
+        "description": "This Rose leaf appears perfectly healthy with no visible signs of disease or pests.",
+        "symptoms": "No symptoms of disease. The leaf color is normal and structural integrity is intact.",
+        "treatment_prevention": "Continue maintaining good agricultural practices, proper watering, and regular monitoring to keep the Rose healthy."
+    },
+    "Rose___rust": {
+        "plant_name": "Rose",
+        "disease_name": "Rust",
+        "description": "The system has detected signs of Rust on this Rose leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Rose foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Rust on Rose."
+    },
+    "Rose___slug_sawfly": {
+        "plant_name": "Rose",
+        "disease_name": "Slug Sawfly",
+        "description": "The system has detected signs of Slug Sawfly on this Rose leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Rose foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Slug Sawfly on Rose."
+    },
+    "Soybean___healthy": {
+        "plant_name": "Soybean",
+        "disease_name": "Healthy",
+        "description": "This Soybean leaf appears perfectly healthy with no visible signs of disease or pests.",
+        "symptoms": "No symptoms of disease. The leaf color is normal and structural integrity is intact.",
+        "treatment_prevention": "Continue maintaining good agricultural practices, proper watering, and regular monitoring to keep the Soybean healthy."
+    },
+    "Squash___powdery_mildew": {
+        "plant_name": "Squash",
+        "disease_name": "Powdery Mildew",
+        "description": "The system has detected signs of Powdery Mildew on this Squash leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Squash foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Powdery Mildew on Squash."
+    },
+    "Strawberry___healthy": {
+        "plant_name": "Strawberry",
+        "disease_name": "Healthy",
+        "description": "This Strawberry leaf appears perfectly healthy with no visible signs of disease or pests.",
+        "symptoms": "No symptoms of disease. The leaf color is normal and structural integrity is intact.",
+        "treatment_prevention": "Continue maintaining good agricultural practices, proper watering, and regular monitoring to keep the Strawberry healthy."
+    },
+    "Strawberry___leaf_scorch": {
+        "plant_name": "Strawberry",
+        "disease_name": "Leaf Scorch",
+        "description": "The system has detected signs of Leaf Scorch on this Strawberry leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Strawberry foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Leaf Scorch on Strawberry."
+    },
+    "Sugarcane___Healthy": {
+        "plant_name": "Sugarcane",
+        "disease_name": "Healthy",
+        "description": "This Sugarcane leaf appears perfectly healthy with no visible signs of disease or pests.",
+        "symptoms": "No symptoms of disease. The leaf color is normal and structural integrity is intact.",
+        "treatment_prevention": "Continue maintaining good agricultural practices, proper watering, and regular monitoring to keep the Sugarcane healthy."
+    },
+    "Sugarcane___Mosaic": {
+        "plant_name": "Sugarcane",
+        "disease_name": "Mosaic",
+        "description": "Sugarcane mosaic is caused by Sugarcane mosaic virus (SCMV). It produces a mosaic pattern of light and dark green on leaves, reducing photosynthetic capacity and growth.",
+        "symptoms": "Mosaic pattern of alternating light and dark green patches on leaves. Leaves may be narrower than normal. Severe infections cause stunting and reduced sugar content.",
+        "treatment_prevention": "Use resistant varieties, plant disease-free setts, control aphid vectors, roguing infected plants, and maintain good field hygiene."
+    },
+    "Sugarcane___RedRot": {
+        "plant_name": "Sugarcane",
+        "disease_name": "Red Rot",
+        "description": "Red rot is caused by the fungus Colletotrichum falcatum. It causes red discoloration of internal stalk tissue.",
+        "symptoms": "Reddening of the internal stalk pith with white patches. External symptoms include drying of leaves and withered top.",
+        "treatment_prevention": "Use resistant varieties, plant healthy setts, treat setts with fungicides, and maintain drainage."
+    },
+    "Sugarcane___Rust": {
+        "plant_name": "Sugarcane",
+        "disease_name": "Rust",
+        "description": "Sugarcane rust is caused by the fungus Puccinia melanocephala. It produces orange to reddish-brown pustules on leaves, reducing photosynthetic area.",
+        "symptoms": "Elongated, orange to reddish-brown pustules on both leaf surfaces. Severe infections cause premature leaf death and reduced cane weight and sugar content.",
+        "treatment_prevention": "Use resistant varieties, apply foliar fungicides in severe cases, maintain balanced nutrition (especially potassium), and ensure adequate plant spacing for airflow."
+    },
+    "Sugarcane___Yellow": {
+        "plant_name": "Sugarcane",
+        "disease_name": "Yellow",
+        "description": "Yellow leaf disease (YLD) is caused by Sugarcane yellow leaf virus (SCYLV). It causes yellowing of leaf midribs and can significantly reduce crop yield.",
+        "symptoms": "Yellowing of the leaf midrib on the underside, progressing to full leaf chlorosis. Stalks may show internal reddish discoloration. Plants are stunted with reduced tillering.",
+        "treatment_prevention": "Use virus-free planting material, plant resistant varieties, control aphid vectors, and use tissue-culture plantlets for clean seed stock."
+    },
+    "Sugercane___healthy": {
+        "plant_name": "Sugarcane",
+        "disease_name": "Healthy",
+        "description": "This Sugarcane leaf appears perfectly healthy with no visible signs of disease or pests.",
+        "symptoms": "No symptoms of disease. The leaf color is normal and structural integrity is intact.",
+        "treatment_prevention": "Continue maintaining good agricultural practices, proper watering, and regular monitoring to keep the Sugarcane healthy."
+    },
+    "Sugercane___mosaic": {
+        "plant_name": "Sugarcane",
+        "disease_name": "Mosaic",
+        "description": "Sugarcane mosaic is caused by Sugarcane mosaic virus (SCMV). It produces a mosaic pattern of light and dark green on leaves, reducing photosynthetic capacity.",
+        "symptoms": "Mosaic pattern of alternating light and dark green patches on leaves. Severe infections cause stunting and reduced sugar content.",
+        "treatment_prevention": "Use resistant varieties, plant disease-free setts, control aphid vectors, and maintain good field hygiene."
+    },
+    "Sugercane___red_rot": {
+        "plant_name": "Sugarcane",
+        "disease_name": "Red Rot",
+        "description": "Red rot is caused by the fungus Colletotrichum falcatum. It causes red discoloration of internal stalk tissue.",
+        "symptoms": "Reddening of the internal stalk pith with white patches. External symptoms include drying of leaves and withered top.",
+        "treatment_prevention": "Use resistant varieties, plant healthy setts, treat setts with fungicides, and maintain drainage."
+    },
+    "Sugercane___rust": {
+        "plant_name": "Sugarcane",
+        "disease_name": "Rust",
+        "description": "Sugarcane rust is caused by the fungus Puccinia melanocephala. It produces orange to reddish-brown pustules on leaves.",
+        "symptoms": "Elongated, orange to reddish-brown pustules on both leaf surfaces. Severe infections cause premature leaf death.",
+        "treatment_prevention": "Use resistant varieties, apply foliar fungicides in severe cases, and ensure adequate plant spacing for airflow."
+    },
+    "Sugercane___yellow_leaf": {
+        "plant_name": "Sugarcane",
+        "disease_name": "Yellow Leaf",
+        "description": "Yellow leaf disease (YLD) is caused by Sugarcane yellow leaf virus (SCYLV). It causes yellowing of leaf midribs.",
+        "symptoms": "Yellowing of the leaf midrib on the underside, progressing to full leaf chlorosis.",
+        "treatment_prevention": "Use virus-free planting material, plant resistant varieties, and control aphid vectors."
+    },
+    "Tomato___bacterial_spot": {
+        "plant_name": "Tomato",
+        "disease_name": "Bacterial Spot",
+        "description": "Bacterial spot is caused by Xanthomonas species. It is highly contagious in warm, wet conditions.",
+        "symptoms": "Small, dark, water-soaked spots on leaves. The centers of spots dry out and fall out, creating a 'shot-hole' appearance. Fruit develops raised, dark, scabby lesions.",
+        "treatment_prevention": "Avoid overhead watering. Apply copper-based bactericides early. Disinfect stakes and tools. Remove infected crop debris immediately."
+    },
+    "Tomato___early_blight": {
+        "plant_name": "Tomato",
+        "disease_name": "Early Blight",
+        "description": "Early blight is caused by the fungus Alternaria solani. It targets solanaceous crops like tomatoes and potatoes.",
+        "symptoms": "Dark brown, circular lesions with concentric rings ('target board') starting on older, lower leaves. Affected leaves yellow and drop off, exposing fruit to sunscald.",
+        "treatment_prevention": "Mulch the soil to prevent soil-borne spores from splashing onto lower leaves. Prune lower leaves to improve airflow. Apply copper or chlorothalonil fungicides."
+    },
+    "Tomato___healthy": {
+        "plant_name": "Tomato",
+        "disease_name": "Healthy",
+        "description": "The tomato plant leaves are healthy.",
+        "symptoms": "Normal leaf color, smooth margins, strong stems, and no spotting, yellowing, or curling.",
+        "treatment_prevention": "Provide deep watering at the base of the plant. Apply balanced organic fertilizers. Prune suckers to improve airflow."
+    },
+    "Tomato___late_blight": {
+        "plant_name": "Tomato",
+        "disease_name": "Late Blight",
+        "description": "Late blight is a highly destructive disease caused by Phytophthora infestans, thriving in cool, wet weather.",
+        "symptoms": "Large, dark, water-soaked spots on leaves and stems that expand rapidly and turn black. White fuzzy mold appears on leaf undersides in high humidity. Fruit develops large, firm, greasy brown blotches.",
+        "treatment_prevention": "Grow resistant cultivars. Keep foliage dry (use drip irrigation). Space plants for air circulation. Immediately pull and bag infected plants to prevent spore release."
+    },
+    "Tomato___leaf_curl": {
+        "plant_name": "Tomato",
+        "disease_name": "Leaf Curl",
+        "description": "The system has detected signs of Leaf Curl on this Tomato leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Tomato foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Leaf Curl on Tomato."
+    },
+    "Tomato___leaf_mold": {
+        "plant_name": "Tomato",
+        "disease_name": "Leaf Mold",
+        "description": "Leaf mold is caused by Passalora fulva, primarily affecting greenhouse tomatoes under high relative humidity.",
+        "symptoms": "Pale green or yellow spots on the upper leaf surfaces, with olive-green to brown velvety spore growth on the underside. Leaves curl, wither, and drop.",
+        "treatment_prevention": "Keep relative humidity below 85% by increasing ventilation and heat. Avoid wetting foliage when watering. Apply fungicides at first sign."
+    },
+    "Tomato___mosaic_virus": {
+        "plant_name": "Tomato",
+        "disease_name": "Mosaic Virus",
+        "description": "The system has detected signs of Mosaic Virus on this Tomato leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Tomato foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Mosaic Virus on Tomato."
+    },
+    "Tomato___septoria_leaf_spot": {
+        "plant_name": "Tomato",
+        "disease_name": "Septoria Leaf Spot",
+        "description": "Septoria leaf spot is caused by Septoria lycopersici. It is a common foliar disease of tomatoes.",
+        "symptoms": "Numerous tiny, circular spots with dark borders and grey/tan centers containing pinhead-sized black dots (pycnidia) on lower leaves.",
+        "treatment_prevention": "Avoid overhead watering. Mulch around plants. Practice crop rotation. Apply copper-based fungicides regularly during damp weather."
+    },
+    "Tomato___spider_mites": {
+        "plant_name": "Tomato",
+        "disease_name": "Spider Mites",
+        "description": "The system has detected signs of Spider Mites on this Tomato leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Tomato foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Spider Mites on Tomato."
+    },
+    "Tomato___target_spot": {
+        "plant_name": "Tomato",
+        "disease_name": "Target Spot",
+        "description": "Target spot is caused by the fungus Corynespora cassiicola, thriving in warm, humid weather.",
+        "symptoms": "Small, dark spots on leaves that expand, showing concentric rings. Lesions may coalesce, causing leaf drop.",
+        "treatment_prevention": "Ensure good air circulation. Remove lower infected leaves. Apply protectant fungicides."
+    },
+    "Watermelon___anthracnose": {
+        "plant_name": "Watermelon",
+        "disease_name": "Anthracnose",
+        "description": "The system has detected signs of Anthracnose on this Watermelon leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Watermelon foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Anthracnose on Watermelon."
+    },
+    "Watermelon___downy_mildew": {
+        "plant_name": "Watermelon",
+        "disease_name": "Downy Mildew",
+        "description": "The system has detected signs of Downy Mildew on this Watermelon leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Watermelon foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Downy Mildew on Watermelon."
+    },
+    "Watermelon___healthy": {
+        "plant_name": "Watermelon",
+        "disease_name": "Healthy",
+        "description": "This Watermelon leaf appears perfectly healthy with no visible signs of disease or pests.",
+        "symptoms": "No symptoms of disease. The leaf color is normal and structural integrity is intact.",
+        "treatment_prevention": "Continue maintaining good agricultural practices, proper watering, and regular monitoring to keep the Watermelon healthy."
+    },
+    "Watermelon___mosaic_virus": {
+        "plant_name": "Watermelon",
+        "disease_name": "Mosaic Virus",
+        "description": "The system has detected signs of Mosaic Virus on this Watermelon leaf. This is a common condition that can affect crop yield and plant health if left untreated.",
+        "symptoms": "Visible signs typically include discoloration, spots, lesions, or unusual patterns on the Watermelon foliage.",
+        "treatment_prevention": "Remove affected leaves to prevent spread. Ensure proper air circulation, avoid overhead watering, and apply appropriate treatments or fungicides designed for Mosaic Virus on Watermelon."
+    },
+    "Wheat___Aphid": {
+        "plant_name": "Wheat",
+        "disease_name": "Aphid",
+        "description": "Aphids are small sap-sucking insects that attack wheat crops. They cluster on leaves and stems, draining nutrients and weakening the plant. Heavy infestations can cause yellowing, stunted growth, and reduced grain yield.",
+        "symptoms": "Yellowing and curling of leaves, sticky honeydew residue on leaf surfaces, presence of small green or black insects on the underside of leaves, stunted growth, and distorted leaf tips.",
+        "treatment_prevention": "Use resistant wheat varieties, encourage natural predators like ladybugs and lacewings, apply insecticidal soap or neem oil for minor infestations, use systemic insecticides for severe outbreaks, and practice crop rotation."
+    },
+    "Wheat___Black_Rust": {
+        "plant_name": "Wheat",
+        "disease_name": "Black Rust (Stem Rust)",
+        "description": "Black rust, also known as stem rust, is caused by the fungus Puccinia graminis. It produces dark brown to black pustules on stems and leaf sheaths. It can cause significant yield losses by disrupting nutrient transport and weakening stems.",
+        "symptoms": "Dark brown to black elongated pustules on stems, leaf sheaths, and occasionally leaves. Pustules rupture the epidermis and release dark reddish-brown spores. Severe infections cause premature leaf senescence, stem weakening, and lodging.",
+        "treatment_prevention": "Plant resistant varieties, apply fungicides at early infection stages, destroy volunteer wheat and alternate hosts (barberry), practice crop rotation, and monitor fields regularly during warm, humid conditions."
+    },
+    "Wheat___Blast": {
+        "plant_name": "Wheat",
+        "disease_name": "Wheat Blast",
+        "description": "Wheat blast is caused by Magnaporthe oryzae pathotype Triticum. It is a devastating disease that causes bleaching of spikelets and can destroy entire heads. First identified in Brazil, now spreading globally.",
+        "symptoms": "Bleached, dry spikelets starting from the tip of the head. Lesions on leaves are initially small and diamond-shaped with gray centers and brown borders. Infected heads produce no grain.",
+        "treatment_prevention": "Use resistant varieties (primary control), apply fungicides preventively, avoid planting during warm and humid weather, practice crop rotation, and manage volunteer wheat plants."
+    },
+    "Wheat___Brown_Rust": {
+        "plant_name": "Wheat",
+        "disease_name": "Brown Rust (Leaf Rust)",
+        "description": "Brown rust is caused by Puccinia triticina and is the most common rust disease of wheat. It produces small, circular to oval orange-brown pustules primarily on the upper surface of leaves.",
+        "symptoms": "Small, circular to oval orange-brown pustules scattered across the upper leaf surface. Leaves may yellow and die prematurely. In severe cases, the disease reduces photosynthesis and grain filling.",
+        "treatment_prevention": "Use resistant varieties, apply foliar fungicides (triazoles or strobilurins) when disease appears, ensure adequate nutrition (especially nitrogen), avoid late planting, and practice crop rotation."
+    },
+    "Wheat___Common_Root_Rot": {
+        "plant_name": "Wheat",
+        "disease_name": "Common Root Rot",
+        "description": "Common root rot is caused by several soil-borne fungi including Bipolaris sorokiniana. It affects the roots and lower stem of wheat, reducing nutrient uptake and plant vigor.",
+        "symptoms": "Brown lesions on roots and crown area, yellowing of lower leaves, stunted plant growth, reduced tillering, and premature death of plants. Infected roots appear dark and decaying.",
+        "treatment_prevention": "Use certified disease-free seed, apply seed treatments (fungicides), practice crop rotation (at least 2 years), avoid waterlogged soils, maintain proper soil drainage, and use balanced fertilization."
+    },
+    "Wheat___Fusarium_Head_Blight": {
+        "plant_name": "Wheat",
+        "disease_name": "Fusarium Head Blight (Scab)",
+        "description": "Fusarium head blight (scab) is caused by Fusarium graminearum. It infects the wheat head during flowering, producing toxins that make grain unsafe for consumption.",
+        "symptoms": "Bleached or premature whitening of spikelets, pink or orange spore masses on infected spikelets, shriveled and lightweight grain (tombstones), reduced test weight, and mycotoxin contamination (deoxynivalenol/DON).",
+        "treatment_prevention": "Plant resistant varieties, apply fungicides at early flowering (anthesis), avoid planting after corn or other crop residues, tillage to bury crop debris, and ensure good field drainage."
+    },
+    "Wheat___Healthy": {
+        "plant_name": "Wheat",
+        "disease_name": "Healthy",
+        "description": "The wheat plant appears healthy with no visible signs of disease or pest damage. The leaves are green, vibrant, and free from spots, lesions, or discoloration.",
+        "symptoms": "No symptoms. Leaves are uniformly green, stems are strong and upright, and the plant shows normal growth and development.",
+        "treatment_prevention": "Continue good agricultural practices: proper irrigation, balanced fertilization, crop rotation, and regular field monitoring to maintain plant health."
+    },
+    "Wheat___Leaf_Blight": {
+        "plant_name": "Wheat",
+        "disease_name": "Helminthosporium Leaf Blight",
+        "description": "Helminthosporium leaf blight is caused by Bipolaris sorokiniana (formerly Helminthosporium sativum). It causes necrotic lesions on leaves that can merge and kill entire leaf blades.",
+        "symptoms": "Elongated, oval to rectangular brown lesions with dark borders on leaves. Lesions may have a tan center. Severe infections cause leaves to wither and die from the tip downward.",
+        "treatment_prevention": "Use resistant varieties, apply fungicides when disease is detected, practice crop rotation, use certified clean seed, and maintain balanced soil fertility."
+    },
+    "Wheat___Leaf_Spot": {
+        "plant_name": "Wheat",
+        "disease_name": "Leaf Spot",
+        "description": "Leaf spot on wheat is a general term for several fungal diseases including Helminthosporium leaf blight and Tan spot. They cause necrotic lesions on leaves that reduce photosynthetic area and yield.",
+        "symptoms": "Tan to brown oval or elongated lesions with yellow halos on leaves. Lesions may merge, causing leaf yellowing and premature death. The disease thrives in no-till systems with crop residue.",
+        "treatment_prevention": "Use resistant varieties, apply foliar fungicides, practice crop rotation, use certified clean seed, maintain balanced fertilization, and consider tillage to bury crop residue."
+    },
+    "Wheat___Mite": {
+        "plant_name": "Wheat",
+        "disease_name": "Mite",
+        "description": "Wheat mites (such as wheat curl mite and brown wheat mite) are tiny arachnids that feed on plant sap. They cause discoloration, leaf curling, and can transmit viral diseases.",
+        "symptoms": "Fine stippling (white or yellow dots) on leaves, leaf curling and distortion, bronze or silvery appearance of leaves, dried leaf tips, and reduced plant vigor. Severe infestations cause leaf death.",
+        "treatment_prevention": "Use miticides for severe infestations, control weeds that serve as mite hosts, plant early to avoid peak mite populations, use resistant varieties, and maintain adequate soil moisture."
+    },
+    "Wheat___Pest": {
+        "plant_name": "Wheat",
+        "disease_name": "Pest Damage",
+        "description": "Wheat pests include aphids, mites, and other sap-sucking insects that feed on plant sap, causing discoloration, leaf curling, and reduced plant vigor. They can also transmit viral diseases.",
+        "symptoms": "Yellowing and curling of leaves, fine stippling or silvering on leaf surfaces, presence of small insects on the underside of leaves, stunted growth, distorted leaf tips, and honeydew residue.",
+        "treatment_prevention": "Encourage natural predators (ladybugs, lacewings), apply insecticidal soap or neem oil for minor infestations, use systemic insecticides for severe outbreaks, control weeds, and practice crop rotation."
+    },
+    "Wheat___Mildew": {
+        "plant_name": "Wheat",
+        "disease_name": "Powdery Mildew",
+        "description": "Powdery mildew is caused by the fungus Blumeria graminis f. sp. tritici. It produces white, powdery fungal growth on the surface of leaves, stems, and sometimes heads.",
+        "symptoms": "White to grayish powdery patches on the upper surface of leaves. Affected areas may yellow and die. Severe infections reduce photosynthesis, causing yield loss and weakened grain filling.",
+        "treatment_prevention": "Plant resistant varieties, apply fungicides (triazoles or strobilurins) early, ensure good air circulation, avoid excessive nitrogen fertilization, and practice crop rotation."
+    },
+    "Wheat___Septoria": {
+        "plant_name": "Wheat",
+        "disease_name": "Septoria Leaf Blotch",
+        "description": "Septoria leaf blotch is caused by Septoria tritici. It is a major foliar disease of wheat, producing irregular necrotic lesions with visible black fruiting bodies (pycnidia).",
+        "symptoms": "Irregular, tan to brown lesions on leaves with dark specks (pycnidia) visible within the lesion. Lesions expand and merge, causing premature leaf death. Lower leaves are affected first.",
+        "treatment_prevention": "Use resistant varieties, apply foliar fungicides at flag leaf emergence, practice crop rotation, avoid planting infested residue, and maintain balanced fertilization."
+    },
+    "Wheat___Smut": {
+        "plant_name": "Wheat",
+        "disease_name": "Smut (Loose / Flag Smut)",
+        "description": "Wheat smut is caused by fungal pathogens (Urocystis tritici for flag smut, Tilletia caries for bunt). They replace grain kernels or leaf tissue with black, powdery spore masses.",
+        "symptoms": "Black, powdery spore masses replacing normal plant tissue. Flag smut produces long, dark streaks on leaves and stems. Loose smut replaces grain heads with masses of black spores.",
+        "treatment_prevention": "Use certified disease-free seed, apply seed treatment fungicides, plant resistant varieties, practice crop rotation, and remove infected plants before spores spread."
+    },
+    "Wheat___Stem_fly": {
+        "plant_name": "Wheat",
+        "disease_name": "Stem Fly",
+        "description": "Stem fly (Meromyza saltatrix) is a pest that lays eggs in wheat stems. The larvae feed inside the stem, causing structural damage, reduced nutrient transport, and dead hearts (dead central shoot).",
+        "symptoms": "White or transparent streaks on leaves, dead hearts (withering of the central shoot), stems that break easily, reduced grain filling, and presence of small white larvae inside the stem.",
+        "treatment_prevention": "Use resistant varieties, apply systemic insecticides, practice crop rotation, remove crop residues, and monitor fields during the larval stage."
+    },
+    "Wheat___Tan_spot": {
+        "plant_name": "Wheat",
+        "disease_name": "Tan Spot",
+        "description": "Tan spot is caused by Pyrenophora tritici-repentis. It produces tan-colored lesions with yellow halos on leaves, reducing photosynthetic area and yield.",
+        "symptoms": "Tan to brown oval lesions with yellow halos on leaves. Lesions may have a dark center. Severe infections cause leaf chlorosis and premature leaf death. The disease thrives in no-till systems with crop residue.",
+        "treatment_prevention": "Use resistant varieties, apply fungicides, tillage to bury crop residue, practice crop rotation, and maintain balanced fertilization."
+    },
+    "Wheat___Yellow_Rust": {
+        "plant_name": "Wheat",
+        "disease_name": "Yellow Rust (Stripe Rust)",
+        "description": "Yellow rust, also known as stripe rust, is caused by Puccinia striiformis f. sp. tritici. It produces yellow to orange pustules arranged in linear stripes along leaf veins.",
+        "symptoms": "Yellow to orange pustules arranged in long, linear stripes along leaf veins. Leaves may curl and die prematurely. Severe infections reduce photosynthesis and grain filling.",
+        "treatment_prevention": "Use resistant varieties, apply fungicides (triazoles or strobilurins) early, avoid susceptible varieties, practice crop rotation, and monitor fields during cool, wet weather."
+    },
+    "Wheat___Rust": {
+        "plant_name": "Wheat",
+        "disease_name": "Rust",
+        "description": "Wheat rust is a group of fungal diseases caused by Puccinia species (including stem rust, leaf/brown rust, and stripe/yellow rust). They produce colored pustules on leaves and stems, disrupting nutrient transport and reducing yield.",
+        "symptoms": "Orange, brown, or reddish-brown pustules on leaves, stems, and leaf sheaths. Pustules rupture to release powdery spores. Severe infections cause premature leaf death, stem weakening, and reduced grain filling.",
+        "treatment_prevention": "Use resistant varieties, apply foliar fungicides (triazoles or strobilurins) at early infection stages, practice crop rotation, destroy volunteer wheat and alternate hosts, and monitor fields regularly during warm, humid conditions."
+    },
+    "Maize___Common_Rust": {
+        "plant_name": "Maize",
+        "disease_name": "Common Rust",
+        "description": "Common rust is caused by the fungus Puccinia sorghi. It produces small, circular to elongated cinnamon-brown pustules on both leaf surfaces.",
+        "symptoms": "Small, circular to elongated cinnamon-brown pustules on both leaf surfaces. Pustules can merge to form larger lesions. Severe infections can cause premature leaf death and reduced grain fill.",
+        "treatment_prevention": "Plant resistant hybrids. Apply fungicides (triazoles or strobilurins) when conditions favor disease development (cool, humid weather). Monitor fields during the growing season."
+    },
+    "Maize___Gray_Leaf_Spot": {
+        "plant_name": "Maize",
+        "disease_name": "Gray Leaf Spot",
+        "description": "Gray leaf spot is caused by the fungus Cercospora zeae-maydis. It is one of the most damaging foliar diseases of maize in humid, warm regions.",
+        "symptoms": "Small, rectangular, tan to gray lesions on leaves that are limited by leaf veins, giving a rectangular appearance. Lesions can coalesce, killing entire leaves in severe cases.",
+        "treatment_prevention": "Rotate crops with non-host species (soybeans, small grains). Reduce residue by tillage or baling. Apply fungicides when disease appears on lower leaves."
+    },
+    "Maize___Healthy": {
+        "plant_name": "Maize",
+        "disease_name": "Healthy",
+        "description": "This Maize leaf appears perfectly healthy with no visible signs of disease or pests.",
+        "symptoms": "No symptoms of disease. The leaf color is normal and structural integrity is intact.",
+        "treatment_prevention": "Continue maintaining good agricultural practices, proper watering, and regular monitoring to keep the Maize healthy."
+    },
+    "Maize___Northern_Leaf_Blight": {
+        "plant_name": "Maize",
+        "disease_name": "Northern Leaf Blight",
+        "description": "Northern leaf blight is caused by the fungus Exserohilum turcicum. It produces large, cigar-shaped lesions on leaves, especially in cool, wet conditions.",
+        "symptoms": "Large, elongated, cigar-shaped, grayish-green to tan lesions (1-6 inches long) on leaves. Lesions often start on lower leaves and progress upward. Severe infections can cause significant yield loss.",
+        "treatment_prevention": "Plant resistant hybrids. Apply fungicides (triazoles or strobilurins) when lesions appear. Practice crop rotation and reduce residue to minimize inoculum."
+    },
+    "fallback": {
+        "plant_name": "Unknown",
+        "disease_name": "Unverified Condition",
+        "description": "The system identified a leaf but was unable to classify a specific disease with high confidence. This may be due to complex leaf patterns, dust, or a plant species not represented in our training database.",
+        "symptoms": "N/A",
+        "treatment_prevention": "Ensure the leaf is well-lit, in focus, and occupies the majority of the frame, then try scanning again."
+    },
+    "no_leaf": {
+        "plant_name": "No Leaf Detected",
+        "disease_name": "Invalid Image",
+        "description": "The AI engine could not confidently identify a plant leaf in this image. This usually happens if you upload a picture of a random object, logo, or if the leaf is too blurry.",
+        "symptoms": "N/A",
+        "treatment_prevention": "Please upload a clear, well-lit photo of a plant leaf that fills the majority of the frame."
+    },
+    "Rice_Add___Bacterial_leaf_blight": {
+        "plant_name": "Rice",
+        "disease_name": "Bacterial Leaf Blight",
+        "description": "Bacterial leaf blight is caused by Xanthomonas oryzae pv. oryzae. It is one of the most destructive bacterial diseases of rice worldwide.",
+        "symptoms": "Water-soaked stripes starting at leaf tips and margins, turning yellow-to-white wavy lesions along the leaf length. Droplets of bacterial ooze may appear on leaves in high humidity.",
+        "treatment_prevention": "Use resistant rice varieties. Avoid excessive nitrogen fertilization. Keep fields free of weeds and maintain proper water management. Drain fields if disease is detected early."
+    },
+    "Rice_Add___Brown_spot": {
+        "plant_name": "Rice",
+        "disease_name": "Brown Spot",
+        "description": "Brown spot is caused by the fungus Bipolaris oryzae. It thrives in nutrient-poor soils and high humidity, causing significant yield losses in rice.",
+        "symptoms": "Small, oval to circular brown lesions on leaves with gray or white centers. Lesions may coalesce causing leaf yellowing and drying. Also affects glumes and grains.",
+        "treatment_prevention": "Improve soil fertility with balanced fertilization (especially potassium and silicon). Use resistant varieties. Apply fungicides if severe. Ensure proper water management."
+    },
+    "Rice_Add___Leaf_smut": {
+        "plant_name": "Rice",
+        "disease_name": "Leaf Smut",
+        "description": "Leaf smut is caused by the fungus Entyloma oryzae. It is a minor disease but can reduce photosynthetic area and grain yield in severe cases.",
+        "symptoms": "Small, dark brown to black raised spots (smut pustules) on the upper surface of leaves. Spots may be circular or angular and often appear in groups. Leaves may turn yellow around lesions.",
+        "treatment_prevention": "Use disease-free seeds. Maintain proper field sanitation by removing infected debris. Balanced fertilization and proper water management reduce disease severity. Fungicide application is rarely needed."
+    }
+}

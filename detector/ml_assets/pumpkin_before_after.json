@@ -1,0 +1,96 @@
+{
+    "BEFORE (pre-correction)": {
+        "per_class_acc": {
+            "Bacterial Leaf Spot": 10.0,
+            "Downy Mildew": 92.5,
+            "Healthy Leaf": 95.0,
+            "Mosaic Disease": 97.5,
+            "Powdery Mildew": 56.41
+        },
+        "overall_acc": 70.0,
+        "cm": [
+            [
+                4,
+                1,
+                0,
+                0,
+                35
+            ],
+            [
+                3,
+                37,
+                0,
+                0,
+                0
+            ],
+            [
+                2,
+                0,
+                38,
+                0,
+                0
+            ],
+            [
+                0,
+                0,
+                0,
+                39,
+                1
+            ],
+            [
+                2,
+                3,
+                8,
+                4,
+                22
+            ]
+        ]
+    },
+    "AFTER (corrected)": {
+        "per_class_acc": {
+            "Bacterial Leaf Spot": 92.5,
+            "Downy Mildew": 92.5,
+            "Healthy Leaf": 100.0,
+            "Mosaic Disease": 97.5,
+            "Powdery Mildew": 100.0
+        },
+        "overall_acc": 96.0,
+        "cm": [
+            [
+                37,
+                3,
+                0,
+                0,
+                0
+            ],
+            [
+                2,
+                37,
+                1,
+                0,
+                0
+            ],
+            [
+                0,
+                0,
+                40,
+                0,
+                0
+            ],
+            [
+                1,
+                0,
+                0,
+                39,
+                0
+            ],
+            [
+                0,
+                0,
+                0,
+                0,
+                39
+            ]
+        ]
+    }
+}

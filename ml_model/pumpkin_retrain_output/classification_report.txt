@@ -1,0 +1,12 @@
+Classification Report (test set)
+============================================================
+class                                     precision     recall         f1  support
+Pumpkin___bacterial_leaf_spot                0.8372     0.9000     0.8675       40
+Pumpkin___downy_mildew                       0.8919     0.8250     0.8571       40
+Pumpkin___healthy                            0.9524     1.0000     0.9756       40
+Pumpkin___mosaic_disease                     0.9744     0.9500     0.9620       40
+Pumpkin___powdery_mildew                     1.0000     0.9750     0.9873       40
+------------------------------------------------------------
+accuracy                                      93.00% (186/200)
+------------------------------------------------------------
+macro avg precision/recall/f1: 0.9312 / 0.9300 / 0.9299

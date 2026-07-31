@@ -1,0 +1,472 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf Lenz - AI Plant Disease Diagnostic & Encyclopedia</title>
+    
+    <!-- SEO Optimization Meta Tags -->
+    <meta name="description" content="Diagnose plant diseases instantly using Leaf Lenz AI. Advanced neural networks analyze leaf photos to detect 30 conditions with active treatment plans.">
+    <meta name="keywords" content="Leaf Lenz, plant disease detector, AI crop health, garden diagnosis, botany scanner, plant disease analyzer">
+    <meta property="og:title" content="Leaf Lenz - AI Plant Disease Diagnostic & Encyclopedia">
+    <meta property="og:description" content="Instant plant health scanner with detailed treatment recommendations, statistics dashboard, and crop disease encyclopedia.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'detector/css/style.css' %}?v=2">
+</head>
+<body>
+
+    <!-- ===== ONBOARDING POPUP MODAL ===== -->
+    <div class="onboarding-overlay" id="onboarding-overlay">
+        <div class="onboarding-modal" id="onboarding-modal">
+            <!-- Header -->
+            <div class="onboarding-header">
+                <div class="onboarding-logo">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <h2>Welcome to <span>LeafLenz</span></h2>
+                <p>For the best diagnosis, follow these simple photo tips</p>
+            </div>
+
+            <!-- Tips Grid -->
+            <div class="onboarding-tips">
+                <!-- DO THIS -->
+                <div class="tip-card tip-good">
+                    <div class="tip-badge good-badge"><i class="fa-solid fa-check"></i> Do This</div>
+                    <div class="tip-icons-row">
+                        <div class="tip-icon-item">
+                            <div class="tip-icon-circle good">
+                                <i class="fa-solid fa-sun"></i>
+                            </div>
+                            <span>Good lighting</span>
+                        </div>
+                        <div class="tip-icon-item">
+                            <div class="tip-icon-circle good">
+                                <i class="fa-solid fa-expand"></i>
+                            </div>
+                            <span>Leaf fills frame</span>
+                        </div>
+                        <div class="tip-icon-item">
+                            <div class="tip-icon-circle good">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <span>In sharp focus</span>
+                        </div>
+                        <div class="tip-icon-item">
+                            <div class="tip-icon-circle good">
+                                <i class="fa-solid fa-image"></i>
+                            </div>
+                            <span>Both sides visible</span>
+                        </div>
+                    </div>
+                    <div class="tip-example good-example">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <p>Hold the leaf flat, fill the frame, ensure the affected area is clearly visible and well-lit.</p>
+                    </div>
+                </div>
+
+                <!-- DON'T DO THIS -->
+                <div class="tip-card tip-bad">
+                    <div class="tip-badge bad-badge"><i class="fa-solid fa-xmark"></i> Avoid This</div>
+                    <div class="tip-icons-row">
+                        <div class="tip-icon-item">
+                            <div class="tip-icon-circle bad">
+                                <i class="fa-solid fa-moon"></i>
+                            </div>
+                            <span>Dark / shadows</span>
+                        </div>
+                        <div class="tip-icon-item">
+                            <div class="tip-icon-circle bad">
+                                <i class="fa-solid fa-compress"></i>
+                            </div>
+                            <span>Leaf too far</span>
+                        </div>
+                        <div class="tip-icon-item">
+                            <div class="tip-icon-circle bad">
+                                <i class="fa-solid fa-rotate"></i>
+                            </div>
+                            <span>Blurry / shaky</span>
+                        </div>
+                        <div class="tip-icon-item">
+                            <div class="tip-icon-circle bad">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </div>
+                            <span>Cluttered bg</span>
+                        </div>
+                    </div>
+                    <div class="tip-example bad-example">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <p>Avoid blurry photos, dark rooms, crowded backgrounds, or leaves that are too small in frame.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proceed Button -->
+            <button class="onboarding-btn" id="onboarding-proceed-btn">
+                <i class="fa-solid fa-arrow-right"></i>
+                Got it — Start Scanning
+            </button>
+            <p class="onboarding-skip" id="onboarding-skip">Skip this tip</p>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-left">
+                <div class="logo">
+                    <i class="fa-solid fa-leaf leaf-logo"></i>
+                    <h1>Leaf<span>Lenz</span></h1>
+                </div>
+                <p class="tagline">Instant AI Plant Leaf & Disease Identification</p>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="app-nav">
+            <button class="nav-btn active" data-tab="scanner" id="nav-scanner-btn">
+                <i class="fa-solid fa-magnifying-glass-chart"></i> AI Scanner
+            </button>
+            <button class="nav-btn" data-tab="encyclopedia" id="nav-encyclopedia-btn">
+                <i class="fa-solid fa-book-open"></i> Disease Encyclopedia
+            </button>
+            <button class="nav-btn" data-tab="analytics" id="nav-analytics-btn">
+                <i class="fa-solid fa-chart-line"></i> Analytics & Stats
+            </button>
+        </nav>
+
+        <!-- Tab: Scanner Content -->
+        <div id="tab-scanner" class="tab-content active">
+            <!-- Main Dashboard Layout -->
+            <main class="dashboard-grid">
+                <!-- Left Panel: Interactive Scan & Capture -->
+                <section class="panel scan-panel">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-expand"></i> Diagnostics Scan</h2>
+                        <span class="mode-indicator">Local Engine</span>
+                    </div>
+
+                    <!-- Media Switcher (Upload vs Camera) -->
+                    <div class="media-tabs">
+                        <button class="media-tab active" id="tab-upload">
+                            <i class="fa-solid fa-cloud-arrow-up"></i> Upload Image
+                        </button>
+                        <button class="media-tab" id="tab-camera">
+                            <i class="fa-solid fa-camera"></i> Live Camera
+                        </button>
+                    </div>
+
+                    <!-- Crop Selector -->
+                    <div class="crop-selector-bar">
+                        <label for="crop-select"><i class="fa-solid fa-seedling"></i> Select your crop:</label>
+                        <select id="crop-select" class="form-select crop-select">
+                            <option value="auto">Auto-detect (General Model)</option>
+                            <optgroup label="Specialized Models">
+                                <option value="wheat">🌾 Wheat</option>
+                                <option value="maize">🌽 Maize / Corn</option>
+                            </optgroup>
+                            <optgroup label="General Model — Fruits">
+                                <option value="apple">Apple</option>
+                                <option value="blueberry">Blueberry</option>
+                                <option value="cherry">Cherry</option>
+                                <option value="grape">Grape</option>
+                                <option value="mango">Mango</option>
+                                <option value="orange">Orange</option>
+                                <option value="peach">Peach</option>
+                                <option value="raspberry">Raspberry</option>
+                                <option value="strawberry">Strawberry</option>
+                                <option value="watermelon">Watermelon</option>
+                            </optgroup>
+                            <optgroup label="General Model — Vegetables & Crops">
+                                <option value="bell_pepper">Bell Pepper</option>
+                                <option value="cassava">Cassava</option>
+                                <option value="coffee">Coffee</option>
+                                <option value="potato">Potato</option>
+                                <option value="rice">Rice</option>
+                                <option value="soybean">Soybean</option>
+                                <option value="squash">Squash</option>
+                                <option value="sugarcane">Sugarcane</option>
+                                <option value="tomato">Tomato</option>
+                                <option value="cotton">Cotton</option>
+                                <option value="groundnut">Groundnut</option>
+                                <option value="pumpkin">Pumpkin</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <!-- File Drop/Upload Zone -->
+                    <div class="drop-zone" id="upload-zone">
+                        <input type="file" id="file-input" accept="image/*" class="file-input">
+                        <div class="drop-zone-content">
+                            <div class="icon-circle">
+                                <i class="fa-solid fa-image-polaroid-user"></i>
+                                <i class="fa-solid fa-arrow-up-from-bracket bounce-icon"></i>
+                            </div>
+                            <h3>Drag & drop your leaf photo</h3>
+                            <p>Supports JPEG, PNG up to 10MB</p>
+                            <button class="btn btn-primary">Browse Files</button>
+                        </div>
+                    </div>
+
+                    <!-- Camera Viewport (Hidden initially) -->
+                    <div class="camera-zone hidden" id="camera-zone">
+                        <div class="camera-viewport">
+                            <video id="video-stream" autoplay playsinline muted></video>
+                            <div class="camera-overlay">
+                                <div class="focus-brackets"></div>
+                            </div>
+                            <canvas id="capture-canvas" class="hidden"></canvas>
+                        </div>
+                        <div class="camera-controls">
+                            <button class="btn btn-secondary" id="btn-stop-camera">
+                                <i class="fa-solid fa-xmark"></i> Stop
+                            </button>
+                            <button class="btn btn-success circle-btn" id="btn-snap" title="Capture Image">
+                                <div class="inner-circle"></div>
+                            </button>
+                            <div class="placeholder-spacer"></div>
+                        </div>
+                    </div>
+
+                    <!-- Image Preview Area -->
+                    <div class="image-preview-container hidden" id="preview-container">
+                        <img id="image-preview" src="" alt="Leaf Preview">
+                        <div class="preview-overlay">
+                            <button class="btn btn-danger btn-sm" id="btn-reset">
+                                <i class="fa-solid fa-trash"></i> Remove
+                            </button>
+                            <button class="btn btn-success btn-sm" id="btn-analyze">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i> Analyze Leaf
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Right Panel: AI Diagnosis Results -->
+                <section class="panel results-panel empty" id="results-panel">
+                    <!-- Welcome/Empty State -->
+                    <div class="empty-state" id="results-empty">
+                        <div class="pulse-plant">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3>Waiting for Analysis</h3>
+                        <p>Upload a leaf image or click a live picture to diagnose plant diseases instantly.</p>
+                    </div>
+
+                    <!-- Analyzing/Loading State -->
+                    <div class="loading-state hidden" id="results-loading">
+                        <div class="leaf-loader">
+                            <i class="fa-solid fa-leaf spin-leaf"></i>
+                            <div class="scan-bar"></div>
+                        </div>
+                        <h3>Diagnosing Leaf Health...</h3>
+                        <p>Extracting plant features and running neural network classification...</p>
+                    </div>
+
+                    <!-- Results Output State (Hidden initially) -->
+                    <div class="results-content hidden" id="results-content">
+                        <!-- Disease Result Banner -->
+                        <div class="prediction-header-card" id="prediction-header-card">
+                            <div class="plant-badge" id="res-plant">Tomato</div>
+                            <!-- Big Disease Name -->
+                            <div class="disease-result-block" id="disease-result-block">
+                                <div class="disease-result-icon" id="disease-result-icon">
+                                    <i class="fa-solid fa-virus" id="disease-icon-el"></i>
+                                </div>
+                                <h2 class="disease-title" id="res-disease">Early Blight</h2>
+                                <p class="disease-subtitle" id="disease-subtitle">Disease Detected</p>
+                            </div>
+                            <!-- Hidden confidence (kept for JS logic) -->
+                            <div class="confidence-container" style="display:none;">
+                                <strong id="res-confidence"></strong>
+                                <div class="progress-bar-bg"><div class="progress-bar-fill" id="res-confidence-bar"></div></div>
+                            </div>
+                        </div>
+
+                        <!-- Crop Mismatch Warning (hidden by default) -->
+                        <div class="crop-mismatch-warning hidden" id="crop-mismatch-warning">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <span id="crop-mismatch-text"></span>
+                        </div>
+
+                        <!-- Tabs for Info -->
+                        <div class="info-tabs">
+                            <button class="info-tab active" data-target="info-about">About</button>
+                            <button class="info-tab" data-target="info-symptoms">Symptoms</button>
+                            <button class="info-tab" data-target="info-treatment">Treatment</button>
+                        </div>
+
+                        <!-- Info Tab Contents -->
+                        <div class="info-content-container">
+                            <div class="info-pane active" id="info-about">
+                                <h3><i class="fa-solid fa-circle-info"></i> About the Condition</h3>
+                                <p id="desc-text">...</p>
+                            </div>
+                            <div class="info-pane" id="info-symptoms">
+                                <h3><i class="fa-solid fa-list-check"></i> Symptoms</h3>
+                                <p id="symptoms-text">...</p>
+                            </div>
+                            <div class="info-pane" id="info-treatment">
+                                <h3><i class="fa-solid fa-hand-holding-medical"></i> Treatment & Prevention</h3>
+                                <p id="treatment-text">...</p>
+                            </div>
+                        </div>
+
+                        <!-- User Feedback -->
+                        <div class="feedback-footer">
+                            <span id="feedback-prompt">Was this prediction accurate?</span>
+                            <div class="feedback-buttons" id="feedback-btns">
+                                <button class="btn btn-outline-success" id="btn-feedback-yes" title="Correct">
+                                    <i class="fa-solid fa-thumbs-up"></i> Yes
+                                </button>
+                                <button class="btn btn-outline-danger" id="btn-feedback-no" title="Incorrect">
+                                    <i class="fa-solid fa-thumbs-down"></i> No
+                                </button>
+                            </div>
+                            <div class="feedback-thanks hidden" id="feedback-thanks">
+                                <i class="fa-solid fa-circle-check"></i> Thank you for your feedback!
+                            </div>
+                        </div>
+
+                        <!-- Correction Form Panel (Hidden initially) -->
+                        <div class="correction-form-panel hidden" id="correction-form-panel">
+                            <div class="divider"></div>
+                            <h4><i class="fa-solid fa-triangle-exclamation"></i> Correct the diagnosis</h4>
+                            <p class="form-help-text">Select the correct plant condition from the list below to improve our system model accuracy.</p>
+                            
+                            <div class="form-group">
+                                <label for="correction-select">Correct Condition:</label>
+                                <select id="correction-select" class="form-select">
+                                    <!-- Loaded dynamically from api/diseases/ -->
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="correction-comments">Additional notes (Optional):</label>
+                                <textarea id="correction-comments" placeholder="Describe the symptoms you notice..." class="form-textarea" rows="2"></textarea>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button class="btn btn-sm btn-outline-secondary" id="btn-cancel-correction">Cancel</button>
+                                <button class="btn btn-sm btn-primary" id="btn-submit-correction">Submit Correction</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Bottom Section: Scan History -->
+            <section class="panel history-section">
+                <div class="panel-header">
+                    <h2><i class="fa-solid fa-history"></i> Recent Diagnostics History</h2>
+                    <span class="history-count" id="history-count">0 items</span>
+                </div>
+                
+                <div class="history-scroll-container">
+                    <div class="history-grid" id="history-grid">
+                        <!-- History cards will load dynamically via JS -->
+                        <div class="no-history-state" id="no-history-text">
+                            <p><i class="fa-solid fa-folder-open"></i> No previous scans found. Log some predictions above!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Tab: Encyclopedia Content -->
+        <div id="tab-encyclopedia" class="tab-content hidden">
+            <section class="panel encyclopedia-panel">
+                <div class="panel-header">
+                    <h2><i class="fa-solid fa-book-open"></i> Plant Disease Encyclopedia</h2>
+                    <span class="badge" id="encyclopedia-count">30 conditions</span>
+                </div>
+                
+                <!-- Search & Filters -->
+                <div class="search-filter-bar">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="encyclopedia-search" placeholder="Search plants, diseases, symptoms or treatments...">
+                    </div>
+                    <div class="filter-box">
+                        <i class="fa-solid fa-filter"></i>
+                        <select id="encyclopedia-filter">
+                            <option value="all">All Plants</option>
+                            <!-- Plant options will populate dynamically -->
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Encyclopedia List Grid -->
+                <div class="encyclopedia-grid" id="encyclopedia-grid">
+                    <!-- Cards will be populated dynamically -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Tab: Analytics Content -->
+        <div id="tab-analytics" class="tab-content hidden">
+            <section class="panel stats-panel">
+                <div class="panel-header">
+                    <h2><i class="fa-solid fa-chart-line"></i> Analytics Dashboard</h2>
+                    <span class="mode-indicator">Real-time DB Sync</span>
+                </div>
+
+                <!-- Key Metrics Cards -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon scan-icon"><i class="fa-solid fa-qrcode"></i></div>
+                        <div class="metric-info">
+                            <span class="metric-label">Total Scans</span>
+                            <h3 class="metric-value" id="stat-total-scans">0</h3>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon accuracy-icon"><i class="fa-solid fa-circle-check"></i></div>
+                        <div class="metric-info">
+                            <span class="metric-label">Accuracy Rate</span>
+                            <h3 class="metric-value" id="stat-accuracy">100%</h3>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon correct-icon"><i class="fa-solid fa-thumbs-up"></i></div>
+                        <div class="metric-info">
+                            <span class="metric-label">Verified Correct</span>
+                            <h3 class="metric-value" id="stat-correct">0</h3>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon incorrect-icon"><i class="fa-solid fa-thumbs-down"></i></div>
+                        <div class="metric-info">
+                            <span class="metric-label">Corrections Logged</span>
+                            <h3 class="metric-value" id="stat-incorrect">0</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-details-grid">
+                    <div class="stats-chart-card">
+                        <h3><i class="fa-solid fa-chart-bar"></i> Scan Distribution by Plant Type</h3>
+                        <div class="chart-container" id="stats-distribution-chart">
+                            <!-- Populated dynamically with percentage bars -->
+                            <div class="no-stats-state" id="no-stats-text">
+                                <p><i class="fa-solid fa-chart-pie"></i> No data recorded yet. Run diagnostics scans to view plant distribution.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- JavaScript code -->
+    <script src="{% static 'detector/js/app.js' %}?v=3"></script>
+</body>
+</html>

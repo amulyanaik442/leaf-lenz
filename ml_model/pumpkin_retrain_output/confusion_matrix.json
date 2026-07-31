@@ -1,0 +1,46 @@
+{
+    "classes": [
+        "Pumpkin___bacterial_leaf_spot",
+        "Pumpkin___downy_mildew",
+        "Pumpkin___healthy",
+        "Pumpkin___mosaic_disease",
+        "Pumpkin___powdery_mildew"
+    ],
+    "confusion_matrix": [
+        [
+            36,
+            3,
+            1,
+            0,
+            0
+        ],
+        [
+            5,
+            33,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            40,
+            0,
+            0
+        ],
+        [
+            1,
+            1,
+            0,
+            38,
+            0
+        ],
+        [
+            1,
+            0,
+            0,
+            0,
+            39
+        ]
+    ]
+}
