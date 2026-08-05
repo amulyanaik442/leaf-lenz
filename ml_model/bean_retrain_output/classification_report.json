@@ -1,0 +1,29 @@
+{
+    "rows": {
+        "bean___healthy": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 13
+        },
+        "bean___downy_mildew": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 13
+        },
+        "bean___leafminer": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 13
+        },
+        "bean___powdery_mildew": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 13
+        }
+    },
+    "accuracy": 1.0
+}

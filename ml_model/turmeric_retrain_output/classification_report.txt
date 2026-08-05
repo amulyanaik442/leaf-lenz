@@ -1,0 +1,9 @@
+Turmeric Classification Report (internal test set)
+============================================================
+class                         precision     recall         f1  support
+Turmeric___aphids_disease        1.0000     1.0000     1.0000        8
+Turmeric___blotch                1.0000     1.0000     1.0000        8
+Turmeric___healthy               1.0000     1.0000     1.0000        8
+Turmeric___leaf_spot             1.0000     1.0000     1.0000        8
+------------------------------------------------------------
+accuracy                         100.00% (32/32)

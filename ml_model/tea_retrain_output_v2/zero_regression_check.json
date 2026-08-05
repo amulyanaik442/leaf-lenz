@@ -1,0 +1,5 @@
+{
+    "non_tea_weight_max_diff": 0.0,
+    "non_tea_bias_max_diff": 0.0,
+    "zero_regression_ok": true
+}

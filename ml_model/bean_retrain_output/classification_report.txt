@@ -1,0 +1,9 @@
+bean Classification Report (internal test set)
+============================================================
+class                           precision     recall         f1  support
+bean___healthy                      1.0000     1.0000     1.0000       13
+bean___downy_mildew                 1.0000     1.0000     1.0000       13
+bean___leafminer                    1.0000     1.0000     1.0000       13
+bean___powdery_mildew               1.0000     1.0000     1.0000       13
+------------------------------------------------------------
+accuracy                           100.00% (52/52)

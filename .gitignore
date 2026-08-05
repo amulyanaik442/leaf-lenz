@@ -54,6 +54,9 @@ ml_model/*_split_data/
 detector/ml_assets/*.onnx.bak*
 *.bak
 
+# === Large local dataset backups (too big for git) ===
+ml_model/cacao_backup_pre_removal_20260801_115245/
+
 # === Secrets ===
 .env
 .env.local

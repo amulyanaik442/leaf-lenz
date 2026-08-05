@@ -1,0 +1,11 @@
+{
+    "non_turmeric_weight_max_diff": 0.0,
+    "non_turmeric_bias_max_diff": 0.0,
+    "zero_regression_ok": true,
+    "inference_spot_check": {
+        "samples": 658,
+        "max_logit_diff_first_123": 0.0,
+        "top1_old_class_changed": 0,
+        "turmeric_false_positives": 35
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "classes": [
+        "cauliflower___healthy",
+        "cauliflower___black_rot",
+        "cauliflower___downy_mildew",
+        "cauliflower___bacterial_spot_rot"
+    ],
+    "confusion_matrix": [
+        [
+            6,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            6,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            6,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            6
+        ]
+    ]
+}

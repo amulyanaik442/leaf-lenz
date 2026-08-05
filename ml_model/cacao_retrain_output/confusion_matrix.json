@@ -1,0 +1,16 @@
+{
+    "classes": [
+        "Cacao___healthy",
+        "Cacao___anthracnose"
+    ],
+    "confusion_matrix": [
+        [
+            169,
+            37
+        ],
+        [
+            22,
+            184
+        ]
+    ]
+}

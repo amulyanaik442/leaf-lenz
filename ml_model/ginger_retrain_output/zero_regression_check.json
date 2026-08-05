@@ -1,0 +1,11 @@
+{
+    "non_ginger_weight_max_diff": 0.0,
+    "non_ginger_bias_max_diff": 0.0,
+    "zero_regression_ok": true,
+    "inference_spot_check": {
+        "samples": 747,
+        "max_logit_diff_first_130": 0.0,
+        "top1_old_class_changed": 0,
+        "ginger_false_positives": 191
+    }
+}

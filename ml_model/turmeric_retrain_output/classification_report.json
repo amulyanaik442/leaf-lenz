@@ -1,0 +1,29 @@
+{
+    "rows": {
+        "Turmeric___aphids_disease": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 8
+        },
+        "Turmeric___blotch": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 8
+        },
+        "Turmeric___healthy": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 8
+        },
+        "Turmeric___leaf_spot": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 8
+        }
+    },
+    "accuracy": 1.0
+}

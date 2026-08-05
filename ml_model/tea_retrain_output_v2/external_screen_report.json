@@ -1,0 +1,538 @@
+{
+    "algal": [
+        {
+            "file": "images (1).jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.69,
+            "own_class_dist": 0.772,
+            "own_95pct_threshold": 0.6133226752281189,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (10).jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.668,
+            "own_class_dist": 0.726,
+            "own_95pct_threshold": 0.6133226752281189,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (11).jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.713,
+            "own_class_dist": 0.797,
+            "own_95pct_threshold": 0.6133226752281189,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (2).jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.759,
+            "own_class_dist": 0.807,
+            "own_95pct_threshold": 0.6133226752281189,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (3).jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.71,
+            "own_class_dist": 0.816,
+            "own_95pct_threshold": 0.6133226752281189,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (6).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.763,
+            "own_class_dist": 0.847,
+            "own_95pct_threshold": 0.6133226752281189,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (7).jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.795,
+            "own_class_dist": 0.901,
+            "own_95pct_threshold": 0.6133226752281189,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (9).jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.722,
+            "own_class_dist": 0.835,
+            "own_95pct_threshold": 0.6133226752281189,
+            "flag": "MISLABEL?"
+        }
+    ],
+    "anthracnoses": [
+        {
+            "file": "images (1).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.562,
+            "own_class_dist": 0.71,
+            "own_95pct_threshold": 0.6370636224746704,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (10).jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.665,
+            "own_class_dist": 0.665,
+            "own_95pct_threshold": 0.6370636224746704,
+            "flag": "OOD"
+        },
+        {
+            "file": "images (12).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.702,
+            "own_class_dist": 0.781,
+            "own_95pct_threshold": 0.6370636224746704,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (13).jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.725,
+            "own_class_dist": 0.725,
+            "own_95pct_threshold": 0.6370636224746704,
+            "flag": "OOD"
+        },
+        {
+            "file": "images (5).jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.963,
+            "own_class_dist": 0.963,
+            "own_95pct_threshold": 0.6370636224746704,
+            "flag": "OOD"
+        },
+        {
+            "file": "images (7).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.62,
+            "own_class_dist": 0.695,
+            "own_95pct_threshold": 0.6370636224746704,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (8).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.718,
+            "own_class_dist": 0.767,
+            "own_95pct_threshold": 0.6370636224746704,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (9).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.642,
+            "own_class_dist": 0.714,
+            "own_95pct_threshold": 0.6370636224746704,
+            "flag": "MISLABEL?"
+        }
+    ],
+    "bird eye spot": [
+        {
+            "file": "images (1).jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.74,
+            "own_class_dist": 0.838,
+            "own_95pct_threshold": 0.5549938082695007,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (14).jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.752,
+            "own_class_dist": 0.858,
+            "own_95pct_threshold": 0.5549938082695007,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (2).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.707,
+            "own_class_dist": 0.803,
+            "own_95pct_threshold": 0.5549938082695007,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (3).jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.706,
+            "own_class_dist": 0.783,
+            "own_95pct_threshold": 0.5549938082695007,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (4).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.876,
+            "own_class_dist": 0.973,
+            "own_95pct_threshold": 0.5549938082695007,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (5).jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.698,
+            "own_class_dist": 0.798,
+            "own_95pct_threshold": 0.5549938082695007,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (6).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.691,
+            "own_class_dist": 0.754,
+            "own_95pct_threshold": 0.5549938082695007,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images.jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.835,
+            "own_class_dist": 0.913,
+            "own_95pct_threshold": 0.5549938082695007,
+            "flag": "MISLABEL?"
+        }
+    ],
+    "brown blight": [
+        {
+            "file": "gray-blight.jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.802,
+            "own_class_dist": 0.802,
+            "own_95pct_threshold": 0.6368932723999023,
+            "flag": "OOD"
+        },
+        {
+            "file": "images (1).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.838,
+            "own_class_dist": 0.838,
+            "own_95pct_threshold": 0.6368932723999023,
+            "flag": "OOD"
+        },
+        {
+            "file": "images (2).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.577,
+            "own_class_dist": 0.577,
+            "own_95pct_threshold": 0.6368932723999023,
+            "flag": "ok"
+        },
+        {
+            "file": "images (3).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.64,
+            "own_class_dist": 0.64,
+            "own_95pct_threshold": 0.6368932723999023,
+            "flag": "OOD"
+        },
+        {
+            "file": "images (4).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.816,
+            "own_class_dist": 0.816,
+            "own_95pct_threshold": 0.6368932723999023,
+            "flag": "OOD"
+        },
+        {
+            "file": "images (7).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.64,
+            "own_class_dist": 0.64,
+            "own_95pct_threshold": 0.6368932723999023,
+            "flag": "OOD"
+        },
+        {
+            "file": "images.jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.863,
+            "own_class_dist": 0.863,
+            "own_95pct_threshold": 0.6368932723999023,
+            "flag": "OOD"
+        }
+    ],
+    "gray light": [
+        {
+            "file": "brown_blight_4.jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.83,
+            "own_class_dist": 0.83,
+            "own_95pct_threshold": 0.6368932723999023,
+            "flag": "OOD"
+        },
+        {
+            "file": "images (1).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.639,
+            "own_class_dist": 0.639,
+            "own_95pct_threshold": 0.6368932723999023,
+            "flag": "OOD"
+        },
+        {
+            "file": "images (2).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.631,
+            "own_class_dist": 0.631,
+            "own_95pct_threshold": 0.6368932723999023,
+            "flag": "ok"
+        },
+        {
+            "file": "images (3).jpg",
+            "nearest_centroid": "Tea___healthy",
+            "nearest_dist": 0.691,
+            "own_class_dist": 0.694,
+            "own_95pct_threshold": 0.6368932723999023,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (4).jpg",
+            "nearest_centroid": "Tea___healthy",
+            "nearest_dist": 0.509,
+            "own_class_dist": 0.619,
+            "own_95pct_threshold": 0.6368932723999023,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (5).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.816,
+            "own_class_dist": 0.816,
+            "own_95pct_threshold": 0.6368932723999023,
+            "flag": "OOD"
+        },
+        {
+            "file": "images (6).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.679,
+            "own_class_dist": 0.679,
+            "own_95pct_threshold": 0.6368932723999023,
+            "flag": "OOD"
+        },
+        {
+            "file": "images (7).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.816,
+            "own_class_dist": 0.816,
+            "own_95pct_threshold": 0.6368932723999023,
+            "flag": "OOD"
+        },
+        {
+            "file": "images.jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.812,
+            "own_class_dist": 0.812,
+            "own_95pct_threshold": 0.6368932723999023,
+            "flag": "OOD"
+        }
+    ],
+    "healthy": [
+        {
+            "file": "images (1).jpg",
+            "nearest_centroid": "Tea___healthy",
+            "nearest_dist": 0.889,
+            "own_class_dist": 0.889,
+            "own_95pct_threshold": 0.672798216342926,
+            "flag": "OOD"
+        },
+        {
+            "file": "images (2).jpg",
+            "nearest_centroid": "Tea___healthy",
+            "nearest_dist": 1.03,
+            "own_class_dist": 1.03,
+            "own_95pct_threshold": 0.672798216342926,
+            "flag": "OOD"
+        },
+        {
+            "file": "images (3).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.958,
+            "own_class_dist": 1.015,
+            "own_95pct_threshold": 0.672798216342926,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (4).jpg",
+            "nearest_centroid": "Tea___healthy",
+            "nearest_dist": 0.994,
+            "own_class_dist": 0.994,
+            "own_95pct_threshold": 0.672798216342926,
+            "flag": "OOD"
+        },
+        {
+            "file": "images (5).jpg",
+            "nearest_centroid": "Tea___healthy",
+            "nearest_dist": 1.03,
+            "own_class_dist": 1.03,
+            "own_95pct_threshold": 0.672798216342926,
+            "flag": "OOD"
+        },
+        {
+            "file": "images (6).jpg",
+            "nearest_centroid": "Tea___healthy",
+            "nearest_dist": 0.995,
+            "own_class_dist": 0.995,
+            "own_95pct_threshold": 0.672798216342926,
+            "flag": "OOD"
+        },
+        {
+            "file": "images (8).jpg",
+            "nearest_centroid": "Tea___healthy",
+            "nearest_dist": 0.744,
+            "own_class_dist": 0.744,
+            "own_95pct_threshold": 0.672798216342926,
+            "flag": "OOD"
+        },
+        {
+            "file": "images.jpg",
+            "nearest_centroid": "Tea___healthy",
+            "nearest_dist": 0.821,
+            "own_class_dist": 0.821,
+            "own_95pct_threshold": 0.672798216342926,
+            "flag": "OOD"
+        }
+    ],
+    "red leaf spot": [
+        {
+            "file": "images (1).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.902,
+            "own_class_dist": 0.993,
+            "own_95pct_threshold": 0.6257042288780212,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (2).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.691,
+            "own_class_dist": 0.858,
+            "own_95pct_threshold": 0.6257042288780212,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (3).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.691,
+            "own_class_dist": 0.85,
+            "own_95pct_threshold": 0.6257042288780212,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (4).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.681,
+            "own_class_dist": 0.845,
+            "own_95pct_threshold": 0.6257042288780212,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (5).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.792,
+            "own_class_dist": 0.92,
+            "own_95pct_threshold": 0.6257042288780212,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (6).jpg",
+            "nearest_centroid": "Tea___red_leaf_spot",
+            "nearest_dist": 1.02,
+            "own_class_dist": 1.02,
+            "own_95pct_threshold": 0.6257042288780212,
+            "flag": "OOD"
+        },
+        {
+            "file": "images (7).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.735,
+            "own_class_dist": 0.924,
+            "own_95pct_threshold": 0.6257042288780212,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (8).jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.807,
+            "own_class_dist": 0.914,
+            "own_95pct_threshold": 0.6257042288780212,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images.jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.84,
+            "own_class_dist": 0.948,
+            "own_95pct_threshold": 0.6257042288780212,
+            "flag": "MISLABEL?"
+        }
+    ],
+    "white spot": [
+        {
+            "file": "images (1).jpg",
+            "nearest_centroid": "Tea___bird_eye_spot",
+            "nearest_dist": 0.867,
+            "own_class_dist": 0.912,
+            "own_95pct_threshold": 0.6593101620674133,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (2).jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.72,
+            "own_class_dist": 0.79,
+            "own_95pct_threshold": 0.6593101620674133,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (3).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.782,
+            "own_class_dist": 0.927,
+            "own_95pct_threshold": 0.6593101620674133,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (4).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.827,
+            "own_class_dist": 0.867,
+            "own_95pct_threshold": 0.6593101620674133,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (5).jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.647,
+            "own_class_dist": 0.737,
+            "own_95pct_threshold": 0.6593101620674133,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (6).jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.55,
+            "own_class_dist": 0.719,
+            "own_95pct_threshold": 0.6593101620674133,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images (9).jpg",
+            "nearest_centroid": "Tea___blight",
+            "nearest_dist": 0.782,
+            "own_class_dist": 0.927,
+            "own_95pct_threshold": 0.6593101620674133,
+            "flag": "MISLABEL?"
+        },
+        {
+            "file": "images.jpg",
+            "nearest_centroid": "Tea___anthracnose",
+            "nearest_dist": 0.698,
+            "own_class_dist": 0.769,
+            "own_95pct_threshold": 0.6593101620674133,
+            "flag": "MISLABEL?"
+        }
+    ]
+}

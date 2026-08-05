@@ -1,0 +1,12 @@
+Tea Classification Report (internal test set)
+============================================================
+class                         precision     recall         f1  support
+Tea___anthracnose                0.8333     0.8333     0.8333       30
+Tea___algal_leaf                 0.7500     0.8000     0.7742       30
+Tea___bird_eye_spot              0.8387     0.8667     0.8525       30
+Tea___blight                     0.7000     0.7000     0.7000       30
+Tea___healthy                    0.9677     1.0000     0.9836       30
+Tea___red_leaf_spot              1.0000     0.8667     0.9286       30
+Tea___white_spot                 0.9000     0.9000     0.9000       30
+------------------------------------------------------------
+accuracy                          85.24% (179/210)

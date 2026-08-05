@@ -1,0 +1,8 @@
+Black Pepper Classification Report (internal test set)
+============================================================
+class                           precision     recall         f1  support
+BlackPepper___healthy              1.0000     1.0000     1.0000       19
+BlackPepper___leaf_blight          1.0000     1.0000     1.0000       19
+BlackPepper___yellow_mottle_virus     1.0000     1.0000     1.0000       19
+------------------------------------------------------------
+accuracy                           100.00% (57/57)

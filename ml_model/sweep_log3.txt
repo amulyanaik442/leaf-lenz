@@ -1,0 +1,36 @@
+﻿
+===== SEED 7 =====
+  Early stopping at epoch 37
+Best validation accuracy: 83.33%
+  Test accuracy (4-view TTA): 83.33%
+  Test accuracy (single view): 81.25%
+
+===== SEED 8 =====
+  Early stopping at epoch 31
+Best validation accuracy: 81.25%
+  Test accuracy (4-view TTA): 79.17%
+  Test accuracy (single view): 79.17%
+
+===== SEED 9 =====
+  Early stopping at epoch 35
+Best validation accuracy: 83.33%
+  Test accuracy (4-view TTA): 81.25%
+  Test accuracy (single view): 77.08%
+
+===== SEED 10 =====
+  Early stopping at epoch 37
+Best validation accuracy: 83.33%
+  Test accuracy (4-view TTA): 81.25%
+  Test accuracy (single view): 79.17%
+
+===== SEED 11 =====
+  Early stopping at epoch 38
+Best validation accuracy: 85.42%
+  Test accuracy (4-view TTA): 75.00%
+  Test accuracy (single view): 77.08%
+
+===== SEED 12 =====
+  Early stopping at epoch 48
+Best validation accuracy: 85.42%
+  Test accuracy (4-view TTA): 77.08%
+  Test accuracy (single view): 79.17%

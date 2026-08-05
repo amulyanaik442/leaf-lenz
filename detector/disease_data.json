@@ -252,21 +252,21 @@
         "treatment_prevention": "Plant resistant hybrids, apply fungicides at early symptom onset, practice crop rotation with non-host crops, till crop residue to reduce inoculum, and avoid overhead irrigation."
     },
     "Maize___Common_Rust": {
-        "plant_name": "Corn",
+        "plant_name": "Maize",
         "disease_name": "Common Rust",
-        "description": "Common rust on maize is caused by Puccinia sorghi. It produces small, circular to elongated cinnamon-brown pustules on both leaf surfaces. It can reduce yield in severe cases.",
-        "symptoms": "Small, raised, cinnamon-brown pustules on leaves and stalks. Pustules rupture to release rust-colored spores. Severe infections cause premature leaf death and reduced photosynthesis.",
-        "treatment_prevention": "Plant resistant hybrids, apply fungicides if infection is early and severe, practice crop rotation, and destroy crop debris after harvest."
+        "description": "Common rust is caused by the fungus Puccinia sorghi. It produces small, circular to elongated cinnamon-brown pustules on both leaf surfaces.",
+        "symptoms": "Small, circular to elongated cinnamon-brown pustules on both leaf surfaces. Pustules can merge to form larger lesions. Severe infections can cause premature leaf death and reduced grain fill.",
+        "treatment_prevention": "Plant resistant hybrids. Apply fungicides (triazoles or strobilurins) when conditions favor disease development (cool, humid weather). Monitor fields during the growing season."
     },
     "Maize___Gray_Leaf_Spot": {
-        "plant_name": "Corn",
+        "plant_name": "Maize",
         "disease_name": "Gray Leaf Spot",
-        "description": "Gray Leaf Spot on maize is caused by Cercospora zeae-maydis. It produces rectangular gray to tan lesions bounded by leaf veins. It is one of the most yield-limiting diseases of corn in humid regions.",
-        "symptoms": "Rectangular, gray to tan lesions on leaves that are restricted by leaf veins. Lesions can merge to blight entire leaves. Severe infections cause significant yield loss.",
-        "treatment_prevention": "Plant resistant hybrids, use tillage to bury crop residue, practice crop rotation, apply fungicides at VT-R1 stage in severe years, and manage weeds."
+        "description": "Gray leaf spot is caused by the fungus Cercospora zeae-maydis. It is one of the most damaging foliar diseases of maize in humid, warm regions.",
+        "symptoms": "Small, rectangular, tan to gray lesions on leaves that are limited by leaf veins, giving a rectangular appearance. Lesions can coalesce, killing entire leaves in severe cases.",
+        "treatment_prevention": "Rotate crops with non-host species (soybeans, small grains). Reduce residue by tillage or baling. Apply fungicides when disease appears on lower leaves."
     },
     "Maize___Healthy": {
-        "plant_name": "Corn",
+        "plant_name": "Maize",
         "disease_name": "Healthy",
         "description": "This Maize leaf appears perfectly healthy with no visible signs of disease or pests.",
         "symptoms": "No symptoms of disease. The leaf color is normal and structural integrity is intact.",
@@ -839,27 +839,6 @@
         "symptoms": "Orange, brown, or reddish-brown pustules on leaves, stems, and leaf sheaths. Pustules rupture to release powdery spores. Severe infections cause premature leaf death, stem weakening, and reduced grain filling.",
         "treatment_prevention": "Use resistant varieties, apply foliar fungicides (triazoles or strobilurins) at early infection stages, practice crop rotation, destroy volunteer wheat and alternate hosts, and monitor fields regularly during warm, humid conditions."
     },
-    "Maize___Common_Rust": {
-        "plant_name": "Maize",
-        "disease_name": "Common Rust",
-        "description": "Common rust is caused by the fungus Puccinia sorghi. It produces small, circular to elongated cinnamon-brown pustules on both leaf surfaces.",
-        "symptoms": "Small, circular to elongated cinnamon-brown pustules on both leaf surfaces. Pustules can merge to form larger lesions. Severe infections can cause premature leaf death and reduced grain fill.",
-        "treatment_prevention": "Plant resistant hybrids. Apply fungicides (triazoles or strobilurins) when conditions favor disease development (cool, humid weather). Monitor fields during the growing season."
-    },
-    "Maize___Gray_Leaf_Spot": {
-        "plant_name": "Maize",
-        "disease_name": "Gray Leaf Spot",
-        "description": "Gray leaf spot is caused by the fungus Cercospora zeae-maydis. It is one of the most damaging foliar diseases of maize in humid, warm regions.",
-        "symptoms": "Small, rectangular, tan to gray lesions on leaves that are limited by leaf veins, giving a rectangular appearance. Lesions can coalesce, killing entire leaves in severe cases.",
-        "treatment_prevention": "Rotate crops with non-host species (soybeans, small grains). Reduce residue by tillage or baling. Apply fungicides when disease appears on lower leaves."
-    },
-    "Maize___Healthy": {
-        "plant_name": "Maize",
-        "disease_name": "Healthy",
-        "description": "This Maize leaf appears perfectly healthy with no visible signs of disease or pests.",
-        "symptoms": "No symptoms of disease. The leaf color is normal and structural integrity is intact.",
-        "treatment_prevention": "Continue maintaining good agricultural practices, proper watering, and regular monitoring to keep the Maize healthy."
-    },
     "Maize___Northern_Leaf_Blight": {
         "plant_name": "Maize",
         "disease_name": "Northern Leaf Blight",
@@ -901,5 +880,236 @@
         "description": "Leaf smut is caused by the fungus Entyloma oryzae. It is a minor disease but can reduce photosynthetic area and grain yield in severe cases.",
         "symptoms": "Small, dark brown to black raised spots (smut pustules) on the upper surface of leaves. Spots may be circular or angular and often appear in groups. Leaves may turn yellow around lesions.",
         "treatment_prevention": "Use disease-free seeds. Maintain proper field sanitation by removing infected debris. Balanced fertilization and proper water management reduce disease severity. Fungicide application is rarely needed."
+    },
+    "Tea___anthracnose": {
+        "plant_name": "Tea",
+        "disease_name": "Anthracnose",
+        "description": "Tea anthracnose is a fungal disease (typically Colletotrichum species) that causes irregular necrotic patches on tea leaves. It spreads in warm, wet weather and can reduce leaf quality and yield.",
+        "symptoms": "Irregular, brown to dark-brown lesions that may begin as small spots and expand, often following the leaf veins. Infected tissue can crack and drop out, leaving ragged holes. Young shoots and leaves are most affected.",
+        "treatment_prevention": "Remove and destroy infected leaves and prunings. Improve air circulation through proper pruning and avoid overhead irrigation. Apply appropriate copper-based or systemic fungicides during wet periods, and avoid stress by maintaining balanced shade and nutrition."
+    },
+    "Tea___algal_leaf": {
+        "plant_name": "Tea",
+        "disease_name": "Algal Leaf Spot",
+        "description": "Algal leaf spot on tea is caused by the parasitic green alga Cephaleuros virescens. It is most common in humid, wet conditions with dense shade.",
+        "symptoms": "Rusty-red to orange-brown, raised, velvety or crusty spots on the upper leaf surface. Spots are roughly circular and may be surrounded by a yellowish halo. Severe infections cause premature leaf drop.",
+        "treatment_prevention": "Improve air movement and reduce shade/humidity through pruning. Avoid overhead irrigation. Apply copper-based fungicides, which are effective against algal spot, especially before or during wet seasons."
+    },
+    "Tea___bird_eye_spot": {
+        "plant_name": "Tea",
+        "disease_name": "Bird's Eye Spot",
+        "description": "Tea bird's eye spot is a fungal disease (Cercospora theae) that produces small, distinctive lesions. It is more common on mature, lower leaves in shaded, humid plantations.",
+        "symptoms": "Small, round spots with a dark center and a lighter margin, resembling a bird's eye. Spots may have a purplish-brown ring and a grayish center, and can merge into larger blotches on severe infections.",
+        "treatment_prevention": "Remove affected older leaves and improve sunlight penetration by pruning and reducing excessive shade. Avoid water stress and overwatering. Apply fungicides such as copper oxychloride if infections are widespread."
+    },
+    "Tea___blight": {
+        "plant_name": "Tea",
+        "disease_name": "Blight (Brown / Gray Blight)",
+        "description": "Tea blight is a group of fungal diseases caused by Pestalotiopsis species, commonly described as brown blight or gray blight. They are among the most prevalent leaf diseases in tea plantations.",
+        "symptoms": "Irregular necrotic lesions that start as small brown or gray spots and expand into large blotches, often with concentric rings. Lesions may be dark brown (brown blight) or grayish with darker margins (gray blight). Severely infected leaves wither and drop.",
+        "treatment_prevention": "Prune and remove infected leaves and debris to reduce inoculum. Maintain balanced shade and nutrition to avoid stress. Apply appropriate fungicides (e.g., carbendazim or copper-based products) during wet, warm periods. Harvest promptly to reduce infection of young leaves."
+    },
+    "Tea___healthy": {
+        "plant_name": "Tea",
+        "disease_name": "Healthy",
+        "description": "The tea leaf appears healthy with no visible signs of fungal, algal, or bacterial disease.",
+        "symptoms": "Uniform green color, intact leaf margins, normal vein structure, and no spots, lesions, or discoloration.",
+        "treatment_prevention": "Maintain good plantation hygiene, balanced shade, and proper nutrition and irrigation. Inspect foliage regularly for early signs of pests or disease."
+    },
+    "Tea___red_leaf_spot": {
+        "plant_name": "Tea",
+        "disease_name": "Red Leaf Spot",
+        "description": "Red leaf spot on tea is a fungal leaf disease that produces red-colored lesions. It tends to appear under warm, humid conditions and can reduce photosynthetic area.",
+        "symptoms": "Red to reddish-brown spots or blotches on leaves, sometimes with darker borders or a yellowish halo. Lesions may coalesce and cause leaf distortion or premature drop in severe cases.",
+        "treatment_prevention": "Remove infected leaves and improve air circulation through pruning. Avoid prolonged leaf wetness by limiting overhead irrigation. Apply appropriate copper-based or systemic fungicides during high-humidity periods."
+    },
+    "Tea___white_spot": {
+        "plant_name": "Tea",
+        "disease_name": "White Spot",
+        "description": "Tea white spot is a fungal leaf disease characterized by white to pale lesions. It is favored by cool, humid conditions and can affect leaf quality.",
+        "symptoms": "Small, white to pale-gray spots or lesions on leaves, often with a slightly darker or water-soaked border. Spots may enlarge and merge, causing chlorosis and leaf drop in severe infections.",
+        "treatment_prevention": "Remove and destroy infected foliage. Improve air flow and reduce humidity through pruning. Apply fungicides preventively in cool, wet weather and maintain balanced plantation nutrition."
+    },
+    "Cacao___anthracnose": {
+        "plant_name": "Cacao",
+        "disease_name": "Anthracnose",
+        "description": "Cacao anthracnose is a fungal disease (Colletotrichum species) that attacks cacao leaves, causing necrotic lesions. It is favored by warm, wet weather and can weaken young trees and reduce pod set.",
+        "symptoms": "Irregular brown to dark-brown necrotic lesions that often start as small spots and expand along leaf veins. Infected tissue may crack and fall out, leaving ragged holes. Severe infections cause leaf yellowing and premature defoliation.",
+        "treatment_prevention": "Remove and destroy infected leaves and pruning debris. Improve air circulation by pruning overcrowded canopies and provide proper shade management. Apply copper-based or systemic fungicides during wet periods, and maintain balanced nutrition to reduce stress."
+    },
+    "Cacao___healthy": {
+        "plant_name": "Cacao",
+        "disease_name": "Healthy",
+        "description": "The cacao leaf appears healthy with no visible signs of fungal, bacterial, or viral disease.",
+        "symptoms": "Uniform green color, intact leaf margins, normal vein structure, and no spots, lesions, or discoloration.",
+        "treatment_prevention": "Maintain good plantation hygiene, proper shade management, and balanced nutrition and irrigation. Inspect foliage regularly for early signs of pests or disease."
+    },
+    "Chilli___anthracnose": {
+        "plant_name": "Chilli",
+        "disease_name": "Anthracnose",
+        "description": "Chilli anthracnose is a fungal disease (Colletotrichum species) that attacks chilli leaves and fruit, producing sunken necrotic lesions. It thrives in warm, humid, rainy weather and can spread rapidly through the crop.",
+        "symptoms": "Circular to irregular dark-brown or black sunken lesions on leaves and fruit, often ringed with a yellow halo. Infected fruit develops concentric rings of spores and may shrivel or drop prematurely. Heavy leaf spotting leads to yellowing and defoliation.",
+        "treatment_prevention": "Remove and destroy infected plant debris and practice crop rotation. Improve airflow by proper spacing and avoid overhead irrigation. Apply copper-based or systemic fungicides during wet spells and use resistant chilli varieties where available."
+    },
+    "Chilli___healthy": {
+        "plant_name": "Chilli",
+        "disease_name": "Healthy",
+        "description": "The chilli leaf appears healthy with no visible signs of fungal, bacterial, or viral disease, or pest damage.",
+        "symptoms": "Uniform green color, intact leaf margins, normal vein structure, and no spots, lesions, curling, or discoloration.",
+        "treatment_prevention": "Maintain balanced nutrition and irrigation, keep the field free of weeds and plant debris, and inspect plants regularly for early signs of pests or disease."
+    },
+    "Chilli___leaf_curl_virus": {
+        "plant_name": "Chilli",
+        "disease_name": "Leaf Curl Virus",
+        "description": "Chilli leaf curl is caused by begomoviruses transmitted by whiteflies. Infected plants show severe leaf distortion and stunting, and the disease is a major constraint on chilli production in tropical regions.",
+        "symptoms": "Upward and inward curling and crinkling of young leaves, thickened and reduced leaf blades, yellowing along veins, and stunted, bushy plant growth. Flowers and fruit are reduced, leading to significant yield loss.",
+        "treatment_prevention": "Control whitefly vectors with yellow sticky traps, reflective mulch, and appropriate insecticides. Remove and destroy infected plants early to reduce inoculum. Use resistant varieties and avoid planting near infected crops."
+    },
+    "Chilli___leaf_spot": {
+        "plant_name": "Chilli",
+        "disease_name": "Leaf Spot",
+        "description": "Chilli leaf spot (often Cercospora or Alternaria species) is a fungal disease that produces distinct spots on chilli leaves, especially in warm, humid conditions.",
+        "symptoms": "Small circular to angular pale-brown or gray spots with darker margins scattered over the leaf surface. Severely affected leaves turn yellow and drop prematurely, weakening the plant and reducing yield.",
+        "treatment_prevention": "Remove infected leaves and debris, rotate crops, and improve field ventilation. Avoid overhead irrigation and apply protective or systemic fungicides when conditions favor disease. Maintain balanced nutrition to keep plants vigorous."
+    },
+    "Chilli___whitefly": {
+        "plant_name": "Chilli",
+        "disease_name": "Whitefly",
+        "description": "Whiteflies are small sap-sucking insects that infest chilli leaves. Heavy feeding weakens plants, and whiteflies also transmit viruses such as chilli leaf curl, making them a serious pest of chilli crops.",
+        "symptoms": "Small white-winged insects and pale nymphs clustered on the undersides of leaves. Leaves develop yellow mottling or silvering, become sticky with honeydew, and may grow sooty mold. Severe infestations cause leaf drop and stunted growth.",
+        "treatment_prevention": "Monitor with yellow sticky traps and inspect leaf undersides regularly. Use reflective mulch to repel adults, apply insecticidal soap, neem oil, or targeted insecticides, and conserve natural enemies. Remove heavily infested plant parts promptly."
+    },
+    "Chilli___yellowish": {
+        "plant_name": "Chilli",
+        "disease_name": "Yellowish",
+        "description": "A yellowish appearance of chilli leaves is a general symptom that usually indicates nutrient deficiency, water stress, or a viral infection rather than a single pathogen. The pattern and distribution of yellowing help identify the cause.",
+        "symptoms": "Leaves turn pale yellow or yellow-green, often starting between veins or on older leaves. Interveinal yellowing, yellow veins, or uniform yellowing may appear depending on the underlying cause, sometimes accompanied by reduced growth.",
+        "treatment_prevention": "Diagnose the specific cause: test soil and apply balanced fertilizer for nutrient deficiencies, correct irrigation and drainage for water stress, and manage virus vectors such as whiteflies. Remove affected foliage and maintain overall plant health."
+    },
+    "Turmeric___aphids_disease": {
+        "plant_name": "Turmeric",
+        "disease_name": "Aphids Disease",
+        "description": "Aphids are small sap-sucking insects that colonize the undersides of turmeric leaves. Heavy feeding weakens the plant, distorts new growth, and the sticky honeydew they excrete encourages sooty mold, which can reduce photosynthesis.",
+        "symptoms": "Clusters of small green, yellow, or black insects on leaf undersides and young shoots. Leaves curl, yellow, or become distorted, and affected areas may feel sticky with honeydew and develop a black sooty mold coating.",
+        "treatment_prevention": "Inspect leaf undersides regularly and remove heavily infested leaves. Encourage natural predators such as lady beetles and lacewings, apply insecticidal soap or neem oil, and use water sprays to dislodge colonies. Avoid excess nitrogen fertilization that promotes soft, aphid-friendly growth."
+    },
+    "Turmeric___blotch": {
+        "plant_name": "Turmeric",
+        "disease_name": "Blotch",
+        "description": "Turmeric blotch is a fungal leaf disease that produces irregular, diffuse discolored patches on the leaf surface. It spreads in warm, humid conditions with frequent leaf wetness and can cause premature yellowing and leaf dieback.",
+        "symptoms": "Irregular, water-soaked to brown or gray blotchy patches on leaves, often merging into larger areas of dead tissue. Surrounding leaf tissue may yellow, and severely affected leaves dry out and die back from the tips or edges.",
+        "treatment_prevention": "Remove and destroy infected leaves and debris, improve spacing and airflow, and avoid overhead irrigation. Rotate crops and apply protective or systemic fungicides when humid, wet weather favors disease. Maintain balanced soil nutrition for vigorous growth."
+    },
+    "Turmeric___healthy": {
+        "plant_name": "Turmeric",
+        "disease_name": "Healthy",
+        "description": "The turmeric leaf appears healthy with no visible signs of fungal, bacterial, or viral disease, or pest damage.",
+        "symptoms": "Uniform green color, intact leaf margins and tips, normal vein structure, and no spots, blotches, yellowing, curling, or insect damage.",
+        "treatment_prevention": "Maintain balanced nutrition and irrigation, keep the field free of weeds and plant debris, ensure good drainage, and inspect plants regularly for early signs of pests or disease."
+    },
+    "Turmeric___leaf_spot": {
+        "plant_name": "Turmeric",
+        "disease_name": "Leaf Spot",
+        "description": "Turmeric leaf spot (often caused by fungal pathogens such as Cercospora or Colletotrichum species) produces distinct spots on turmeric leaves, especially under warm, humid, rainy conditions.",
+        "symptoms": "Small circular to oval brown, gray, or pale spots with darker margins scattered across the leaf surface. Spots may enlarge and merge, causing surrounding tissue to yellow and leaves to dry out or drop prematurely.",
+        "treatment_prevention": "Remove and destroy infected leaves and crop debris, rotate crops, and improve ventilation by proper spacing. Avoid overhead irrigation and apply protective or systemic fungicides when conditions favor disease. Maintain balanced nutrition to keep plants healthy."
+    },
+    "BlackPepper___healthy": {
+        "plant_name": "Black Pepper",
+        "disease_name": "Healthy",
+        "description": "The black pepper leaf appears healthy with no visible signs of fungal, bacterial, or viral disease, or pest damage.",
+        "symptoms": "Uniform green color, intact leaf margins and tips, normal vein structure, and no spots, yellowing, wilting, mottling, or insect damage.",
+        "treatment_prevention": "Maintain balanced nutrition and consistent moisture, keep the field free of weeds and plant debris, ensure good drainage, and inspect plants regularly for early signs of pests or disease."
+    },
+    "BlackPepper___leaf_blight": {
+        "plant_name": "Black Pepper",
+        "disease_name": "Leaf Blight",
+        "description": "Black pepper leaf blight is a fungal disease that produces spreading brown or black lesions on leaves, often under warm, humid, rainy conditions. Severe infections can defoliate the vine and reduce yield.",
+        "symptoms": "Irregular water-soaked to dark brown or black lesions along leaf edges or across the surface, often with yellow halos. Lesions enlarge and merge, causing leaves to curl, wilt, and drop prematurely.",
+        "treatment_prevention": "Remove and destroy infected leaves and crop debris, improve air circulation with proper trellising and spacing, and avoid overhead irrigation. Apply protective or systemic fungicides when wet weather favors disease and ensure good drainage."
+    },
+    "BlackPepper___yellow_mottle_virus": {
+        "plant_name": "Black Pepper",
+        "disease_name": "Yellow Mottle Virus",
+        "description": "Black pepper yellow mottle virus (Piper yellow mottle virus) is a viral disease transmitted by insect vectors and infected planting material. It causes a distinctive yellow mottling of leaves and can seriously weaken the vine over time.",
+        "symptoms": "Irregular bright yellow mottling or mosaic patterns on leaves, sometimes with leaf distortion, curling, or reduced leaf size. Severely affected vines show stunted growth and reduced yield.",
+        "treatment_prevention": "Use virus-free certified planting material and control insect vectors. Remove and destroy infected vines to reduce spread, and avoid pruning or tools that can transmit the virus between plants."
+    },
+    "ginger___healthy": {
+        "plant_name": "Ginger",
+        "disease_name": "Healthy",
+        "description": "The ginger leaf appears healthy with no visible signs of fungal, bacterial, or viral disease, or pest damage.",
+        "symptoms": "Uniform green color, intact leaf margins and tips, normal vein structure, and no spots, yellowing, wilting, or insect damage.",
+        "treatment_prevention": "Maintain balanced nutrition and consistent moisture, keep the field free of weeds and plant debris, ensure good drainage, and inspect plants regularly for early signs of pests or disease."
+    },
+    "ginger___leaf_blight": {
+        "plant_name": "Ginger",
+        "disease_name": "Leaf Blight",
+        "description": "Ginger leaf blight is a fungal disease that produces spreading brown or dark lesions on leaves, often under warm, humid, rainy conditions. Severe infections can defoliate plants and reduce rhizome yield.",
+        "symptoms": "Irregular water-soaked to dark brown or black lesions on leaves, often with yellow halos, that enlarge and merge. Severely affected leaves turn yellow, dry out, and may drop prematurely.",
+        "treatment_prevention": "Remove and destroy infected leaves and crop debris, improve spacing and air circulation, and avoid overhead irrigation. Apply protective or systemic fungicides when wet weather favors disease, rotate crops, and ensure good drainage."
+    },
+    "ginger___dehydrated": {
+        "plant_name": "Ginger",
+        "disease_name": "Dehydrated",
+        "description": "Dehydrated ginger plants show moisture stress. Leaves wilt, droop, and become dry and crispy at the margins and tips, usually during prolonged dry periods, heat, or poor irrigation.",
+        "symptoms": "Drooping and wilting leaves with dry, brown, crispy margins and tips; leaf curling and reduced growth. Prolonged stress causes yellowing and premature leaf death.",
+        "treatment_prevention": "Maintain consistent soil moisture with regular, even irrigation and mulching to reduce evaporation. Provide shade or windbreaks in hot conditions, improve soil water retention with organic matter, and monitor soil moisture regularly."
+    },
+    "ginger___pest_damage": {
+        "plant_name": "Ginger",
+        "disease_name": "Pest Damage",
+        "description": "Ginger leaves damaged by insect pests such as leaf-feeding caterpillars, thrips, and beetles. Feeding damage reduces photosynthesis and can weaken plants and open wounds for disease.",
+        "symptoms": "Irregular holes, notches, chewed edges, and skeletonized areas on leaves, sometimes with visible insects, eggs, frass, or small necrotic feeding spots and silvery streaks from thrips.",
+        "treatment_prevention": "Inspect plants regularly and remove visible pests and infested leaves. Use appropriate, registered insecticides or bio-pesticides targeted at the specific pest, encourage natural predators, and keep the field free of weeds and debris that harbor pests."
+    },
+    "bean___healthy": {
+        "plant_name": "Bean",
+        "disease_name": "Healthy",
+        "description": "The bean leaf appears healthy with no visible signs of fungal, bacterial, or viral disease, or pest damage.",
+        "symptoms": "Uniform green color, intact leaf margins and tendrils, normal leaflet structure, and no spots, yellowing, powdery growth, or insect damage.",
+        "treatment_prevention": "Maintain balanced nutrition and consistent moisture, keep the field free of weeds and plant debris, ensure good drainage and air circulation, and inspect plants regularly for early signs of pests or disease."
+    },
+    "bean___downy_mildew": {
+        "plant_name": "Bean",
+        "disease_name": "Downy Mildew",
+        "description": "Downy mildew of bean is a fungal disease favored by cool, humid conditions. It causes pale yellow-green patches on the upper leaf surface and a gray to purplish fuzzy growth on the underside, reducing photosynthesis and yield.",
+        "symptoms": "Pale yellow or light green angular blotches on the upper leaf surface with a grayish-purple downy growth on the underside; leaves may curl, yellow, and drop prematurely in severe infections.",
+        "treatment_prevention": "Use resistant or tolerant varieties, ensure good air circulation and spacing, avoid overhead irrigation in cool weather, rotate crops, and remove infected debris. Apply registered protective fungicides when conditions favor disease."
+    },
+    "bean___leafminer": {
+        "plant_name": "Bean",
+        "disease_name": "Leafminer",
+        "description": "Leafminer larvae of flies tunnel between the upper and lower leaf surfaces, creating visible serpentine mines. Heavy infestation reduces leaf area for photosynthesis and can weaken plants.",
+        "symptoms": "Winding, whitish or pale serpentine tunnels (mines) across the leaf blade, sometimes with small dark feeding punctures and stippling; severe damage causes leaf browning and premature drop.",
+        "treatment_prevention": "Inspect plants regularly and remove and destroy mined leaves. Use yellow sticky traps to monitor adults, encourage natural enemies and parasitoids, and apply registered insecticides or bio-pesticides targeted at leafminer larvae when infestations are high."
+    },
+    "bean___powdery_mildew": {
+        "plant_name": "Bean",
+        "disease_name": "Powdery Mildew",
+        "description": "Powdery mildew of bean is a fungal disease that appears as a white, powdery coating on leaves, stems, and pods. It thrives in warm, dry days with cool nights and can reduce yield and pod quality.",
+        "symptoms": "White to light gray powdery fungal growth on the upper surface of leaves, stems, and pods; affected leaves may yellow, curl, dry out, and drop early in severe cases.",
+        "treatment_prevention": "Use resistant varieties, provide good air circulation and spacing, avoid overcrowding, and maintain balanced nutrition. Apply registered sulfur- or fungicide-based sprays at first sign of infection and remove affected plant debris at season end."
+    },
+    "cauliflower___healthy": {
+        "plant_name": "Cauliflower",
+        "disease_name": "Healthy",
+        "description": "The cauliflower plant appears healthy with no visible signs of fungal, bacterial, or viral disease, or pest damage.",
+        "symptoms": "Uniform green leaves and curd, intact leaf margins and veins, normal head development, and no spots, yellowing, water-soaked lesions, or rot.",
+        "treatment_prevention": "Maintain balanced nutrition and consistent moisture, ensure good drainage and air circulation, keep the field free of weeds and plant debris, rotate crops, and inspect plants regularly for early signs of disease."
+    },
+    "cauliflower___black_rot": {
+        "plant_name": "Cauliflower",
+        "disease_name": "Black Rot",
+        "description": "Black rot of cauliflower is caused by the bacterium Xanthomonas campestris pv. campestris. It enters through leaf margins and water pores, producing V-shaped yellow lesions that darken as veins turn black, and it can destroy the crop under warm, humid conditions.",
+        "symptoms": "Yellow V-shaped lesions at leaf margins that progress toward the leaf center, blackened leaf veins, wilting and yellowing of leaves, and in severe cases head infection and plant death.",
+        "treatment_prevention": "Use certified disease-free seed and treat seed with hot water, practice crop rotation of 2-3 years, avoid overhead irrigation, control cruciferous weeds, remove infected debris, and apply registered copper-based bactericides at the first signs."
+    },
+    "cauliflower___downy_mildew": {
+        "plant_name": "Cauliflower",
+        "disease_name": "Downy Mildew",
+        "description": "Downy mildew of cauliflower is caused by the oomycete Peronospora parasitica. It thrives in cool, moist conditions and produces pale patches on the leaf upper surface with a gray-white fuzzy growth on the underside.",
+        "symptoms": "Pale yellow-green irregular blotches on the upper leaf surface with a grayish downy growth on the underside; leaves may yellow, curl, and drop prematurely, and heads may become discolored in severe infections.",
+        "treatment_prevention": "Use tolerant varieties, ensure proper plant spacing and air circulation, avoid overhead irrigation in cool weather, remove infected leaves and debris, rotate crops, and apply registered protective fungicides when conditions favor disease."
     }
 }

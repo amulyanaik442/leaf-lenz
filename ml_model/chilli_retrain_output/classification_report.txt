@@ -1,0 +1,11 @@
+Chilli Classification Report (internal test set)
+============================================================
+class                         precision     recall         f1  support
+Chilli___anthracnose             0.8750     0.8750     0.8750        8
+Chilli___healthy                 0.8750     0.8750     0.8750        8
+Chilli___leaf_curl_virus         0.7000     0.8750     0.7778        8
+Chilli___leaf_spot               0.8571     0.7500     0.8000        8
+Chilli___whitefly                0.6250     0.6250     0.6250        8
+Chilli___yellowish               0.8571     0.7500     0.8000        8
+------------------------------------------------------------
+accuracy                          79.17% (38/48)

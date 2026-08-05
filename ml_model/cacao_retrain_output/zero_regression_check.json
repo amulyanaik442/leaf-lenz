@@ -1,0 +1,11 @@
+{
+    "non_cacao_weight_max_diff": 0.0,
+    "non_cacao_bias_max_diff": 0.0,
+    "zero_regression_ok": true,
+    "inference_spot_check": {
+        "samples": 530,
+        "max_logit_diff_first_115": 0.0,
+        "top1_old_class_changed": 0,
+        "cacao_false_positives": 84
+    }
+}

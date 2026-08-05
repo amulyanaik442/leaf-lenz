@@ -1,0 +1,9 @@
+Ginger Classification Report (internal test set)
+============================================================
+class                           precision     recall         f1  support
+ginger___healthy                   0.8768     0.8768     0.8768      203
+ginger___leaf_blight               0.8247     0.7729     0.7980      207
+ginger___dehydrated                0.5978     0.7902     0.6807      205
+ginger___pest_damage               0.7246     0.5236     0.6079      191
+------------------------------------------------------------
+accuracy                            74.44% (600/806)

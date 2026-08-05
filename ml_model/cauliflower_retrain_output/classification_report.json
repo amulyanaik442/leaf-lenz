@@ -1,0 +1,29 @@
+{
+    "rows": {
+        "cauliflower___healthy": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 6
+        },
+        "cauliflower___black_rot": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 6
+        },
+        "cauliflower___downy_mildew": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 6
+        },
+        "cauliflower___bacterial_spot_rot": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 6
+        }
+    },
+    "accuracy": 1.0
+}

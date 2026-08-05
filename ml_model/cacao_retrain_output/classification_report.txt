@@ -1,0 +1,7 @@
+Cacao Classification Report (internal test set)
+============================================================
+class                         precision     recall         f1  support
+Cacao___healthy                  0.8848     0.8204     0.8514      206
+Cacao___anthracnose              0.8326     0.8932     0.8618      206
+------------------------------------------------------------
+accuracy                          85.68% (353/412)

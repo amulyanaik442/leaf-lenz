@@ -1,0 +1,29 @@
+{
+    "rows": {
+        "ginger___healthy": {
+            "precision": 0.8706,
+            "recall": 0.8621,
+            "f1": 0.8663,
+            "support": 203
+        },
+        "ginger___leaf_blight": {
+            "precision": 0.8247,
+            "recall": 0.7729,
+            "f1": 0.798,
+            "support": 207
+        },
+        "ginger___dehydrated": {
+            "precision": 0.5934,
+            "recall": 0.7902,
+            "f1": 0.6778,
+            "support": 205
+        },
+        "ginger___pest_damage": {
+            "precision": 0.7174,
+            "recall": 0.5183,
+            "f1": 0.6018,
+            "support": 191
+        }
+    },
+    "accuracy": 0.7395
+}

@@ -67,6 +67,13 @@ def preprocess_image(image_file):
     img = img.resize((224, 224), Image.BICUBIC)
     return np.array(img, dtype=np.float32) / 255.0
 
+
+def _green_fraction(arr):
+    """Fraction of strongly-green pixels in a [0,1] (H, W, 3) array."""
+    r, g, b = arr[..., 0], arr[..., 1], arr[..., 2]
+    green = (g > r * 1.15) & (g > b * 1.15) & (g > 0.2)
+    return float(green.mean())
+
 def _run_batch(tensors):
     """
     Run a list of (1, 3, 224, 224) tensors through the ONNX session.
@@ -79,6 +86,28 @@ def _run_batch(tensors):
         exp_l = np.exp(logits - np.max(logits))
         probs = exp_l / np.sum(exp_l)
         prob_sum = probs if prob_sum is None else prob_sum + probs
+    return prob_sum / len(tensors)
+
+
+def _run_batch_filtered(tensors, keep_indices):
+    """
+    Run a list of (1, 3, 224, 224) tensors, but softmax over a fixed subset
+    of output classes per view before averaging.
+
+    Each crop's prediction then depends only on its own logits, so adding
+    classes for other crops cannot perturb existing crops' predictions
+    (guarantees zero regression as the general model grows).
+
+    Returns the averaged subset probability vector aligned with keep_indices.
+    """
+    input_name = _ort_session.get_inputs()[0].name
+    prob_sum = None
+    for t in tensors:
+        logits = _ort_session.run(None, {input_name: t})[0][0]
+        sub = logits[keep_indices]
+        exp_l = np.exp(sub - np.max(sub))
+        p = exp_l / np.sum(exp_l)
+        prob_sum = p if prob_sum is None else prob_sum + p
     return prob_sum / len(tensors)
 
 def predict_leaf_disease(image_file):
@@ -239,12 +268,18 @@ CROP_CLASS_PREFIXES = {
     'pumpkin': 'Pumpkin___',
     'apple': 'Apple___',
     'bell_pepper': 'Bell_pepper___',
+    'black_pepper': 'BlackPepper___',
     'blueberry': 'Blueberry___',
+    'cacao': 'Cacao___',
     'cassava': 'Cassava___',
     'cherry': 'Cherry___',
+    'chilli': 'Chilli___',
     'coffee': 'Coffee___',
     'cotton': 'Cotton___',
     'grape': 'Grape___',
+    'ginger': 'ginger___',
+    'bean': 'bean___',
+    'cauliflower': 'cauliflower___',
 
     'mango': 'Mango___',
     'orange': 'Orange___',
@@ -256,7 +291,9 @@ CROP_CLASS_PREFIXES = {
     'squash': 'Squash___',
     'strawberry': 'Strawberry___',
     'sugarcane': ('Sugercane___', 'Sugarcane___'),
+    'tea': 'Tea___',
     'tomato': 'Tomato___',
+    'turmeric': 'Turmeric___',
     'watermelon': 'Watermelon___',
 }
 
@@ -265,10 +302,14 @@ def _predict_general_filtered(image_file, crop_key):
     """
     Run general model TTA, then zero-out probabilities for classes
     not matching the selected crop. Returns only classes for that crop.
+
+    Returns (label, confidence, top5, mismatch): mismatch is a non-empty
+    warning string when the filtered prediction is low-confidence (the model
+    is basically guessing between classes), else None.
     """
     is_loaded = load_inference_assets()
     if not is_loaded:
-        return "fallback", 0.0, [("fallback", 0.0)]
+        return "fallback", 0.0, [("fallback", 0.0)], None
 
     try:
         arr = preprocess_image(image_file)  # (224,224,3) bicubic
@@ -278,37 +319,70 @@ def _predict_general_filtered(image_file, crop_key):
             norm = _normalize(aug)
             tensors.append(_to_tensor(norm).astype(np.float32))
 
-        avg_probs = _run_batch(tensors)
-
         prefix = CROP_CLASS_PREFIXES.get(crop_key, '')
         if prefix:
             if isinstance(prefix, tuple):
                 match_fn = lambda cn: any(cn.startswith(p) for p in prefix)
             else:
                 match_fn = lambda cn: cn.startswith(prefix)
-            # Zero out all classes that don't match this crop
-            filtered = np.array([
-                p if match_fn(_class_names[i]) else 0.0
-                for i, p in enumerate(avg_probs)
-            ])
-            total = filtered.sum()
-            if total > 0:
-                filtered = filtered / total
-            else:
-                # No matching classes found — fall back to full probs
-                filtered = avg_probs
-        else:
-            filtered = avg_probs
+            keep_indices = np.array(
+                [i for i, cn in enumerate(_class_names) if match_fn(cn)],
+                dtype=np.int64,
+            )
+            if keep_indices.size > 0:
+                sub_probs = _run_batch_filtered(tensors, keep_indices)
+                filtered = np.zeros(len(_class_names))
+                filtered[keep_indices] = sub_probs
+                order = np.argsort(sub_probs)[::-1][:5]
+                top5_indices = [int(keep_indices[j]) for j in order]
+                top5 = [(str(_class_names[i]), float(filtered[i])) for i in top5_indices]
+                predicted_label = top5[0][0]
+                confidence = top5[0][1]
+                # Low-confidence check: the model must both commit to the top
+                # class AND clearly separate it from the runner-up. Otherwise
+                # it is guessing, and the crop filter is forcing a label.
+                LOW_CONF_THRESHOLD = 0.50
+                LOW_GAP_THRESHOLD = 0.30
+                if len(top5) >= 2:
+                    gap = top5[0][1] - top5[1][1]
+                else:
+                    gap = float('inf')
+                mismatch = None
+                if confidence < LOW_CONF_THRESHOLD and gap < LOW_GAP_THRESHOLD:
+                    mismatch = (
+                        f"Low-confidence prediction ({confidence*100:.0f}%). "
+                        "The image may not match the selected crop or the "
+                        "training data. Try a clear close-up of a single leaf."
+                    )
+                # Out-of-distribution greenness check: mildew disease samples in
+                # the training data are desaturated/discolored, so an unusually
+                # green leaf predicted as mildew is likely out-of-distribution
+                # (e.g. a healthy leaf photo from the web). Warn instead of
+                # presenting the forced label as a confident diagnosis.
+                if 'mildew' in predicted_label.lower():
+                    green_frac = _green_fraction(arr)
+                    if green_frac > 0.15:
+                        disease_name = predicted_label.split('___')[-1].replace('_', ' ')
+                        green_msg = (
+                            f"Leaf is unusually green for {disease_name} "
+                            f"({green_frac*100:.0f}% green pixels). The image may "
+                            "not match the selected crop or the training data. "
+                            "Try a clear close-up of a single leaf."
+                        )
+                        mismatch = green_msg if mismatch is None else f"{mismatch} {green_msg}"
+                return predicted_label, confidence, top5, mismatch
+            # No matching classes — fall through to full softmax
+        avg_probs = _run_batch(tensors)
 
-        top5_indices = np.argsort(filtered)[::-1][:5]
-        top5 = [(str(_class_names[i]), float(filtered[i])) for i in top5_indices]
+        top5_indices = np.argsort(avg_probs)[::-1][:5]
+        top5 = [(str(_class_names[i]), float(avg_probs[i])) for i in top5_indices]
         predicted_label = top5[0][0]
         confidence = top5[0][1]
-        return predicted_label, confidence, top5
+        return predicted_label, confidence, top5, None
 
     except Exception as e:
         print(f"Error during filtered inference: {e}")
-        return "fallback", 0.0, [("fallback", 0.0)]
+        return "fallback", 0.0, [("fallback", 0.0)], None
 
 
 def predict_by_crop(image_file, crop='auto'):
@@ -351,9 +425,9 @@ def predict_by_crop(image_file, crop='auto'):
     # General model with crop-specific filtering
     if hasattr(image_file, 'seek'):
         image_file.seek(0)
-    label, conf, top5 = _predict_general_filtered(image_file, crop)
+    label, conf, top5, mismatch = _predict_general_filtered(image_file, crop)
     print(f"[CROP SELECT] General model ({crop}): {label} ({conf:.4f})")
-    return label, conf, top5, None
+    return label, conf, top5, mismatch
 
 
 def _detect_crop_from_label(label):

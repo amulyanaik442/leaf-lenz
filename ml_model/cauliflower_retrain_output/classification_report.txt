@@ -1,0 +1,9 @@
+cauliflower Classification Report (internal test set)
+============================================================
+class                           precision     recall         f1  support
+cauliflower___healthy              1.0000     1.0000     1.0000        6
+cauliflower___black_rot            1.0000     1.0000     1.0000        6
+cauliflower___downy_mildew         1.0000     1.0000     1.0000        6
+cauliflower___bacterial_spot_rot     1.0000     1.0000     1.0000        6
+------------------------------------------------------------
+accuracy                           100.00% (24/24)

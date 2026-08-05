@@ -1,0 +1,6 @@
+{
+    "train_accuracy": 100.0,
+    "best_val_accuracy": 85.4167,
+    "test_accuracy": 0.7917,
+    "device": "cpu"
+}

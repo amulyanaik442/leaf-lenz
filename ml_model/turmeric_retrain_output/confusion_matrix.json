@@ -1,0 +1,34 @@
+{
+    "classes": [
+        "Turmeric___aphids_disease",
+        "Turmeric___blotch",
+        "Turmeric___healthy",
+        "Turmeric___leaf_spot"
+    ],
+    "confusion_matrix": [
+        [
+            8,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            8,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            8,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            8
+        ]
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "classes": [
+        "bean___healthy",
+        "bean___downy_mildew",
+        "bean___leafminer",
+        "bean___powdery_mildew"
+    ],
+    "confusion_matrix": [
+        [
+            13,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            13,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            13,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            13
+        ]
+    ]
+}

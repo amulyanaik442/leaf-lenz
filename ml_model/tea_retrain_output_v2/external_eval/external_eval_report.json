@@ -1,0 +1,450 @@
+{
+    "algal": {
+        "images": 8,
+        "candidate_accuracy": 0.0,
+        "tea_filtered_accuracy": 0.0,
+        "production_accuracy": 0.0,
+        "misclassified": [
+            {
+                "file": "images (1).jpg",
+                "true": "Tea___algal_leaf",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.327,
+                "true_conf": 0.034
+            },
+            {
+                "file": "images (10).jpg",
+                "true": "Tea___algal_leaf",
+                "pred": "Tea___bird_eye_spot",
+                "conf": 0.289,
+                "true_conf": 0.023
+            },
+            {
+                "file": "images (11).jpg",
+                "true": "Tea___algal_leaf",
+                "pred": "Tea___bird_eye_spot",
+                "conf": 0.247,
+                "true_conf": 0.078
+            },
+            {
+                "file": "images (2).jpg",
+                "true": "Tea___algal_leaf",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.372,
+                "true_conf": 0.031
+            },
+            {
+                "file": "images (3).jpg",
+                "true": "Tea___algal_leaf",
+                "pred": "Tea___blight",
+                "conf": 0.225,
+                "true_conf": 0.041
+            },
+            {
+                "file": "images (6).jpg",
+                "true": "Tea___algal_leaf",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.7,
+                "true_conf": 0.046
+            },
+            {
+                "file": "images (7).jpg",
+                "true": "Tea___algal_leaf",
+                "pred": "Tea___algal_leaf",
+                "conf": 0.218,
+                "true_conf": 0.102
+            },
+            {
+                "file": "images (9).jpg",
+                "true": "Tea___algal_leaf",
+                "pred": "Pumpkin___bacterial_leaf_spot",
+                "conf": 0.23,
+                "true_conf": 0.055
+            }
+        ]
+    },
+    "anthracnoses": {
+        "images": 8,
+        "candidate_accuracy": 0.0,
+        "tea_filtered_accuracy": 0.0,
+        "production_accuracy": 0.0,
+        "misclassified": [
+            {
+                "file": "images (1).jpg",
+                "true": "Tea___anthracnose",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.631,
+                "true_conf": 0.002
+            },
+            {
+                "file": "images (10).jpg",
+                "true": "Tea___anthracnose",
+                "pred": "Tea___blight",
+                "conf": 0.48,
+                "true_conf": 0.097
+            },
+            {
+                "file": "images (12).jpg",
+                "true": "Tea___anthracnose",
+                "pred": "Tea___blight",
+                "conf": 0.34,
+                "true_conf": 0.011
+            },
+            {
+                "file": "images (13).jpg",
+                "true": "Tea___anthracnose",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.48,
+                "true_conf": 0.076
+            },
+            {
+                "file": "images (5).jpg",
+                "true": "Tea___anthracnose",
+                "pred": "Tea___blight",
+                "conf": 0.296,
+                "true_conf": 0.071
+            },
+            {
+                "file": "images (7).jpg",
+                "true": "Tea___anthracnose",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.561,
+                "true_conf": 0.036
+            },
+            {
+                "file": "images (8).jpg",
+                "true": "Tea___anthracnose",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.268,
+                "true_conf": 0.055
+            },
+            {
+                "file": "images (9).jpg",
+                "true": "Tea___anthracnose",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.612,
+                "true_conf": 0.019
+            }
+        ]
+    },
+    "bird eye spot": {
+        "images": 8,
+        "candidate_accuracy": 12.5,
+        "tea_filtered_accuracy": 12.5,
+        "production_accuracy": 0.0,
+        "misclassified": [
+            {
+                "file": "images (1).jpg",
+                "true": "Tea___bird_eye_spot",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.32,
+                "true_conf": 0.023
+            },
+            {
+                "file": "images (14).jpg",
+                "true": "Tea___bird_eye_spot",
+                "pred": "Tea___blight",
+                "conf": 0.206,
+                "true_conf": 0.022
+            },
+            {
+                "file": "images (2).jpg",
+                "true": "Tea___bird_eye_spot",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.491,
+                "true_conf": 0.065
+            },
+            {
+                "file": "images (4).jpg",
+                "true": "Tea___bird_eye_spot",
+                "pred": "Tea___algal_leaf",
+                "conf": 0.251,
+                "true_conf": 0.077
+            },
+            {
+                "file": "images (5).jpg",
+                "true": "Tea___bird_eye_spot",
+                "pred": "Tea___algal_leaf",
+                "conf": 0.524,
+                "true_conf": 0.049
+            },
+            {
+                "file": "images (6).jpg",
+                "true": "Tea___bird_eye_spot",
+                "pred": "Tea___red_leaf_spot",
+                "conf": 0.537,
+                "true_conf": 0.056
+            },
+            {
+                "file": "images.jpg",
+                "true": "Tea___bird_eye_spot",
+                "pred": "Tea___blight",
+                "conf": 0.192,
+                "true_conf": 0.052
+            }
+        ]
+    },
+    "brown blight": {
+        "images": 7,
+        "candidate_accuracy": 28.57,
+        "tea_filtered_accuracy": 85.71,
+        "production_accuracy": 0.0,
+        "misclassified": [
+            {
+                "file": "gray-blight.jpg",
+                "true": "Tea___blight",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.679,
+                "true_conf": 0.052
+            },
+            {
+                "file": "images (2).jpg",
+                "true": "Tea___blight",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.371,
+                "true_conf": 0.337
+            },
+            {
+                "file": "images (3).jpg",
+                "true": "Tea___blight",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.496,
+                "true_conf": 0.35
+            },
+            {
+                "file": "images (4).jpg",
+                "true": "Tea___blight",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.5,
+                "true_conf": 0.127
+            },
+            {
+                "file": "images (7).jpg",
+                "true": "Tea___blight",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.496,
+                "true_conf": 0.35
+            }
+        ]
+    },
+    "gray light": {
+        "images": 9,
+        "candidate_accuracy": 33.33,
+        "tea_filtered_accuracy": 77.78,
+        "production_accuracy": 0.0,
+        "misclassified": [
+            {
+                "file": "brown_blight_4.jpg",
+                "true": "Tea___blight",
+                "pred": "Tea___bird_eye_spot",
+                "conf": 0.288,
+                "true_conf": 0.132
+            },
+            {
+                "file": "images (2).jpg",
+                "true": "Tea___blight",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.669,
+                "true_conf": 0.228
+            },
+            {
+                "file": "images (4).jpg",
+                "true": "Tea___blight",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.341,
+                "true_conf": 0.134
+            },
+            {
+                "file": "images (5).jpg",
+                "true": "Tea___blight",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.5,
+                "true_conf": 0.127
+            },
+            {
+                "file": "images (6).jpg",
+                "true": "Tea___blight",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.728,
+                "true_conf": 0.102
+            },
+            {
+                "file": "images (7).jpg",
+                "true": "Tea___blight",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.5,
+                "true_conf": 0.127
+            }
+        ]
+    },
+    "healthy": {
+        "images": 8,
+        "candidate_accuracy": 62.5,
+        "tea_filtered_accuracy": 87.5,
+        "production_accuracy": 0.0,
+        "misclassified": [
+            {
+                "file": "images (1).jpg",
+                "true": "Tea___healthy",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.179,
+                "true_conf": 0.141
+            },
+            {
+                "file": "images (3).jpg",
+                "true": "Tea___healthy",
+                "pred": "Tea___blight",
+                "conf": 0.286,
+                "true_conf": 0.085
+            },
+            {
+                "file": "images (8).jpg",
+                "true": "Tea___healthy",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.562,
+                "true_conf": 0.103
+            }
+        ]
+    },
+    "red leaf spot": {
+        "images": 9,
+        "candidate_accuracy": 0.0,
+        "tea_filtered_accuracy": 0.0,
+        "production_accuracy": 0.0,
+        "misclassified": [
+            {
+                "file": "images (1).jpg",
+                "true": "Tea___red_leaf_spot",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.208,
+                "true_conf": 0.027
+            },
+            {
+                "file": "images (2).jpg",
+                "true": "Tea___red_leaf_spot",
+                "pred": "Tea___blight",
+                "conf": 0.185,
+                "true_conf": 0.012
+            },
+            {
+                "file": "images (3).jpg",
+                "true": "Tea___red_leaf_spot",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.549,
+                "true_conf": 0.007
+            },
+            {
+                "file": "images (4).jpg",
+                "true": "Tea___red_leaf_spot",
+                "pred": "Tea___blight",
+                "conf": 0.423,
+                "true_conf": 0.02
+            },
+            {
+                "file": "images (5).jpg",
+                "true": "Tea___red_leaf_spot",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.338,
+                "true_conf": 0.026
+            },
+            {
+                "file": "images (6).jpg",
+                "true": "Tea___red_leaf_spot",
+                "pred": "Tea___blight",
+                "conf": 0.143,
+                "true_conf": 0.093
+            },
+            {
+                "file": "images (7).jpg",
+                "true": "Tea___red_leaf_spot",
+                "pred": "Tea___blight",
+                "conf": 0.34,
+                "true_conf": 0.017
+            },
+            {
+                "file": "images (8).jpg",
+                "true": "Tea___red_leaf_spot",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.201,
+                "true_conf": 0.046
+            },
+            {
+                "file": "images.jpg",
+                "true": "Tea___red_leaf_spot",
+                "pred": "Tea___blight",
+                "conf": 0.723,
+                "true_conf": 0.002
+            }
+        ]
+    },
+    "white spot": {
+        "images": 8,
+        "candidate_accuracy": 0.0,
+        "tea_filtered_accuracy": 0.0,
+        "production_accuracy": 0.0,
+        "misclassified": [
+            {
+                "file": "images (1).jpg",
+                "true": "Tea___white_spot",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.277,
+                "true_conf": 0.01
+            },
+            {
+                "file": "images (2).jpg",
+                "true": "Tea___white_spot",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.397,
+                "true_conf": 0.049
+            },
+            {
+                "file": "images (3).jpg",
+                "true": "Tea___white_spot",
+                "pred": "Tea___bird_eye_spot",
+                "conf": 0.394,
+                "true_conf": 0.006
+            },
+            {
+                "file": "images (4).jpg",
+                "true": "Tea___white_spot",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.613,
+                "true_conf": 0.04
+            },
+            {
+                "file": "images (5).jpg",
+                "true": "Tea___white_spot",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.386,
+                "true_conf": 0.036
+            },
+            {
+                "file": "images (6).jpg",
+                "true": "Tea___white_spot",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.23,
+                "true_conf": 0.008
+            },
+            {
+                "file": "images (9).jpg",
+                "true": "Tea___white_spot",
+                "pred": "Tea___bird_eye_spot",
+                "conf": 0.394,
+                "true_conf": 0.006
+            },
+            {
+                "file": "images.jpg",
+                "true": "Tea___white_spot",
+                "pred": "Pumpkin___powdery_mildew",
+                "conf": 0.561,
+                "true_conf": 0.027
+            }
+        ]
+    },
+    "overall": {
+        "images": 65,
+        "candidate_accuracy": 16.92,
+        "tea_filtered_accuracy": 32.31,
+        "production_accuracy": 0.0
+    }
+}

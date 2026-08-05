@@ -1,0 +1,83 @@
+{
+  "stage": "candidate_ready",
+  "summary": "Cacao leaf detection candidate (117-class) built and evaluated. Production model NOT modified.",
+  "dataset": {
+    "source": "Kaggle ohagwucollinspatrick/amini-cocoa-contamination-dataset (Zindi Amini Cocoa Challenge, CC BY 4.0)",
+    "task": "cocoa leaf object detection -> bbox crops",
+    "approved_classes": ["healthy", "anthracnose"],
+    "dropped_classes": ["cssvd"],
+    "crops_prepared": 6345,
+    "crops_per_class_raw": {"healthy": 4084, "anthracnose": 2261}
+  },
+  "audit": {
+    "corrupt_images": 0,
+    "exact_md5_duplicate_groups": 0,
+    "dhash_near_dup_groups": 2,
+    "label_mismatches": 0
+  },
+  "prep": {
+    "blur_threshold_lap_var": 20,
+    "blur_removed": 404,
+    "blur_removed_by_class": {"healthy": 204, "anthracnose": 200},
+    "balanced_total": 4122,
+    "balanced_per_class": {"healthy": 2061, "anthracnose": 2061},
+    "split_by_source_image": true,
+    "split": {"train": 3298, "valid": 412, "test": 412},
+    "train_augmented": 3298,
+    "seed": 42
+  },
+  "training": {
+    "approach": "frozen 115 existing rows; trained Linear(1280->2) head; spliced rows 115-116",
+    "device": "cpu",
+    "backbone": "production ONNX EfficientNet-B0 (frozen)",
+    "loss": "CrossEntropyLoss(label_smoothing=0.1)",
+    "early_stopped_epoch": 11,
+    "train_accuracy": 94.671,
+    "best_val_accuracy": 89.078,
+    "test_accuracy": 0.8568
+  },
+  "evaluation": {
+    "test_set": "412 leakage-free crops (206/206)",
+    "confusion_matrix": {"healthy": {"healthy": 169, "anthracnose": 37}, "anthracnose": {"healthy": 22, "anthracnose": 184}},
+    "per_class": {
+      "Cacao___healthy": {"precision": 0.8848, "recall": 0.8204, "f1": 0.8514, "support": 206},
+      "Cacao___anthracnose": {"precision": 0.8326, "recall": 0.8932, "f1": 0.8618, "support": 206}
+    }
+  },
+  "zero_regression": {
+    "non_cacao_weight_max_diff": 0.0,
+    "non_cacao_bias_max_diff": 0.0,
+    "ok": true,
+    "inference_spot_check": {
+      "samples": 530,
+      "max_logit_diff_first_115": 0.0,
+      "top1_old_class_changed": 0
+    }
+  },
+  "false_positive_risk": {
+    "note": "Single-view estimate 84/530, TTA(4-view) estimate 90/530 existing non-Cacao crops flip to Cacao___anthracnose on the UNFILTERED path.",
+    "predicted_class": "Cacao___anthracnose only",
+    "tta_fp_count": 90,
+    "tta_fp_median_confidence": 0.346,
+    "tta_fp_above_0_5": 8,
+    "tta_fp_above_0_8": 0,
+    "mitigation": "Crop-filtered UI (CROP_CLASS_PREFIXES) isolates Cacao predictions to cacao selections; auto/unfiltered path may need a confidence threshold."
+  },
+  "artifacts": {
+    "candidate_onnx": "ml_model/cacao_retrain_output/cacao_candidate.onnx",
+    "candidate_class_names": "ml_model/cacao_retrain_output/candidate_class_names.json",
+    "best_model": "ml_model/cacao_retrain_output/best_model.pth",
+    "curves": "ml_model/cacao_retrain_output/training_curves.png",
+    "confusion_matrix": "ml_model/cacao_retrain_output/confusion_matrix.png"
+  },
+  "recommendation": {
+    "status": "CANDIDATE READY - awaiting user approval",
+    "deploy_steps_if_approved": [
+      "Backup current detector/ml_assets/model.onnx + class_names.json",
+      "Replace with cacao_candidate.onnx + candidate_class_names.json",
+      "Add 'cacao': 'Cacao___' to CROP_CLASS_PREFIXES in detector/inference.py",
+      "Add cacao disease cards to disease_data.json",
+      "Run Django manage.py check + smoke test predictions"
+    ]
+  }
+}
