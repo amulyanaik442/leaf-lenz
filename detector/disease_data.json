@@ -1111,5 +1111,40 @@
         "description": "Downy mildew of cauliflower is caused by the oomycete Peronospora parasitica. It thrives in cool, moist conditions and produces pale patches on the leaf upper surface with a gray-white fuzzy growth on the underside.",
         "symptoms": "Pale yellow-green irregular blotches on the upper leaf surface with a grayish downy growth on the underside; leaves may yellow, curl, and drop prematurely, and heads may become discolored in severe infections.",
         "treatment_prevention": "Use tolerant varieties, ensure proper plant spacing and air circulation, avoid overhead irrigation in cool weather, remove infected leaves and debris, rotate crops, and apply registered protective fungicides when conditions favor disease."
+    },
+    "papaya___healthy": {
+        "plant_name": "Papaya",
+        "disease_name": "Healthy",
+        "description": "The papaya leaf appears healthy with no visible signs of fungal, bacterial, or viral disease, or pest damage.",
+        "symptoms": "Uniform green color, intact leaf margins and veins, normal palmately-lobed leaf structure, and no spots, yellowing, curling, mottling, or powdery growth.",
+        "treatment_prevention": "Maintain balanced nutrition and consistent moisture, ensure good drainage and air circulation, keep the field free of weeds and plant debris, and inspect plants regularly for early signs of disease."
+    },
+    "papaya___anthracnose": {
+        "plant_name": "Papaya",
+        "disease_name": "Anthracnose",
+        "description": "Anthracnose of papaya is a fungal disease caused by Colletotrichum gloeosporioides. It thrives in warm, humid conditions and produces dark, sunken lesions on leaves, petioles, and fruit, reducing photosynthesis and fruit quality.",
+        "symptoms": "Circular to irregular brown to black sunken spots with concentric rings on leaves and petioles; pinkish spore masses may appear in wet weather, and fruit develops water-soaked, sunken lesions that rot.",
+        "treatment_prevention": "Use disease-free planting material, provide good air circulation and spacing, avoid overhead irrigation, remove and destroy infected leaves and debris, apply registered protective and systemic fungicides at early stages, and practice field sanitation."
+    },
+    "papaya___bacterial_spot": {
+        "plant_name": "Papaya",
+        "disease_name": "Bacterial Spot",
+        "description": "Bacterial spot of papaya is caused by bacterial pathogens that enter through wounds and natural openings. It produces water-soaked lesions that yellow and later turn brown, reducing leaf area and weakening the plant.",
+        "symptoms": "Small, angular, water-soaked spots on leaves that enlarge and turn yellow to dark brown or black; spots may coalesce, causing blighting and premature leaf drop.",
+        "treatment_prevention": "Use disease-free seeds and planting material, avoid overhead irrigation and work when leaves are wet, remove infected plant parts, practice crop rotation and field sanitation, and apply registered copper-based bactericides at the first signs."
+    },
+    "papaya___curl": {
+        "plant_name": "Papaya",
+        "disease_name": "Leaf Curl",
+        "description": "Papaya leaf curl is a viral disease (papaya leaf curl virus) transmitted by whiteflies. It causes severe leaf curling and crinkling, stunted growth, and reduced fruit production.",
+        "symptoms": "Downward curling and crinkling of leaves, thickened and deformed veins, vein clearing, stunted plant growth, reduced leaf size, and in severe cases leaf yellowing and premature drop.",
+        "treatment_prevention": "Control whitefly vectors with appropriate insecticides or bio-pesticides and reflective mulches, use healthy seedlings, remove and destroy infected plants and alternate weed hosts, install yellow sticky traps for monitoring, and avoid planting near infested fields."
+    },
+    "papaya___ring_spot": {
+        "plant_name": "Papaya",
+        "disease_name": "Ringspot Virus",
+        "description": "Papaya ringspot virus (PRSV) is transmitted by aphids and is one of the most destructive diseases of papaya. It causes mottling, ring spots, leaf distortion, and severe fruit and yield losses.",
+        "symptoms": "Yellow mottling and mosaic patterns on leaves, thin chlorotic ringspots on fruit, leaf distortion and reduced leaf size, stunted growth, and in young plants severe wilting and death.",
+        "treatment_prevention": "Use resistant or tolerant varieties, control aphid vectors with registered insecticides and reflective mulches, rogue and destroy infected plants, remove alternate weed hosts, and replant in clean fields away from infected orchards."
     }
 }

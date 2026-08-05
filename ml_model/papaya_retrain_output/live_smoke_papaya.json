@@ -1,0 +1,30 @@
+{
+    "total": 95,
+    "routed_ok": 95,
+    "correct": 79,
+    "by_class": {
+        "papaya___anthracnose": [
+            19,
+            13
+        ],
+        "papaya___bacterial_spot": [
+            19,
+            18
+        ],
+        "papaya___curl": [
+            19,
+            16
+        ],
+        "papaya___healthy": [
+            19,
+            17
+        ],
+        "papaya___ring_spot": [
+            19,
+            15
+        ]
+    },
+    "errors": [],
+    "accuracy_pct": 83.16,
+    "routing_pct": 100.0
+}

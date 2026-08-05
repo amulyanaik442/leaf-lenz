@@ -1,0 +1,35 @@
+{
+    "rows": {
+        "papaya___anthracnose": {
+            "precision": 1.0,
+            "recall": 0.6842,
+            "f1": 0.8125,
+            "support": 19
+        },
+        "papaya___bacterial_spot": {
+            "precision": 0.7391,
+            "recall": 0.8947,
+            "f1": 0.8095,
+            "support": 19
+        },
+        "papaya___curl": {
+            "precision": 0.75,
+            "recall": 0.7895,
+            "f1": 0.7692,
+            "support": 19
+        },
+        "papaya___healthy": {
+            "precision": 0.68,
+            "recall": 0.8947,
+            "f1": 0.7727,
+            "support": 19
+        },
+        "papaya___ring_spot": {
+            "precision": 1.0,
+            "recall": 0.7368,
+            "f1": 0.8485,
+            "support": 19
+        }
+    },
+    "accuracy": 0.8
+}

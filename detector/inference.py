@@ -280,6 +280,7 @@ CROP_CLASS_PREFIXES = {
     'ginger': 'ginger___',
     'bean': 'bean___',
     'cauliflower': 'cauliflower___',
+    'papaya': 'papaya___',
 
     'mango': 'Mango___',
     'orange': 'Orange___',

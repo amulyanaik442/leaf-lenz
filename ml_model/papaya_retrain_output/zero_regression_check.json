@@ -1,0 +1,11 @@
+{
+    "non_papaya_weight_max_diff": 0.0,
+    "non_papaya_bias_max_diff": 0.0,
+    "zero_regression_ok": true,
+    "inference_spot_check": {
+        "samples": 767,
+        "max_logit_diff_first_141": 0.0,
+        "top1_old_class_changed": 0,
+        "papaya_false_positives": 80
+    }
+}
