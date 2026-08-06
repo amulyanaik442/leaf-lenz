@@ -416,7 +416,8 @@ def collect_existing_crops(max_per_folder=40):
     return paths
 
 
-def inference_zero_regression_check(candidate_path, n_existing=141):
+def inference_zero_regression_check(candidate_path, n_existing=141,
+                                    papaya_range=(141, 146)):
     print('\n' + '=' * 60)
     print('INFERENCE ZERO-REGRESSION SPOT CHECK (existing non-papaya crops)')
     print('=' * 60)
@@ -431,6 +432,8 @@ def inference_zero_regression_check(candidate_path, n_existing=141):
         return None
     print(f'  Existing crops sampled: {len(paths)}')
 
+    protected = [i for i in range(cand.get_outputs()[0].shape[1])
+                 if not (papaya_range[0] <= i < papaya_range[1])]
     max_logit_diff = 0.0
     argmax_old_diff = 0
     papaya_fp = 0
@@ -443,19 +446,20 @@ def inference_zero_regression_check(candidate_path, n_existing=141):
         arr = np.expand_dims(t, 0).astype(np.float32)
         lp = prod.run(None, {inp: arr})[0][0]
         lc = cand.run(None, {inp: arr})[0][0]
-        diff = float(np.max(np.abs(lp[:n_existing] - lc[:n_existing])))
+        diff = float(np.max(np.abs(lp[protected] - lc[protected])))
         max_logit_diff = max(max_logit_diff, diff)
-        if np.argmax(lp) != np.argmax(lc[:n_existing]):
+        if np.argmax(lp[protected]) != np.argmax(lc[protected]):
             argmax_old_diff += 1
-        if np.argmax(lc) >= n_existing:
+        if papaya_range[0] <= np.argmax(lc) < papaya_range[1]:
             papaya_fp += 1
 
-    print(f'  max |logit diff| over first {n_existing} classes: {max_logit_diff:.2e}')
-    print(f'  crops whose top-1 among old classes changed: {argmax_old_diff}/{len(paths)}')
+    print(f'  max |logit diff| over protected (non-papaya) classes: {max_logit_diff:.2e}')
+    print(f'  crops whose top-1 among protected classes changed: {argmax_old_diff}/{len(paths)}')
     print(f'  crops the candidate now labels papaya (FP risk): {papaya_fp}/{len(paths)}')
     result = {
         'samples': len(paths),
-        'max_logit_diff_first_141': max_logit_diff,
+        'max_logit_diff_protected': max_logit_diff,
+        'protected_index_count': len(protected),
         'top1_old_class_changed': argmax_old_diff,
         'papaya_false_positives': papaya_fp,
     }
@@ -476,11 +480,36 @@ def main():
                         help='TTA-aligned training: flip-view train features and '
                              '4-view averaged-softmax val/test eval (matches production)')
     parser.add_argument('--seed', type=int, default=SEED)
+    parser.add_argument('--seeds', type=str, default=None,
+                        help='comma-separated seeds to train and average '
+                             '(linear head weight-space ensemble; overrides --seed)')
+    parser.add_argument('--split-dir', default='Papaya_Split',
+                        help='split folder under dataset/papaya/ (default: Papaya_Split)')
+    parser.add_argument('--prod-model', default='',
+                        help='reference frozen ONNX for backbone + zero-regression '
+                             '(default: detector/ml_assets/model.onnx)')
+    parser.add_argument('--prod-classes', default='',
+                        help='reference class_names.json (default: '
+                             'detector/ml_assets/class_names.json)')
     parser.add_argument('--no-export', action='store_true')
     args = parser.parse_args()
 
-    np.random.seed(args.seed)
-    torch.manual_seed(args.seed)
+    global PRODUCTION_ONNX, CLASSES_PATH, SPLIT_DIR, FEAT_CACHE_TTA
+    if args.prod_model:
+        PRODUCTION_ONNX = args.prod_model
+    if args.prod_classes:
+        CLASSES_PATH = args.prod_classes
+    if args.split_dir != 'Papaya_Split':
+        SPLIT_DIR = os.path.join(BASE_DIR, 'dataset', 'papaya', args.split_dir)
+    split_tag = os.path.basename(SPLIT_DIR)
+    FEAT_CACHE_TTA = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                  f'papaya_features_{split_tag}.pkl')
+
+    seed_list = [int(s) for s in args.seeds.split(',')] if args.seeds else [args.seed]
+    ensemble = len(seed_list) > 1
+
+    np.random.seed(seed_list[0])
+    torch.manual_seed(seed_list[0])
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print(f'Using device: {device}')
@@ -505,13 +534,25 @@ def main():
     with open(CLASSES_PATH) as f:
         existing_classes = json.load(f)
     n_existing = len(existing_classes)
-    assert n_existing == 141, \
-        f'Expected 141 (deployed) classes, got {n_existing}'
-    assert not any(c.startswith('papaya___') for c in existing_classes), \
-        'papaya classes already present!'
-    candidate_classes = existing_classes + PAPAYA_CLASS_NAMES
-    papaya_start = n_existing  # 141
-    papaya_end = papaya_start + N_NEW  # 146
+    first_papaya = next((i for i, c in enumerate(existing_classes)
+                         if c.startswith('papaya___')), None)
+    if first_papaya is None:
+        # Append mode: reference model has no papaya rows yet.
+        append_mode = True
+        assert n_existing == 141, \
+            f'Expected 141 (pre-papaya) classes for append, got {n_existing}'
+        candidate_classes = existing_classes + PAPAYA_CLASS_NAMES
+        papaya_start = n_existing  # 141
+    else:
+        # Replace mode: reference model already contains papaya rows.
+        append_mode = False
+        assert existing_classes[first_papaya:first_papaya + N_NEW] == PAPAYA_CLASS_NAMES, \
+            'papaya row order mismatch in reference model'
+        papaya_start = first_papaya
+        candidate_classes = existing_classes
+        print(f'  REPLACE MODE: papaya rows already at {papaya_start}-{papaya_start + N_NEW - 1}; '
+              f'these rows will be replaced, all other rows stay byte-identical')
+    papaya_end = papaya_start + N_NEW
     print(f'\n  Existing classes: {n_existing} | papaya range: {papaya_start}-{papaya_end - 1} | Candidate total: {len(candidate_classes)}')
 
     # ---- Features ----
@@ -556,79 +597,105 @@ def main():
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
 
-    train_ds = FeatureDataset(train_feats, train_labels)
-    train_loader = DataLoader(train_ds, batch_size=BATCH_SIZE, shuffle=True,
-                              num_workers=NUM_WORKERS)
-
-    # ---- Train ----
+    # ---- Train (optionally weight-space ensemble across seeds) ----
     print('\n' + '=' * 60)
-    print(f'TRAINING ({HEAD_EPOCHS} epochs max)')
+    print(f'TRAINING ({HEAD_EPOCHS} epochs max) seeds={seed_list} '
+          f'({"ensemble" if ensemble else "single"})')
     print('=' * 60)
-    head = nn.Linear(1280, N_NEW).to(device)
-    optimizer = optim.Adam(head.parameters(), lr=args.lr, weight_decay=args.wd)
-    scheduler = optim.lr_scheduler.ReduceLROnPlateau(
-        optimizer, mode='max', factor=0.5, patience=5)
+    train_ds = FeatureDataset(train_feats, train_labels)
     criterion = nn.CrossEntropyLoss(label_smoothing=args.smoothing)
 
     os.makedirs(CKPT_DIR, exist_ok=True)
+    avg_state = None
     best_val_acc = 0.0
-    best_state = None
-    patience_counter = 0
     history = {'train_acc': [], 'val_acc': [], 'train_loss': [], 'val_loss': []}
     train_acc = 0.0
+    per_seed = []
+    for si, seed in enumerate(seed_list):
+        np.random.seed(seed)
+        torch.manual_seed(seed)
+        head = nn.Linear(1280, N_NEW).to(device)
+        optimizer = optim.Adam(head.parameters(), lr=args.lr, weight_decay=args.wd)
+        scheduler = optim.lr_scheduler.ReduceLROnPlateau(
+            optimizer, mode='max', factor=0.5, patience=5)
+        loader = DataLoader(train_ds, batch_size=BATCH_SIZE, shuffle=True,
+                            num_workers=NUM_WORKERS)
+        seed_best = 0.0
+        seed_state = None
+        patience_counter = 0
+        for epoch in range(args.epochs):
+            head.train()
+            running_loss, correct, total = 0.0, 0, 0
+            for feats, labels in loader:
+                feats, labels = feats.to(device), labels.to(device)
+                optimizer.zero_grad()
+                outputs = head(feats)
+                loss = criterion(outputs, labels)
+                loss.backward()
+                optimizer.step()
+                running_loss += loss.item()
+                _, preds = outputs.max(1)
+                total += labels.size(0)
+                correct += preds.eq(labels).sum().item()
+            tr_acc = 100.0 * correct / total
+            tr_loss = running_loss / max(1, len(loader))
 
-    for epoch in range(args.epochs):
-        head.train()
-        running_loss, correct, total = 0.0, 0, 0
-        for feats, labels in train_loader:
-            feats, labels = feats.to(device), labels.to(device)
-            optimizer.zero_grad()
-            outputs = head(feats)
-            loss = criterion(outputs, labels)
-            loss.backward()
-            optimizer.step()
-            running_loss += loss.item()
-            _, preds = outputs.max(1)
-            total += labels.size(0)
-            correct += preds.eq(labels).sum().item()
-        train_acc = 100.0 * correct / total
-        train_loss = running_loss / max(1, len(train_loader))
+            val_acc, _ = evaluate_tta(head, val_views, val_labels, device)
+            scheduler.step(val_acc)
 
-        val_acc, _ = evaluate_tta(head, val_views, val_labels, device)
-        val_loss = 0.0
-        scheduler.step(val_acc)
+            history['train_acc'].append(round(tr_acc, 4))
+            history['val_acc'].append(round(val_acc, 4))
+            history['train_loss'].append(round(tr_loss, 4))
+            history['val_loss'].append(round(0.0, 4))
 
-        history['train_acc'].append(round(train_acc, 4))
-        history['val_acc'].append(round(val_acc, 4))
-        history['train_loss'].append(round(train_loss, 4))
-        history['val_loss'].append(round(val_loss, 4))
+            torch.save(head.state_dict(),
+                       os.path.join(CKPT_DIR, f'seed{seed}_epoch_{epoch + 1:02d}.pth'))
 
-        torch.save(head.state_dict(), os.path.join(CKPT_DIR, f'epoch_{epoch + 1:02d}.pth'))
+            if val_acc > seed_best:
+                seed_best = val_acc
+                seed_state = {k: v.cpu().clone() for k, v in head.state_dict().items()}
+                patience_counter = 0
+            else:
+                patience_counter += 1
 
-        if val_acc > best_val_acc:
-            best_val_acc = val_acc
-            best_state = {k: v.cpu().clone() for k, v in head.state_dict().items()}
-            patience_counter = 0
+            if (epoch + 1) % 5 == 0 or epoch == 0:
+                print(f'Seed {seed} Epoch [{epoch+1:2d}/{args.epochs}] '
+                      f'Train Acc: {tr_acc:.2f}% | Val Acc: {val_acc:.2f}% | '
+                      f'LR: {optimizer.param_groups[0]["lr"]:.1e}')
+
+            if patience_counter >= args.patience:
+                print(f'  Seed {seed}: early stopping at epoch {epoch + 1}')
+                break
+
+        if seed_state is None:
+            print(f'  WARNING: seed {seed} produced no best state')
+            continue
+        per_seed.append({'seed': seed, 'best_val_acc': seed_best,
+                         'epochs': epoch + 1})
+        if avg_state is None:
+            avg_state = {k: v.clone() for k, v in seed_state.items()}
         else:
-            patience_counter += 1
+            for k in avg_state:
+                avg_state[k] = avg_state[k] + seed_state[k]
+        best_val_acc = max(best_val_acc, seed_best)
+        train_acc = tr_acc
+        print(f'  Seed {seed}: best val {seed_best:.2f}% '
+              f'| running ensemble avg over {len(per_seed)} seed(s)')
 
-        if (epoch + 1) % 5 == 0 or epoch == 0:
-            print(f'Epoch [{epoch+1:2d}/{args.epochs}] Train Acc: {train_acc:.2f}% | Val Acc: {val_acc:.2f}% | LR: {optimizer.param_groups[0]["lr"]:.1e}')
-
-        if patience_counter >= args.patience:
-            print(f'  Early stopping at epoch {epoch + 1}')
-            break
-
-    print(f'\nBest validation accuracy: {best_val_acc:.2f}%')
-    head.load_state_dict(best_state)
+    for k in avg_state:
+        avg_state[k] = avg_state[k] / len(per_seed)
+    head = nn.Linear(1280, N_NEW)
+    head.load_state_dict(avg_state)
     head = head.to(device)
+    print(f'\nBest validation accuracy '
+          f'({"ensemble avg" if ensemble else "single"}): {best_val_acc:.2f}%')
 
     with torch.no_grad():
         bias_mean = head.bias.mean()
         head.bias.sub_(bias_mean)
     print(f'  Centered papaya biases: mean bias {bias_mean:.6f} subtracted')
 
-    torch.save(best_state, os.path.join(OUTPUT_DIR, 'best_model.pth'))
+    torch.save(avg_state, os.path.join(OUTPUT_DIR, 'best_model.pth'))
 
     # ---- Test evaluation ----
     print('\n' + '=' * 60)
@@ -649,15 +716,25 @@ def main():
         print(f'  {cls:30s} prec={r["precision"]:.3f} rec={r["recall"]:.3f} f1={r["f1"]:.3f}')
 
     save_artifacts(history, cm, test_acc / 100.0, train_acc, best_val_acc, device)
+    with open(os.path.join(OUTPUT_DIR, 'final_accuracies.json')) as _f:
+        _fa = json.load(_f)
+    _fa['seeds'] = seed_list
+    _fa['ensemble'] = ensemble
+    _fa['split'] = split_tag
+    _fa['replace_mode'] = not append_mode
+    with open(os.path.join(OUTPUT_DIR, 'final_accuracies.json'), 'w') as _f:
+        json.dump(_fa, _f, indent=4)
 
-    # ---- Candidate ONNX (append rows, zero regression) ----
+    # ---- Candidate ONNX (replace or append papaya rows, zero regression) ----
     candidate_path = None
     w_diff = b_diff = None
     ok = None
     inference_result = None
     if not args.no_export:
         print('\n' + '=' * 60)
-        print('CANDIDATE ONNX (papaya rows appended, existing rows frozen)')
+        print('CANDIDATE ONNX '
+              f'({"papaya rows replaced" if not append_mode else "papaya rows appended"}, '
+              'other rows frozen)')
         print('=' * 60)
         model = onnx.load(PRODUCTION_ONNX)
         weight_init = bias_init = None
@@ -681,10 +758,18 @@ def main():
         trained_weight = head.weight.detach().cpu().numpy()
         trained_bias = head.bias.detach().cpu().numpy()
 
-        assert old_weight.shape[0] == papaya_start, \
-            f'Expected {papaya_start} deployed rows, got {old_weight.shape[0]}'
-        new_weight = np.vstack([old_weight, trained_weight])
-        new_bias = np.concatenate([old_bias, trained_bias])
+        if append_mode:
+            assert old_weight.shape[0] == papaya_start, \
+                f'Expected {papaya_start} deployed rows, got {old_weight.shape[0]}'
+            new_weight = np.vstack([old_weight, trained_weight])
+            new_bias = np.concatenate([old_bias, trained_bias])
+        else:
+            assert old_weight.shape[0] == len(candidate_classes), \
+                f'Expected {len(candidate_classes)} deployed rows (replace mode), got {old_weight.shape[0]}'
+            new_weight = old_weight.copy()
+            new_bias = old_bias.copy()
+            new_weight[papaya_start:papaya_end] = trained_weight
+            new_bias[papaya_start:papaya_end] = trained_bias
 
         weight_init.raw_data = new_weight.astype(np.float32).tobytes()
         weight_init.dims[:] = new_weight.shape
@@ -711,7 +796,7 @@ def main():
             json.dump(candidate_classes, f, indent=4)
         print(f'  Saved candidate class names ({len(candidate_classes)} classes)')
 
-        # Zero-regression verification (weights byte-identical for existing rows)
+        # Zero-regression verification (non-papaya rows byte-identical)
         v1 = onnx.load(PRODUCTION_ONNX)
         v1_w = v1_b = None
         for init in v1.graph.initializer:
@@ -720,7 +805,8 @@ def main():
                 v1_w = np.frombuffer(init.raw_data, dtype=np.float32).reshape(dims)
             if dims == [classifier_rows]:
                 v1_b = np.frombuffer(init.raw_data, dtype=np.float32)
-        non_papaya = list(range(0, papaya_start))
+        non_papaya = [i for i in range(new_weight.shape[0])
+                      if not (papaya_start <= i < papaya_end)]
         w_diff = float(np.max(np.abs(new_weight[non_papaya] - v1_w[non_papaya])))
         b_diff = float(np.max(np.abs(new_bias[non_papaya] - v1_b[non_papaya])))
         ok = w_diff == 0.0 and b_diff == 0.0
@@ -728,12 +814,15 @@ def main():
         print(f'  Non-papaya bias max diff:   {b_diff:.10f}')
         print(f'  ZERO REGRESSION: {"OK" if ok else "FAILED"}')
 
-        inference_result = inference_zero_regression_check(candidate_path, n_existing=141)
+        inference_result = inference_zero_regression_check(
+            candidate_path, n_existing=papaya_start, papaya_range=(papaya_start, papaya_end))
 
         with open(os.path.join(OUTPUT_DIR, 'zero_regression_check.json'), 'w') as f:
             json.dump({'non_papaya_weight_max_diff': w_diff,
                        'non_papaya_bias_max_diff': b_diff,
                        'zero_regression_ok': ok,
+                       'papaya_start': papaya_start,
+                       'replace_mode': not append_mode,
                        'inference_spot_check': inference_result}, f, indent=4)
 
     print('\n' + '=' * 60)

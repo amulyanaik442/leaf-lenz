@@ -1,0 +1,60 @@
+{
+    "production_classes": 152,
+    "candidate_classes": 152,
+    "papaya_rows": [
+        141,
+        142,
+        143,
+        144,
+        145
+    ],
+    "okra_rows": [
+        146,
+        147,
+        148,
+        149,
+        150,
+        151
+    ],
+    "papaya_test_accuracy_pct_old_95": 97.89,
+    "papaya_test_accuracy_pct_full_185": 92.43,
+    "non_papaya_crop_filtered_mismatches": 0,
+    "papaya_row_top1_changes_intended": 12,
+    "crop_filtered_samples": 536,
+    "max_logit_diff_non_papaya": 0.0,
+    "papaya_fp_on_existing_crops_uncropped": 61,
+    "per_crop_filtered_mismatches": {
+        "bean": 0,
+        "cauliflower": 0,
+        "pumpkin": 0,
+        "tea": 0,
+        "cacao": 0,
+        "chilli": 0,
+        "turmeric": 0,
+        "black_pepper": 0,
+        "ginger": 0,
+        "okra": 0,
+        "papaya": 12
+    },
+    "app_wiring": {
+        "papaya_prefix": "papaya___",
+        "disease_data_papaya_keys": [
+            "papaya___anthracnose",
+            "papaya___bacterial_spot",
+            "papaya___curl",
+            "papaya___healthy",
+            "papaya___ring_spot"
+        ],
+        "disease_data_okra_keys": [
+            "okra___alternaria_leaf_spot",
+            "okra___cercospora_leaf_spot",
+            "okra___downy_mildew",
+            "okra___healthy",
+            "okra___leaf_curl_virus",
+            "okra___phyllosticta_leaf_spot"
+        ],
+        "dropdown_papaya": true,
+        "predict_by_crop_papaya_runs": true
+    },
+    "zero_regression_ok": true
+}

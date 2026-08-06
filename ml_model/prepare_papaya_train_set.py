@@ -22,6 +22,7 @@ The original BDPapayaLeaf archive is left untouched.
 import os
 import sys
 import json
+import argparse
 import hashlib
 import shutil
 from collections import Counter, defaultdict
@@ -185,10 +186,30 @@ def read_rgb(path):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--full', action='store_true',
+                        help='use ALL cleaned images (skip random undersample)')
+    parser.add_argument('--split-dir', default='Papaya_Split',
+                        help='output split folder name under dataset/papaya/ '
+                             '(default: Papaya_Split)')
+    parser.add_argument('--seed', type=int, default=SEED)
+    parser.add_argument('--report', default='',
+                        help='report filename override (default: papaya_train_prep_report.json)')
+    args = parser.parse_args()
+
+    global SPLIT_DIR, REPORT
+    SPLIT_DIR = os.path.join(PAPAYA_DIR, args.split_dir)
+    REPORT = os.path.join(PAPAYA_DIR, args.report or
+                          (f'papaya_train_prep_report_{args.split_dir}.json'
+                           if args.split_dir != 'Papaya_Split'
+                           else 'papaya_train_prep_report.json'))
+    if args.full:
+        SPLIT_DIR = os.path.join(SPLIT_DIR + '_full')
+
     log('=' * 60)
-    log('PAPAYA TRAIN SET PREP (cleanup -> balance -> split -> augment)')
+    log(f'PAPAYA TRAIN SET PREP ({"full" if args.full else "balanced"} -> split -> augment)')
     log('=' * 60)
-    rng = rng_seeded(SEED)
+    rng = rng_seeded(args.seed)
     aug = make_augmenter()
 
     files = load_files()
@@ -202,9 +223,14 @@ def main():
         f'{dict((k, len(v)) for k, v in dropped.items())}')
     log(f'  cleaned file counts: {dict(cleaned_counts)}')
 
-    # ---- balance (random undersample) ----
-    balanced, n_min = balance(cleaned, rng)
-    log(f'  balance target (smallest class): {n_min}')
+    # ---- balance (random undersample) or use all cleaned images ----
+    if args.full:
+        balanced = list(cleaned)
+        n_min = None
+        log('  balance: NONE (using all cleaned images)')
+    else:
+        balanced, n_min = balance(cleaned, rng)
+        log(f'  balance target (smallest class): {n_min}')
     log(f'  balanced counts: {dict(Counter(c for c, _p, _f in balanced))}')
 
     # ---- stratified file-level split ----
@@ -262,8 +288,10 @@ def main():
         'dropped': dict(dropped),
         'dedup_policy': ('exact-MD5 dedup, keep one copy per group; cross-class '
                          f'conflicts prefer {PREFERRED_CLASS} (approved)'),
-        'split_strategy': ('file-level stratified random undersample to smallest '
-                           'class; 80/10/10 per class, seed 42'),
+        'split_strategy': ('file-level stratified; 80/10/10 per class, seed %d; '
+                           'balance = %s' %
+                           (args.seed, 'none (all cleaned images, --full)' if args.full
+                            else 'random undersample to smallest class')),
         'blur_filter': 'disabled (not in approved plan for this dataset)',
         'balance_target_files': n_min,
         'balanced_file_counts': dict(Counter(c for c, _p, _f in balanced)),
@@ -273,7 +301,7 @@ def main():
         'aug_keep_ratio': AUG_KEEP_RATIO,
         'augmented_generated': dict(gen_per_class),
         'disk_counts': disk_counts,
-        'seed': SEED,
+        'seed': args.seed,
         'log': LOG,
     }
     with open(REPORT, 'w') as f:

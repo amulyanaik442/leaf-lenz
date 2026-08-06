@@ -1,10 +1,10 @@
 papaya Classification Report (internal test set)
 ============================================================
 class                           precision     recall         f1  support
-papaya___anthracnose               1.0000     0.6842     0.8125       19
-papaya___bacterial_spot            0.7391     0.8947     0.8095       19
-papaya___curl                      0.7500     0.7895     0.7692       19
-papaya___healthy                   0.6800     0.8947     0.7727       19
-papaya___ring_spot                 1.0000     0.7368     0.8485       19
+papaya___anthracnose               0.8974     1.0000     0.9459       35
+papaya___bacterial_spot            0.8500     0.7083     0.7727       24
+papaya___curl                      0.9636     0.9298     0.9464       57
+papaya___healthy                   0.9474     0.9474     0.9474       19
+papaya___ring_spot                 0.9038     0.9400     0.9216       50
 ------------------------------------------------------------
-accuracy                            80.00% (76/95)
+accuracy                            91.89% (170/185)
