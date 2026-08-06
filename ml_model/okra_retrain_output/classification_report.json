@@ -1,0 +1,41 @@
+{
+    "rows": {
+        "okra___alternaria_leaf_spot": {
+            "precision": 1.0,
+            "recall": 0.8571,
+            "f1": 0.9231,
+            "support": 7
+        },
+        "okra___cercospora_leaf_spot": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 4
+        },
+        "okra___downy_mildew": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8889,
+            "support": 5
+        },
+        "okra___healthy": {
+            "precision": 0.625,
+            "recall": 1.0,
+            "f1": 0.7692,
+            "support": 5
+        },
+        "okra___leaf_curl_virus": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+        },
+        "okra___phyllosticta_leaf_spot": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.8889,
+            "support": 5
+        }
+    },
+    "accuracy": 0.8966
+}

@@ -144,11 +144,5 @@
     "papaya___bacterial_spot",
     "papaya___curl",
     "papaya___healthy",
-    "papaya___ring_spot",
-    "okra___alternaria_leaf_spot",
-    "okra___cercospora_leaf_spot",
-    "okra___downy_mildew",
-    "okra___healthy",
-    "okra___leaf_curl_virus",
-    "okra___phyllosticta_leaf_spot"
+    "papaya___ring_spot"
 ]

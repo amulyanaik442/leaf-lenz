@@ -1,0 +1,43 @@
+{
+    "production_classes": 146,
+    "candidate_classes": 152,
+    "okra_classes": [
+        "okra___alternaria_leaf_spot",
+        "okra___cercospora_leaf_spot",
+        "okra___downy_mildew",
+        "okra___healthy",
+        "okra___leaf_curl_virus",
+        "okra___phyllosticta_leaf_spot"
+    ],
+    "okra_test_accuracy_pct": 72.22,
+    "crop_filtered_mismatches": 0,
+    "crop_filtered_samples": 507,
+    "max_logit_diff_first_146": 0.0,
+    "okra_fp_on_existing_crops_uncropped": 18,
+    "per_crop_filtered_mismatches": {
+        "bean": 0,
+        "cauliflower": 0,
+        "pumpkin": 0,
+        "tea": 0,
+        "cacao": 0,
+        "chilli": 0,
+        "turmeric": 0,
+        "black_pepper": 0,
+        "ginger": 0,
+        "papaya": 0
+    },
+    "app_wiring": {
+        "okra_prefix": "okra___",
+        "disease_data_okra_keys": [
+            "okra___alternaria_leaf_spot",
+            "okra___cercospora_leaf_spot",
+            "okra___downy_mildew",
+            "okra___healthy",
+            "okra___leaf_curl_virus",
+            "okra___phyllosticta_leaf_spot"
+        ],
+        "dropdown_okra": true,
+        "predict_by_crop_okra_runs": true
+    },
+    "zero_regression_ok": true
+}

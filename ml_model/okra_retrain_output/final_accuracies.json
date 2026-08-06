@@ -1,0 +1,13 @@
+{
+    "train_accuracy": 99.2908,
+    "best_val_accuracy": 96.5517,
+    "test_accuracy": 0.8966,
+    "device": "cpu",
+    "seeds": [
+        42,
+        7,
+        123
+    ],
+    "ensemble": true,
+    "split": "Okra_Split_full_full"
+}

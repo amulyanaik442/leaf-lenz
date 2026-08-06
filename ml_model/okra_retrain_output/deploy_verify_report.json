@@ -1,0 +1,32 @@
+{
+  "deployed_classes": 152,
+  "okra_test_correct": 25,
+  "okra_test_total": 29,
+  "okra_test_accuracy": 0.8621,
+  "per_class": {
+    "okra___alternaria_leaf_spot": {
+      "correct": 6,
+      "total": 7
+    },
+    "okra___cercospora_leaf_spot": {
+      "correct": 4,
+      "total": 4
+    },
+    "okra___downy_mildew": {
+      "correct": 3,
+      "total": 5
+    },
+    "okra___healthy": {
+      "correct": 5,
+      "total": 5
+    },
+    "okra___leaf_curl_virus": {
+      "correct": 3,
+      "total": 3
+    },
+    "okra___phyllosticta_leaf_spot": {
+      "correct": 4,
+      "total": 5
+    }
+  }
+}

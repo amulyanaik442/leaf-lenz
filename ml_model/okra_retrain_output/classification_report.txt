@@ -1,0 +1,11 @@
+okra Classification Report (internal test set)
+============================================================
+class                           precision     recall         f1  support
+okra___alternaria_leaf_spot        1.0000     0.8571     0.9231        7
+okra___cercospora_leaf_spot        1.0000     1.0000     1.0000        4
+okra___downy_mildew                1.0000     0.8000     0.8889        5
+okra___healthy                     0.6250     1.0000     0.7692        5
+okra___leaf_curl_virus             1.0000     1.0000     1.0000        3
+okra___phyllosticta_leaf_spot      1.0000     0.8000     0.8889        5
+------------------------------------------------------------
+accuracy                            89.66% (26/29)

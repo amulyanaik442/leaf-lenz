@@ -1,0 +1,11 @@
+{
+    "non_okra_weight_max_diff": 0.0,
+    "non_okra_bias_max_diff": 0.0,
+    "zero_regression_ok": true,
+    "inference_spot_check": {
+        "samples": 862,
+        "max_logit_diff_first_146": 0.0,
+        "top1_old_class_changed": 0,
+        "okra_false_positives": 23
+    }
+}

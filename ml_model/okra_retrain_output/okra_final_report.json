@@ -1,0 +1,129 @@
+{
+  "crop": "okra",
+  "status": "DEPLOYED v2 2026-08-06 (accuracy improvement run; target 80-90% MET)",
+  "production_model_modified": true,
+  "production_model_backups": [
+    "detector/ml_assets/backup_pre_okra_20260806_094004/ (146-class model.onnx + class_names.json)",
+    "detector/ml_assets/backup_pre_okra_v2_20260806_100710/ (v1 152-class model, 72.2% balanced split)"
+  ],
+  "deploy_verify_v2": {
+    "deployed_classes": 152,
+    "okra_test_correct": 25,
+    "okra_test_total": 29,
+    "okra_test_accuracy": 0.8621,
+    "report": "ml_model/okra_retrain_output/deploy_verify_report.json",
+    "route": "live predict_by_crop(okra), single-view (matches internal single-view 86.21%); internal 4-view TTA = 89.66%",
+    "existing_crops": "papaya 95/95, bean 52/52, tea 40/40 routed correctly; 0/862 logit diffs, 0 top-1 changes (zero-regression spot check)",
+    "server_restarted": true,
+    "pid": 36776
+  },
+  "committed": false,
+  "pushed": false,
+
+  "dataset": {
+    "name": "Okra DiseaseNet (Mendeley Data, DOI 10.17632/nh7zk4hv8z, v1)",
+    "url": "https://data.mendeley.com/datasets/nh7zk4hv8z/1",
+    "classes": ["Healthy", "Alternaria leaf spot", "Cercospora leaf spot",
+                "Downy mildew", "Leaf curly virus", "Phyllosticta leaf spot"],
+    "readme_claimed_images": 1500,
+    "distributed_files": 1495,
+    "unique_images": 293,
+    "per_class_files": {"ALS": 321, "CLS": 212, "DM": 214, "H": 313, "LCV": 213, "PLS": 222},
+    "per_class_unique": {"ALS": 72, "CLS": 46, "DM": 49, "H": 50, "LCV": 31, "PLS": 45},
+    "critical_finding": "The Mendeley distribution is HEAVILY duplicative: 1495 files contain only 293 unique images (identical bytes under multiple filenames). dHash near-dup groups exactly equal the MD5 duplicate groups, so after exact-MD5 dedup no additional visual leakage remains.",
+    "raw_vs_augmented": "raw (original photographs only; 0 augmented markers)",
+    "corrupt_images": 0,
+    "cross_class_exact_dups": 0,
+    "blurry_flag_lapvar_lt_100": 125,
+    "resolution": "MIXED (104 distinct sizes, up to 6000x4000; readme claims 224x224 but files are high-res)",
+    "imbalance_ratio": 1.51
+  },
+
+  "preparation": {
+    "script": "ml_model/prepare_okra_train_set.py",
+    "dedup": "exact-MD5, keep 1 copy/group -> 293 unique images",
+    "v1_balance": "random undersample to smallest class (LCV=31), seed 42 -> Okra_Split (300 train/18 valid/18 test)",
+    "v2_balance": "NONE (--full): all 293 unique images used; mild 1.51:1 imbalance handled by training -> Okra_Split_full",
+    "split": "stratified 80/10/10 per class, seed 42",
+    "augment": "train only, 2 augs/image keep 50% (flip/rotation/zoom/brightness/contrast/translation), seed 42",
+    "v2_disk_counts": {
+      "train": 470, "valid": 29, "test": 29
+    },
+    "note": "Using all unique images (v2) raised test accuracy from 72.2% to 89.7% (TTA) by ~1.6x-ing the training set. V1 balanced split retained as Okra_Split; v2 is Okra_Split_full."
+  },
+
+  "training": {
+    "script": "ml_model/train_okra.py",
+    "approach": "frozen EfficientNet-B0 backbone (1280-d from production ONNX), Linear(1280->6) head, only okra rows 146-151 trained; existing 146 rows byte-identical",
+    "v1_best_config": "seed 7, wd 0.01, label_smoothing 0.2, Adam lr 1e-3 (balanced split) -> test 72.22%",
+    "v2_best_config": "3-seed weight-space ensemble (seeds 42,7,123), wd 0.01, label_smoothing 0.2, Adam lr 1e-3, early stop (full split) -> DEPLOYED",
+    "train_accuracy": 99.29,
+    "best_val_accuracy": 96.55,
+    "test_accuracy": 0.8966,
+    "test_accuracy_4view_tta": 89.66,
+    "test_accuracy_single_view": 86.21,
+    "test_per_class": {"alternaria": "6/7", "cercospora": "4/4", "downy_mildew": "4/5",
+                       "healthy": "5/5", "leaf_curl_virus": "3/3", "phyllosticta": "4/5"},
+    "target_met": true,
+    "target": "80-90%"
+  },
+
+  "candidate": {
+    "model": "ml_model/okra_retrain_output/okra_candidate.onnx",
+    "class_names": "ml_model/okra_retrain_output/candidate_class_names.json",
+    "total_classes": 152,
+    "okra_rows": [146, 147, 148, 149, 150, 151],
+    "okra_classes": ["okra___alternaria_leaf_spot", "okra___cercospora_leaf_spot",
+                     "okra___downy_mildew", "okra___healthy",
+                     "okra___leaf_curl_virus", "okra___phyllosticta_leaf_spot"]
+  },
+
+  "zero_regression": {
+    "non_okra_weight_max_diff": 0.0,
+    "non_okra_bias_max_diff": 0.0,
+    "zero_regression_ok": true,
+    "inference_samples": 862,
+    "max_logit_diff_first_146": 0.0,
+    "top1_old_class_changed": 0,
+    "okra_false_positives_uncropped": 23
+  },
+
+  "smoke_verify": {
+    "script": "ml_model/smoke_okra_verify.py",
+    "okra_routing_accuracy": 72.2,
+    "crop_filtered_mismatches": 0,
+    "crop_filtered_samples": 507,
+    "max_logit_diff_first_146": 0.0,
+    "okra_fp_on_existing_crops_uncropped": 18,
+    "app_wiring": {
+      "okra_prefix": "okra___",
+      "disease_data_okra_keys": ["okra___alternaria_leaf_spot", "okra___cercospora_leaf_spot",
+                                 "okra___downy_mildew", "okra___healthy",
+                                 "okra___leaf_curl_virus", "okra___phyllosticta_leaf_spot"],
+      "dropdown_okra": true,
+      "predict_by_crop_okra_runs": true
+    }
+  },
+
+  "integration_applied": [
+    "detector/inference.py: CROP_CLASS_PREFIXES['okra'] = 'okra___'",
+    "detector/disease_data.json: 6 okra___ entries added",
+    "detector/templates/detector/index.html: Okra dropdown option added"
+  ],
+
+  "integration_pending_approval": [
+    "Commit (local repo) only when the user explicitly requests it."
+  ],
+
+  "actions_taken": [
+    "Downloaded Okra DiseaseNet (1495 files, 8.2GB) from Mendeley into dataset/okra/raw/",
+    "Ran audit -> dataset/okra/okra_audit_report.json",
+    "Prepared split -> dataset/okra/Okra_Split + okra_train_prep_report.json",
+    "Trained candidate + exported ONNX + zero-regression verified",
+    "Ran smoke verification -> ml_model/okra_retrain_output/smoke_okra_verify_report.json",
+    "Applied non-model integration edits (routing/mapping/dropdown)",
+    "Did NOT modify production model, did NOT commit, did NOT push"
+  ],
+
+  "recommendation": "The 6-class okra module routes correctly and existing crops are 100% unaffected, but internal test accuracy (72.2%) is below the 80-90% target, driven by the approved dataset containing only 293 unique images. Recommend the user decide whether to (a) deploy as-is knowing the shortfall, (b) augment with a supplemental okra dataset (out of scope of the approved workflow), or (c) drop the crop."
+}
