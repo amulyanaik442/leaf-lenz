@@ -1,0 +1,24 @@
+{
+  "classes": [
+    "Coffee___healthy",
+    "Coffee___red_spider_mite",
+    "Coffee___rust"
+  ],
+  "confusion_matrix": {
+    "Coffee___healthy": {
+      "Coffee___healthy": 56,
+      "Coffee___rust": 15,
+      "Coffee___red_spider_mite": 5
+    },
+    "Coffee___red_spider_mite": {
+      "Coffee___red_spider_mite": 10,
+      "Coffee___healthy": 3,
+      "Coffee___rust": 3
+    },
+    "Coffee___rust": {
+      "Coffee___rust": 28,
+      "Coffee___red_spider_mite": 23,
+      "Coffee___healthy": 6
+    }
+  }
+}
