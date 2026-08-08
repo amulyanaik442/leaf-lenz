@@ -1,382 +1,78 @@
 {
-  "model": "deployed production model (coffee classes pre-existing, not retrained)",
+  "model": "retrained coffee rows (v2) - replaced rows 17-19 in the 152-class deployed model; zero-regression verified on all other rows",
   "classes": [
     "Coffee___healthy",
     "Coffee___red_spider_mite",
     "Coffee___rust"
   ],
   "test_images": 149,
-  "accuracy": 63.0872,
-  "correct": 94,
-  "misclassified": [
-    [
-      "C10P17H1.jpg",
-      "Coffee___healthy",
-      "Coffee___rust",
-      0.561
-    ],
-    [
-      "C10P20E1.jpg",
-      "Coffee___healthy",
-      "Coffee___rust",
-      0.635
-    ],
-    [
-      "C11P20H1.jpg",
-      "Coffee___healthy",
-      "Coffee___rust",
-      0.551
-    ],
-    [
-      "C11P2H1.jpg",
-      "Coffee___healthy",
-      "Coffee___rust",
-      0.453
-    ],
-    [
-      "C2P11E1.jpg",
-      "Coffee___healthy",
-      "Coffee___red_spider_mite",
-      0.454
-    ],
-    [
-      "C2P15H1.jpg",
-      "Coffee___healthy",
-      "Coffee___rust",
-      0.505
-    ],
-    [
-      "C2P27H1.jpg",
-      "Coffee___healthy",
-      "Coffee___red_spider_mite",
-      0.523
-    ],
-    [
-      "C3P15H1.jpg",
-      "Coffee___healthy",
-      "Coffee___rust",
-      0.865
-    ],
-    [
-      "C3P20H1.jpg",
-      "Coffee___healthy",
-      "Coffee___red_spider_mite",
-      0.666
-    ],
-    [
-      "C3P21H1.jpg",
-      "Coffee___healthy",
-      "Coffee___rust",
-      0.543
-    ],
-    [
-      "C3P37E1.jpg",
-      "Coffee___healthy",
-      "Coffee___rust",
-      0.574
-    ],
-    [
-      "C5P17E1.jpg",
-      "Coffee___healthy",
-      "Coffee___rust",
-      0.831
-    ],
-    [
-      "C5P28H2.jpg",
-      "Coffee___healthy",
-      "Coffee___rust",
-      0.712
-    ],
-    [
-      "C5P37H1.jpg",
-      "Coffee___healthy",
-      "Coffee___red_spider_mite",
-      0.461
-    ],
-    [
-      "C7P11H2.jpg",
-      "Coffee___healthy",
-      "Coffee___rust",
-      0.674
-    ],
-    [
-      "C7P13H2.jpg",
-      "Coffee___healthy",
-      "Coffee___rust",
-      0.634
-    ],
-    [
-      "C8P39E1.jpg",
-      "Coffee___healthy",
-      "Coffee___rust",
-      0.482
-    ],
-    [
-      "C8P4H2.jpg",
-      "Coffee___healthy",
-      "Coffee___rust",
-      0.639
-    ],
-    [
-      "C9P18H2.jpg",
-      "Coffee___healthy",
-      "Coffee___red_spider_mite",
-      0.537
-    ],
-    [
-      "C9P36H2.jpg",
-      "Coffee___healthy",
-      "Coffee___rust",
-      0.454
-    ],
-    [
-      "C2P12E2.jpg",
-      "Coffee___red_spider_mite",
-      "Coffee___healthy",
-      0.449
-    ],
-    [
-      "C3P19H2.jpg",
-      "Coffee___red_spider_mite",
-      "Coffee___healthy",
-      0.545
-    ],
-    [
-      "C3P37E2.jpg",
-      "Coffee___red_spider_mite",
-      "Coffee___healthy",
-      0.709
-    ],
-    [
-      "C4P19E2.jpg",
-      "Coffee___red_spider_mite",
-      "Coffee___rust",
-      0.493
-    ],
-    [
-      "C5P24H2.jpg",
-      "Coffee___red_spider_mite",
-      "Coffee___rust",
-      0.591
-    ],
-    [
-      "C9P6E1.jpg",
-      "Coffee___red_spider_mite",
-      "Coffee___rust",
-      0.599
-    ],
-    [
-      "C10P12E2.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.755
-    ],
-    [
-      "C10P18H2.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.641
-    ],
-    [
-      "C10P24H2.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.614
-    ],
-    [
-      "C10P7E2.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.482
-    ],
-    [
-      "C11P38H2.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.683
-    ],
-    [
-      "C12P12H2.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.449
-    ],
-    [
-      "C1P21H2.jpg",
-      "Coffee___rust",
-      "Coffee___healthy",
-      0.519
-    ],
-    [
-      "C1P22H2.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.456
-    ],
-    [
-      "C1P24H2.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.675
-    ],
-    [
-      "C1P35H2.jpg",
-      "Coffee___rust",
-      "Coffee___healthy",
-      0.408
-    ],
-    [
-      "C1P39H2.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.768
-    ],
-    [
-      "C3P16H1.jpg",
-      "Coffee___rust",
-      "Coffee___healthy",
-      0.553
-    ],
-    [
-      "C3P21E2.jpg",
-      "Coffee___rust",
-      "Coffee___healthy",
-      0.859
-    ],
-    [
-      "C3P27H2.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.457
-    ],
-    [
-      "C4P13H2.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.585
-    ],
-    [
-      "C4P1H2.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.476
-    ],
-    [
-      "C4P38H2.jpg",
-      "Coffee___rust",
-      "Coffee___healthy",
-      0.5
-    ],
-    [
-      "C4P40H2.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.753
-    ],
-    [
-      "C5P25H2.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.484
-    ],
-    [
-      "C5P30E1.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.937
-    ],
-    [
-      "C6P31H1.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.77
-    ],
-    [
-      "C6P33H2.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.877
-    ],
-    [
-      "C7P12H2.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.385
-    ],
-    [
-      "C8P11E2.jpg",
-      "Coffee___rust",
-      "Coffee___healthy",
-      0.762
-    ],
-    [
-      "C9P10E1.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.524
-    ],
-    [
-      "C9P23E1.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.478
-    ],
-    [
-      "C9P25H1.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.576
-    ],
-    [
-      "C9P36H1.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.706
-    ],
-    [
-      "C9P4E1.jpg",
-      "Coffee___rust",
-      "Coffee___red_spider_mite",
-      0.414
-    ]
-  ],
+  "accuracy": 0.7383,
+  "correct": 110,
+  "accuracy_pct": 73.83,
+  "previous_deployed_accuracy": 0.6309,
+  "improvement_pts": 10.74,
+  "training": {
+    "script": "ml_model/train_coffee.py",
+    "split": "Coffee_Split",
+    "seeds": [42, 7, 123],
+    "ensemble": true,
+    "weight_decay": 0.01,
+    "label_smoothing": 0.2,
+    "class_weights": true,
+    "train_images": 1194,
+    "valid_images": 150,
+    "test_images": 149,
+    "best_val_acc_pct": 72.0,
+    "internal_test_tta_acc_pct": 73.15
+  },
+  "deployment": {
+    "backup": "detector/ml_assets/backup_pre_coffee_20260808_165753/",
+    "replace_range": [17, 20],
+    "zero_regression_non_coffee_weight_max_diff": 0.0,
+    "zero_regression_non_coffee_bias_max_diff": 0.0,
+    "zero_regression_ok": true
+  },
+  "live_eval": {
+    "method": "production-style TTA (4 views), crop-filtered softmax over Coffee___ classes",
+    "accuracy_pct": 73.83,
+    "correct": 110,
+    "total": 149
+  },
   "per_class": {
     "Coffee___healthy": {
-      "precision": 0.8615,
-      "recall": 0.7368,
-      "f1": 0.7943,
+      "precision": 0.833,
+      "recall": 0.789,
       "support": 76
     },
     "Coffee___red_spider_mite": {
-      "precision": 0.2632,
-      "recall": 0.625,
-      "f1": 0.3704,
+      "precision": 0.406,
+      "recall": 0.813,
       "support": 16
     },
     "Coffee___rust": {
-      "precision": 0.6087,
-      "recall": 0.4912,
-      "f1": 0.5437,
+      "precision": 0.822,
+      "recall": 0.649,
       "support": 57
     }
   },
-  "confusion_matrix": {
+  "confusion_matrix_true_to_pred": {
     "Coffee___healthy": {
-      "Coffee___healthy": 56,
-      "Coffee___rust": 15,
-      "Coffee___red_spider_mite": 5
+      "Coffee___healthy": 60,
+      "Coffee___rust": 6,
+      "Coffee___red_spider_mite": 10
     },
     "Coffee___red_spider_mite": {
-      "Coffee___red_spider_mite": 10,
-      "Coffee___healthy": 3,
-      "Coffee___rust": 3
+      "Coffee___red_spider_mite": 13,
+      "Coffee___healthy": 1,
+      "Coffee___rust": 2
     },
     "Coffee___rust": {
-      "Coffee___rust": 28,
-      "Coffee___red_spider_mite": 23,
-      "Coffee___healthy": 6
+      "Coffee___rust": 37,
+      "Coffee___red_spider_mite": 9,
+      "Coffee___healthy": 11
     }
   },
   "test_source": "RoCoLe (Kaggle mirror), stratified 80/10/10 split, seed 42",
-  "test_folder_naming": "lowercase coffee___ folders mapped to model Coffee___ classes"
+  "test_folder_naming": "lowercase coffee___ folders mapped to model Coffee___ classes",
+  "notes": "Biggest residual confusion is rust<->red_spider_mite (19 miscalls). Class weights (inverse frequency) restored mite recall to 81% vs 62.5% on the old deployed model."
 }

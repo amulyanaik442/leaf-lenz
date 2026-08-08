@@ -1,0 +1,14 @@
+{
+    "train_accuracy": 82.8308,
+    "best_val_accuracy": 72.0,
+    "test_accuracy": 0.7315,
+    "device": "cpu",
+    "seeds": [
+        42,
+        7,
+        123
+    ],
+    "ensemble": true,
+    "split": "Coffee_Split",
+    "class_weights": true
+}

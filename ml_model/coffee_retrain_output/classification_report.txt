@@ -1,0 +1,8 @@
+coffee Classification Report (internal test set)
+============================================================
+class                           precision     recall         f1  support
+Coffee___healthy                   0.8529     0.7632     0.8056       76
+Coffee___red_spider_mite           0.4062     0.8125     0.5417       16
+Coffee___rust                      0.7755     0.6667     0.7170       57
+------------------------------------------------------------
+accuracy                            73.15% (109/149)

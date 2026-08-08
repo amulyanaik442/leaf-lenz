@@ -1,0 +1,24 @@
+{
+    "classes": [
+        "Coffee___healthy",
+        "Coffee___red_spider_mite",
+        "Coffee___rust"
+    ],
+    "confusion_matrix": [
+        [
+            58,
+            9,
+            9
+        ],
+        [
+            1,
+            13,
+            2
+        ],
+        [
+            9,
+            10,
+            38
+        ]
+    ]
+}
